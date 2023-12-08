@@ -1,0 +1,100 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Asv.Avalonia.ToolkitGallery.ViewModels"
+             xmlns:toolkit="clr-namespace:Asv.Avalonia.Toolkit;assembly=Asv.Avalonia.Toolkit"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Asv.Avalonia.ToolkitGallery.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+  <TabControl>
+      <TabItem Header="Circular">
+          <StackPanel Width="300">
+            <toolkit:Circular3Indicator
+                Grid.Row="0" Grid.Column="0"
+                Title="Power"
+                TopTitle="Total power, dBm" 
+                TopMin="-90" 
+                TopMax="10" 
+                TopStatus="{Binding TopStatus}"
+                TopText="{Binding TopText}"
+                TopValue="{Binding TopValue}"
+            
+                RightStatus="Warning"
+                RightText="80.00"
+                RightTitle="SDM, %"
+            
+                LeftStatus="Success"
+                LeftText="-10.00"
+                LeftTitle="DDM, %"
+            
+                />
+            <toolkit:DoubleCircle3Indicator 
+               
+                Title="CRS \ CLR"
+                LeftTopText="-90.0"
+                LeftTopTitle="CLR Power, dBm"
+                LeftBottomLeftText="+40.0"
+                LeftBottomLeftTitle="DDM,%"
+                LeftBottomRightText="-80.8"
+                LeftBottomRightTitle="SDM,%"
+                RightTopText="-110.0"
+                RightTopTitle="CRS Power, dBm"
+                RightBottomLeftText="+40.0"
+                RightBottomLeftTitle="DDM,%"
+                RightBottomRightText="-80.8"
+                RightBottomRightTitle="SDM,%"
+                BottomStatusText="Warning"
+            
+            />
+            <Grid ColumnDefinitions="*,*">
+                <toolkit:Circular3Indicator
+                    Grid.Row="0" Grid.Column="0"
+                    Title="Power"
+                    TopTitle="Total power, dBm" 
+                    TopMin="-90" 
+                    TopMax="10" 
+                    TopStatus="{Binding TopStatus}"
+                    TopText="{Binding TopText}"
+                    TopValue="{Binding TopValue}"
+            
+                    RightStatus="Warning"
+                    RightText="80.00"
+                    RightTitle="SDM, %"
+            
+                    LeftStatus="Success"
+                    LeftText="-10.00"
+                    LeftTitle="DDM, %"
+            
+                />
+                <toolkit:Circular3Indicator
+                    Grid.Row="0" Grid.Column="1"
+                    Title="Power"
+                    TopTitle="Total power, dBm" 
+                    TopMin="-90" 
+                    TopMax="10" 
+                    TopStatus="{Binding TopStatus}"
+                    TopText="{Binding TopText}"
+                    TopValue="{Binding TopValue}"
+            
+                    RightStatus="Warning"
+                    RightText="80.00"
+                    RightTitle="SDM, %"
+            
+                    LeftStatus="Success"
+                    LeftText="-10.00"
+                    LeftTitle="DDM, %"
+            
+                />
+            </Grid>
+          </StackPanel>
+          
+      </TabItem>
+  </TabControl>
+</UserControl>

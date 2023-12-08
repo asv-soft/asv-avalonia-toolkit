@@ -1,0 +1,27 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+    <Styles.Resources>
+        <IterationCount x:Key="BlinkAnimationCount">2</IterationCount>
+        <SolidColorBrush x:Key="IndicatorBorderBrush" Color="#616161"/>
+        
+        <SolidColorBrush x:Key="IndicatorSuccessBrush" Color="#558b2f"/>
+        <SolidColorBrush x:Key="IndicatorWarningBrush" Color="#ef6c00"/>
+        <SolidColorBrush x:Key="IndicatorCriticalBrush" Color="#d50000"/>
+        <SolidColorBrush x:Key="IndicatorUnknownBrush" Color="#616161"/>
+        
+        <SolidColorBrush x:Key="IndicatorTextBrush" Color="#616161"/>
+        
+        <SolidColorBrush x:Key="TextSuccessBrush" Color="#558b2f"/>
+        <SolidColorBrush x:Key="TextWarningBrush" Color="#ef6c00"/>
+        <SolidColorBrush x:Key="TextCriticalBrush" Color="#d50000"/>
+        <SolidColorBrush x:Key="TextUnknownBrush" Color="#616161"/>
+    </Styles.Resources>
+    
+    <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Circular/Circular3Indicator.axaml"/>
+    <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Circular/DoubleCircle3Indicator.axaml"/>
+</Styles>

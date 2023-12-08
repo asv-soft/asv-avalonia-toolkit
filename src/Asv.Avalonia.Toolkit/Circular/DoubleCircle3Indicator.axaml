@@ -1,0 +1,288 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Asv.Avalonia.Toolkit">
+    <Design.PreviewWith>
+        <controls:DoubleCircle3Indicator 
+            Width="400" 
+            Height="200"
+            Title="CRS \ CLR"
+            LeftTopText="-90.0"
+            LeftTopTitle="CLR Power, dBm"
+            LeftBottomLeftText="+40.0"
+            LeftBottomLeftTitle="DDM,%"
+            LeftBottomRightText="-80.8"
+            LeftBottomRightTitle="SDM,%"
+            RightTopText="-110.0"
+            RightTopTitle="CRS Power, dBm"
+            RightBottomLeftText="+40.0"
+            RightBottomLeftTitle="DDM,%"
+            RightBottomRightText="-80.8"
+            RightBottomRightTitle="SDM,%"
+            BottomStatusText="Warning"
+            
+            />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|DoubleCircle3Indicator">
+        <!-- Set Defaults -->
+        <Setter Property="BorderBrush" Value="{StaticResource IndicatorBorderBrush}"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Viewbox>
+                    <Panel>
+                        <Canvas HorizontalAlignment="Left" Width="200" Height="100">
+                            <Arc
+                                x:Name="TopLeftArc"
+                                Canvas.Left="2"
+                                Canvas.Top="2"
+                                Height="96"
+                                Width="96"
+                                StartAngle="190"
+                                Stretch="None"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                                SweepAngle="80"
+                            />    
+                            <Line 
+                                x:Name="TopLeftLine"
+                                StartPoint="50,2.5"
+                                EndPoint="100,2.5"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                            />
+                            
+                            
+                            <Arc
+                                x:Name="TopRightArc"
+                                Canvas.Left="102"
+                                Canvas.Top="2"
+                                Height="96"
+                                Width="96"
+                                StartAngle="-10"
+                                Stretch="None"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                                SweepAngle="-80"
+                            /> 
+                           
+                            <Line 
+                                  x:Name="TopRightLine"
+                                  StartPoint="100,2.5"
+                                  EndPoint="150,2.5"
+                                  Stroke="{TemplateBinding BorderBrush}"
+                                  StrokeThickness="{TemplateBinding BorderThickness}"
+                            />
+                            <Arc
+                                x:Name="BottomLeftArc"
+                                Canvas.Left="2"
+                                Canvas.Top="2"
+                                Height="96"
+                                Width="96"
+                                StartAngle="90"
+                                Stretch="None"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                                SweepAngle="80"
+                            />    
+                            <Line 
+                                x:Name="BottomLeftLine"
+                                StartPoint="50,97.5"
+                                EndPoint="100,97.5"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                            />
+                            
+                            
+                            <Arc
+                                x:Name="BottomRightArc"
+                                Canvas.Left="102"
+                                Canvas.Top="2"
+                                Height="96"
+                                Width="96"
+                                StartAngle="10"
+                                Stretch="None"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                                SweepAngle="80"
+                            /> 
+                            <Line 
+                                x:Name="BottomRightLine"
+                                StartPoint="100,97.5"
+                                EndPoint="150,97.5"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                            />
+                            
+                            <Line 
+                                StartPoint="10,50"
+                                EndPoint="190,50"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                            />
+                            <Line 
+                                StartPoint="50,50"
+                                EndPoint="50,90" 
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            <Line 
+                                StartPoint="100,20"
+                                EndPoint="100,80" 
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
+                           
+                            <Line 
+                                StartPoint="150,50"
+                                EndPoint="150,90" 
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            
+                            <!--<Line StartPoint="50,2.5"
+                                  EndPoint="100,2.5"
+                                  Stroke="Green"
+                                  StrokeThickness="5"
+                            />
+                            <Arc
+                                Height="100"
+                                StartAngle="190"
+                                Stretch="None"
+                                Stroke="Green"
+                                StrokeThickness="5"
+                                SweepAngle="80"
+                                Width="100" />-->
+                            
+                            
+                        </Canvas>
+                        
+                        <Grid  RowDefinitions="35,10,8,20,10" ColumnDefinitions="*,5,*,5,*,5,*">
+                            <TextBlock 
+                                Grid.Row="0" 
+                                Grid.ColumnSpan="3" 
+                                Grid.Column="2" 
+                                Foreground="{StaticResource IndicatorTextBrush}"
+                                HorizontalAlignment="Center"
+                                Margin="0,4,0,0"
+                                VerticalAlignment="Top" 
+                                FontSize="10"
+                                Text="{TemplateBinding Title}"/>
+                            <TextBlock 
+                                x:Name="BottomStatusText"
+                                Grid.Row="4" 
+                                Grid.ColumnSpan="3" 
+                                Grid.Column="2" 
+                                HorizontalAlignment="Center"
+                                Margin="0,9,0,0"
+                                VerticalAlignment="Bottom" 
+                                FontSize="10"
+                                Text="{TemplateBinding BottomStatusText}"/>
+                            <TextBlock 
+                                FontWeight="Bold" 
+                                Grid.Row="0" 
+                                Grid.ColumnSpan="3" 
+                                Grid.Column="0" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Bottom" 
+                                Text="{TemplateBinding LeftTopText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}"
+                                Grid.Row="1" 
+                                FontSize="8" 
+                                Grid.ColumnSpan="3" 
+                                Grid.Column="0" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Bottom" Text="{TemplateBinding LeftTopTitle}"/>
+                            
+                            <TextBlock 
+                                Grid.Row="3" Grid.Column="0" 
+                                FontSize="12" 
+                                HorizontalAlignment="Right" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding LeftBottomLeftText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}"
+                                Margin="0,-3,2,0" 
+                                Grid.Row="4" 
+                                FontSize="7"
+                                Grid.Column="0" 
+                                HorizontalAlignment="Right" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding LeftBottomLeftTitle}"/>
+                            
+                            <TextBlock 
+                                Margin="2,0,0,0" 
+                                Grid.Row="3" 
+                                Grid.Column="2" 
+                                FontSize="12" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top"
+                                Text="{TemplateBinding LeftBottomRightText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}"
+                                Margin="5,-3,0,0" 
+                                Grid.Row="4" 
+                                FontSize="7" 
+                                Grid.Column="2" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding LeftBottomRightTitle}"/>
+                            
+                            
+                            <TextBlock 
+                                FontWeight="Bold" 
+                                Grid.Row="0" 
+                                Grid.ColumnSpan="3" 
+                                Grid.Column="4" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Bottom" 
+                                Text="{TemplateBinding RightTopText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}" 
+                                Grid.Row="1" 
+                                FontSize="8" 
+                                Grid.ColumnSpan="3" 
+                                Grid.Column="4" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Bottom" 
+                                Text="{TemplateBinding RightTopTitle}"/>
+                            
+                            <TextBlock 
+                                Margin="0,0,2,0" 
+                                Grid.Row="3" 
+                                Grid.Column="4" 
+                                FontSize="12" 
+                                HorizontalAlignment="Right" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding RightBottomLeftText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}" 
+                                Margin="0,-3,2,0" 
+                                Grid.Row="4" 
+                                FontSize="7" 
+                                Grid.Column="4" 
+                                HorizontalAlignment="Right" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding RightBottomLeftTitle}"/>
+                            
+                            <TextBlock 
+                                Margin="3,0,0,0"
+                                Grid.Row="3" 
+                                Grid.Column="6" 
+                                FontSize="12" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding RightBottomRightText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}" 
+                                Margin="3,-3,0,0" 
+                                Grid.Row="4" 
+                                FontSize="7" 
+                                Grid.Column="6" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding RightBottomRightTitle}"/>
+                        </Grid>
+                    </Panel>
+                </Viewbox>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
