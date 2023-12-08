@@ -1,5 +1,6 @@
 # asv-avalonia-toolkit
 A set of advanced controls for Avalonia UI, used in the Asv.Drones application
 
-## Circular 3 indicator
-![image](https://github.com/asv-soft/asv-avalonia-toolkit/assets/1770739/ea348786-74d7-47d6-a76c-25d00a0db2fd)
+## Circular indicator
+![image](https://github.com/asv-soft/asv-avalonia-toolkit/assets/1770739/8e75af96-91e9-4d04-a533-099b369f4a72)
+
