@@ -2,28 +2,42 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controls="using:Asv.Avalonia.Toolkit">
     <Design.PreviewWith>
-        <controls:DoubleCircle3Indicator 
+        <controls:DoubleCircular3Indicator 
             Width="400" 
             Height="200"
             Title="CRS \ CLR"
             LeftTopText="-90.0"
             LeftTopTitle="CLR Power, dBm"
+            LeftTopStatus="Unknown"
+            
             LeftBottomLeftText="+40.0"
             LeftBottomLeftTitle="DDM,%"
+            LeftBottomLeftStatus="Success"
+            
             LeftBottomRightText="-80.8"
             LeftBottomRightTitle="SDM,%"
+            LeftBottomRightStatus="Warning"
+            
             RightTopText="-110.0"
             RightTopTitle="CRS Power, dBm"
+            RightTopStatus="Critical"
+            
             RightBottomLeftText="+40.0"
             RightBottomLeftTitle="DDM,%"
+            RightBottomLeftStatus="Success"
+            
+            
             RightBottomRightText="-80.8"
             RightBottomRightTitle="SDM,%"
+            RightBottomRightStatus="Unknown"
+            
             BottomStatusText="Warning"
+            BottomStatus="Warning"
             
             />
     </Design.PreviewWith>
 
-    <Style Selector="controls|DoubleCircle3Indicator">
+    <Style Selector="controls|DoubleCircular3Indicator">
         <!-- Set Defaults -->
         <Setter Property="BorderBrush" Value="{StaticResource IndicatorBorderBrush}"/>
         <Setter Property="Template">
@@ -175,6 +189,7 @@
                                 FontSize="10"
                                 Text="{TemplateBinding BottomStatusText}"/>
                             <TextBlock 
+                                x:Name="LeftTopTextBlock"
                                 FontWeight="Bold" 
                                 Grid.Row="0" 
                                 Grid.ColumnSpan="3" 
@@ -285,4 +300,41 @@
             </ControlTemplate>
         </Setter>
     </Style>
+    
+    <!-- TopLeft -->
+
+    <Style Selector="controls|DoubleCircular3Indicator:lt-critical /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource BlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+   
+    <Style Selector="controls|DoubleCircular3Indicator:lt-warning /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource BlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <Style Selector="controls|DoubleCircular3Indicator:lt-unknown /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextUnknownBrush}"/>
+       
+    </Style>
+    
+    
 </Styles>

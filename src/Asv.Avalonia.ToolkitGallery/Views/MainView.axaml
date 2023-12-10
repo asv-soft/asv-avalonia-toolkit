@@ -35,7 +35,7 @@
                 LeftTitle="DDM, %"
             
                 />
-            <toolkit:DoubleCircle3Indicator 
+            <toolkit:DoubleCircular3Indicator 
                
                 Title="CRS \ CLR"
                 LeftTopText="-90.0"

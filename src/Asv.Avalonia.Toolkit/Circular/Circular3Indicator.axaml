@@ -84,6 +84,8 @@
     </Design.PreviewWith>
     <Style Selector="controls|Circular3Indicator">
         <!-- Set Defaults -->
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{StaticResource IndicatorBorderBrush}"/>
         <Setter Property="Template">
             <ControlTemplate>
                 <Viewbox>
@@ -96,8 +98,8 @@
                                 Width="96"
                                 StartAngle="190"
                                 Stretch="None"
-                                Stroke="Gray"
-                                StrokeThickness="1"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
                                 SweepAngle="160"
                             />    
                             <Arc
@@ -105,7 +107,6 @@
                                 Height="100"
                                 StartAngle="190"
                                 Stretch="None"
-                                Stroke="Green"
                                 StrokeThickness="5"
                                 SweepAngle="{TemplateBinding TopProgressAngle}"
                                 Width="100" >
@@ -118,8 +119,8 @@
                                 Width="96"
                                 StartAngle="10"
                                 Stretch="None"
-                                Stroke="Gray"
-                                StrokeThickness="1"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
                                 SweepAngle="70"
                             />    
                            
@@ -131,25 +132,25 @@
                                 Width="96"
                                 StartAngle="100"
                                 Stretch="None"
-                                Stroke="Gray"
-                                StrokeThickness="1"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
                                 SweepAngle="70"
                             /> 
-                            <Line StartPoint="5,0" EndPoint="85,0" Width="80" Canvas.Left="5" Canvas.Top="50" Stroke="Gray" Height="2" StrokeThickness="1" />
-                            <Line StartPoint="45,0" EndPoint="45,40" Width="80" Canvas.Left="5" Canvas.Top="50" Stroke="Gray" Height="2" StrokeThickness="1" />
+                            <Line StartPoint="5,0" EndPoint="85,0" Width="80" Canvas.Left="5" Canvas.Top="50" Stroke="{TemplateBinding BorderBrush}" Height="2" StrokeThickness="{TemplateBinding BorderThickness}" />
+                            <Line StartPoint="45,0" EndPoint="45,40" Width="80" Canvas.Left="5" Canvas.Top="50" Stroke="{TemplateBinding BorderBrush}" Height="2" StrokeThickness="{TemplateBinding BorderThickness}" />
                         </Canvas>
                         <Grid RowDefinitions="35,10,8,20,10" ColumnDefinitions="*,4,*">
 
-                            <TextBlock Foreground="Gray" Grid.Row="0" Grid.ColumnSpan="3" FontSize="9" Margin="0,9,0,0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Text="{TemplateBinding Title}"/>
+                            <TextBlock Foreground="{StaticResource IndicatorTextBrush}"  Grid.Row="0" Grid.ColumnSpan="3" FontSize="9" Margin="0,9,0,0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Text="{TemplateBinding Title}"/>
                             
                             <TextBlock x:Name="TopTextBlock" Margin="0,0,0,-2" FontWeight="Bold" Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="{TemplateBinding TopText}"/>
-                            <TextBlock Foreground="Gray" Grid.Row="1" FontSize="8" Grid.ColumnSpan="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="{TemplateBinding TopTitle}"/>
+                            <TextBlock Foreground="{StaticResource IndicatorTextBrush}"  Grid.Row="1" FontSize="8" Grid.ColumnSpan="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="{TemplateBinding TopTitle}"/>
                             
                             <TextBlock x:Name="LeftTextBlock" Margin="0,0,2,0" Grid.Row="3" Grid.Column="0" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Text="{TemplateBinding LeftText}"/>
-                            <TextBlock Foreground="Gray" Margin="0,-3,2,0" Grid.Row="4" FontSize="7" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Text="{TemplateBinding LeftTitle}"/>
+                            <TextBlock Foreground="{StaticResource IndicatorTextBrush}"  Margin="0,-3,2,0" Grid.Row="4" FontSize="7" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Text="{TemplateBinding LeftTitle}"/>
                             
                             <TextBlock x:Name="RightTextBlock" Margin="3,0,0,0" Grid.Row="3" Grid.Column="2" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{TemplateBinding RightText}"/>
-                            <TextBlock Foreground="Gray" Margin="3,-3,0,0" Grid.Row="4" FontSize="7" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{TemplateBinding RightTitle}"/>
+                            <TextBlock Foreground="{StaticResource IndicatorTextBrush}"  Margin="3,-3,0,0" Grid.Row="4" FontSize="7" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{TemplateBinding RightTitle}"/>
                         </Grid>
                     </Panel>
                     

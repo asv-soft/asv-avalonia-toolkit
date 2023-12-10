@@ -5,17 +5,25 @@ using Avalonia.Controls.Primitives;
 
 namespace Asv.Avalonia.Toolkit;
 
-[PseudoClasses(SharedConst.LeftCritical, SharedConst.LeftWarning, SharedConst.LeftSuccess, SharedConst.LeftUnknown,
-    SharedConst.TopCritical, SharedConst.TopWarning, SharedConst.TopSuccess, SharedConst.TopUnknown,
-    SharedConst.RightCritical, SharedConst.RightWarning, SharedConst.RightSuccess, SharedConst.RightUnknown)]
+[PseudoClasses(LeftCritical, LeftWarning, LeftSuccess, LeftUnknown,
+    TopCritical, TopWarning, TopSuccess, TopUnknown,
+    RightCritical, RightWarning, RightSuccess, RightUnknown)]
 public class Circular3Indicator : IndicatorBase
 {
-    private double _topProgressAngle;
+    public const string TopCritical = ":top-critical";
+    public const string TopWarning = ":top-warning";
+    public const string TopSuccess = ":top-success";
+    public const string TopUnknown = ":top-unknown";
+    public const string LeftCritical = ":left-critical";
+    public const string LeftWarning = ":left-warning";
+    public const string LeftSuccess = ":left-success";
+    public const string LeftUnknown = ":left-unknown";
+    public const string RightCritical = ":right-critical";
+    public const string RightWarning = ":right-warning";
+    public const string RightSuccess = ":right-success";
+    public const string RightUnknown = ":right-unknown";
     
-    public Circular3Indicator()
-    {
-        
-    }
+    private double _topProgressAngle;
 
     #region Top Props
 
@@ -166,26 +174,26 @@ public class Circular3Indicator : IndicatorBase
         if (change.Property == TopStatusProperty)
         {
             var value = (IndicatorStatusEnum)change.NewValue!;
-            PseudoClasses.Set(":top-critical", value == IndicatorStatusEnum.Critical);
-            PseudoClasses.Set(":top-warning", value == IndicatorStatusEnum.Warning);
-            PseudoClasses.Set(":top-success", value == IndicatorStatusEnum.Success);
-            PseudoClasses.Set(":top-unknown", value == IndicatorStatusEnum.Unknown);
+            PseudoClasses.Set(TopCritical, value == IndicatorStatusEnum.Critical);
+            PseudoClasses.Set(TopWarning, value == IndicatorStatusEnum.Warning);
+            PseudoClasses.Set(TopSuccess, value == IndicatorStatusEnum.Success);
+            PseudoClasses.Set(TopUnknown, value == IndicatorStatusEnum.Unknown);
         }
         if (change.Property == LeftStatusProperty)
         {
             var value = (IndicatorStatusEnum)change.NewValue!;
-            PseudoClasses.Set(":left-critical", value == IndicatorStatusEnum.Critical);
-            PseudoClasses.Set(":left-warning", value == IndicatorStatusEnum.Warning);
-            PseudoClasses.Set(":left-success", value == IndicatorStatusEnum.Success);
-            PseudoClasses.Set(":left-unknown", value == IndicatorStatusEnum.Unknown);
+            PseudoClasses.Set(LeftCritical, value == IndicatorStatusEnum.Critical);
+            PseudoClasses.Set(LeftWarning, value == IndicatorStatusEnum.Warning);
+            PseudoClasses.Set(LeftSuccess, value == IndicatorStatusEnum.Success);
+            PseudoClasses.Set(LeftUnknown, value == IndicatorStatusEnum.Unknown);
         }
         if (change.Property == RightStatusProperty)
         {
             var value = (IndicatorStatusEnum)change.NewValue!;
-            PseudoClasses.Set(":right-critical", value == IndicatorStatusEnum.Critical);
-            PseudoClasses.Set(":right-warning", value == IndicatorStatusEnum.Warning);
-            PseudoClasses.Set(":right-success", value == IndicatorStatusEnum.Success);
-            PseudoClasses.Set(":right-unknown", value == IndicatorStatusEnum.Unknown);
+            PseudoClasses.Set(RightCritical, value == IndicatorStatusEnum.Critical);
+            PseudoClasses.Set(RightWarning, value == IndicatorStatusEnum.Warning);
+            PseudoClasses.Set(RightSuccess, value == IndicatorStatusEnum.Success);
+            PseudoClasses.Set(RightUnknown, value == IndicatorStatusEnum.Unknown);
         }
     }
     

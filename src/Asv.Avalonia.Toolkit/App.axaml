@@ -23,5 +23,5 @@
     </Styles.Resources>
     
     <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Circular/Circular3Indicator.axaml"/>
-    <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Circular/DoubleCircle3Indicator.axaml"/>
+    <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Circular/DoubleCircular3Indicator.axaml"/>
 </Styles>
