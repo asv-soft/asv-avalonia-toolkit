@@ -6,7 +6,7 @@ set projects=Asv.Avalonia.Toolkit
 rem ====== projects ======
 
 rem copy version to text file, then in variable
-git describe --abbrev=0 >./version.txt
+git describe --tags --abbrev=0 >./version.txt
 SET /p VERSION=<version.txt
 DEL version.txt
 

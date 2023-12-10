@@ -1,28 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <Authors>https://github.com/asvol</Authors>
-        <Company>https://github.com/asv-soft</Company>
-        <Copyright>https://github.com/asvol</Copyright>
-        <PackageProjectUrl>https://github.com/asv-soft/asv-avalonia-toolkit</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/asv-soft/asv-avalonia-toolkit</RepositoryUrl>
-        <PackageTags>avalonia;.net;avalonia-ui</PackageTags>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Description>A set of advanced controls for Avalonia UI, used in the Asv.Drones application</Description>
-        <Configurations>Debug;Release</Configurations>
-        <Platforms>AnyCPU</Platforms>
-    </PropertyGroup>
-
-
-    <ItemGroup>
-        <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
-        <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)" />
-        <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
-        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
-    </ItemGroup>
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>https://github.com/asvol</Authors>
+    <Company>https://github.com/asv-soft</Company>
+    <Copyright>https://github.com/asvol</Copyright>
+    <PackageProjectUrl>https://github.com/asv-soft/asv-avalonia-toolkit</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/asv-soft/asv-avalonia-toolkit</RepositoryUrl>
+    <PackageTags>avalonia;.net;avalonia-ui</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>A set of advanced controls for Avalonia UI, used in the Asv.Drones application</Description>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU</Platforms>
+    <Version>0.1.1</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+  </ItemGroup>
 </Project>
