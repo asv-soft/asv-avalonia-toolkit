@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Authors>https://github.com/asvol</Authors>
@@ -12,8 +12,6 @@
         <PackageTags>avalonia;.net;avalonia-ui</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Description>A set of advanced controls for Avalonia UI, used in the Asv.Drones application</Description>
-        <PackageLicenseFile>LICENSE</PackageLicenseFile>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
         <Configurations>Debug;Release</Configurations>
         <Platforms>AnyCPU</Platforms>
     </PropertyGroup>
