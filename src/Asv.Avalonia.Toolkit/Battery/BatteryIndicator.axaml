@@ -1,0 +1,35 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Asv.Avalonia.Toolkit.Battery">
+    <Design.PreviewWith>
+        <controls:BatteryIndicator Width="100" Height="100" />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|BatteryIndicator">
+        <!-- Set Defaults -->
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{StaticResource IndicatorBorderBrush}"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Viewbox>
+                    <Panel>
+                        <Canvas Width="100" Height="100">
+                            <Line StartPoint="5,5"
+                                  EndPoint="5,15"
+                                  StrokeLineCap="Round"
+                                  Stroke="{TemplateBinding BorderBrush}"
+                                  StrokeThickness="3">
+                                <Line.RenderTransform>
+                                    
+                                </Line.RenderTransform>
+                            </Line>
+                            <!-- <Ellipse Width="100" Height="100" StrokeThickness="20" Stroke="Gray" > -->
+                            <!--      -->
+                            <!-- </Ellipse> -->
+                        </Canvas>
+                        </Panel>
+                </Viewbox>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

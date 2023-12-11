@@ -86,4 +86,5 @@
     <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Circular/DoubleCircular3Indicator.axaml"/>
     <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Record/RecordIndicator.axaml"/>
     <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Route/RouteIndicator.axaml"/>
+    <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Battery/BatteryIndicator.axaml"/>
 </Styles>
