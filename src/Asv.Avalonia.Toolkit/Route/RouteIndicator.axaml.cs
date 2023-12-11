@@ -8,23 +8,23 @@ using ReactiveUI;
 namespace Asv.Avalonia.Toolkit.Route;
 
 [PseudoClasses(ProgressDisabledPseudoclass,ProgressCompletedPseudoclass)]
-public class RouteIndicator : TemplatedControl
+public class RouteIndicator : IndicatorBase
 {
     public const string ProgressDisabledPseudoclass = ":progress-disabled";
     public const string ProgressCompletedPseudoclass = ":progress-completed";
-    public RouteIndicator()
+    /*public RouteIndicator()
     {
         if (Design.IsDesignMode)
         {
-            /*Observable.Timer(TimeSpan.FromMilliseconds(100), TimeSpan.FromMilliseconds(100))
+            Observable.Timer(TimeSpan.FromMilliseconds(100), TimeSpan.FromMilliseconds(100))
                 .ObserveOn(RxApp.MainThreadScheduler)
                 .Subscribe(_ =>
                 {
                     Progress += 0.01;
                     if (Progress >= 1.0) Progress = 0.0;
-                });*/
+                });
         }
-    }
+    }*/
     
     
     private double _internalBorderWidth;
@@ -68,6 +68,35 @@ public class RouteIndicator : TemplatedControl
         get => _internalIndicatorLeft;
         set => SetAndRaise(InternalIndicatorLeftProperty, ref _internalIndicatorLeft, value);
     }
+
+    private string _internalProgressText;
+
+    public static readonly DirectProperty<RouteIndicator, string> InternalProgressTextProperty = AvaloniaProperty.RegisterDirect<RouteIndicator, string>(
+        nameof(InternalProgressText), o => o.InternalProgressText, (o, v) => o.InternalProgressText = v);
+
+    public string InternalProgressText
+    {
+        get => _internalProgressText;
+        set => SetAndRaise(InternalProgressTextProperty, ref _internalProgressText, value);
+    }
+
+    public static readonly StyledProperty<string> StatusTextProperty = AvaloniaProperty.Register<RouteIndicator, string>(
+        nameof(StatusText));
+
+    public string StatusText
+    {
+        get => GetValue(StatusTextProperty);
+        set => SetValue(StatusTextProperty, value);
+    }
+
+    public static readonly StyledProperty<string> SubStatusTextProperty = AvaloniaProperty.Register<RouteIndicator, string>(
+        nameof(SubStatusText));
+
+    public string SubStatusText
+    {
+        get => GetValue(SubStatusTextProperty);
+        set => SetValue(SubStatusTextProperty, value);
+    }
     
     protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
     {
@@ -78,12 +107,16 @@ public class RouteIndicator : TemplatedControl
             
             if (double.IsNaN(progress))
             {
+                InternalProgressText = string.Empty;
                 PseudoClasses.Add(ProgressDisabledPseudoclass);
                 return;
             }
 
             PseudoClasses.Remove(ProgressDisabledPseudoclass);
             PseudoClasses.Set(ProgressCompletedPseudoclass, Math.Abs(Progress - 1.0) < 0.01);
+            
+            InternalProgressText = $"{progress * 100.0:F0} %";
+            
             if (progress <= 0.0) progress = 0.0000001;
             
             if (progress >= 1.0)

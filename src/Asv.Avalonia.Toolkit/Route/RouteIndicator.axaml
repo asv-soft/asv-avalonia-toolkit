@@ -3,10 +3,10 @@
         xmlns:controls="using:Asv.Avalonia.Toolkit.Route">
     <Design.PreviewWith>
         <StackPanel Spacing="8">
-            <controls:RouteIndicator Width="400" Progress="0.00001" />
-            <controls:RouteIndicator Width="400" Progress="0.5" />
-            <controls:RouteIndicator Width="400" Progress="0.95" />
-            <controls:RouteIndicator Width="400" Progress="1" />    
+            <controls:RouteIndicator Width="400" Progress="0.00001" Title="Zero progress" StatusText="6 MIN" SubStatusText="BEFORE COMPLETE" />
+            <controls:RouteIndicator Width="400" Progress="0.5" Title="Half progress" StatusText="6 MIN" SubStatusText="BEFORE COMPLETE" />
+            <controls:RouteIndicator Width="400" Progress="1" Title="Complete progress" StatusText="6 MIN" SubStatusText="BEFORE COMPLETE"/>
+            <controls:RouteIndicator Width="400" Progress="NaN" Title="NaN progress" StatusText="6 MIN" SubStatusText="BEFORE COMPLETE" />
         </StackPanel>
     </Design.PreviewWith>
 
@@ -17,7 +17,7 @@
         <Setter Property="MaxHeight" Value="140"/>
         <Setter Property="Height" Value="140"/>
         <Setter Property="BorderBrush" Value="{StaticResource IndicatorBorderBrush}"/>
-        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="CornerRadius" Value="{StaticResource IndicatorCornerRadius}"/>
         <Setter Property="Template">
             <ControlTemplate>
                 <Border Padding="10" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}">
@@ -28,8 +28,8 @@
                             Width="30" Height="30">
                             <Path Fill="{TemplateBinding Foreground}" Data="M18,15A3,3 0 0,1 21,18A3,3 0 0,1 18,21C16.69,21 15.58,20.17 15.17,19H14V17H15.17C15.58,15.83 16.69,15 18,15M18,17A1,1 0 0,0 17,18A1,1 0 0,0 18,19A1,1 0 0,0 19,18A1,1 0 0,0 18,17M18,8A1.43,1.43 0 0,0 19.43,6.57C19.43,5.78 18.79,5.14 18,5.14C17.21,5.14 16.57,5.78 16.57,6.57A1.43,1.43 0 0,0 18,8M18,2.57A4,4 0 0,1 22,6.57C22,9.56 18,14 18,14C18,14 14,9.56 14,6.57A4,4 0 0,1 18,2.57M8.83,17H10V19H8.83C8.42,20.17 7.31,21 6,21A3,3 0 0,1 3,18C3,16.69 3.83,15.58 5,15.17V14H7V15.17C7.85,15.47 8.53,16.15 8.83,17M6,17A1,1 0 0,0 5,18A1,1 0 0,0 6,19A1,1 0 0,0 7,18A1,1 0 0,0 6,17M6,3A3,3 0 0,1 9,6C9,7.31 8.17,8.42 7,8.83V10H5V8.83C3.83,8.42 3,7.31 3,6A3,3 0 0,1 6,3M6,5A1,1 0 0,0 5,6A1,1 0 0,0 6,7A1,1 0 0,0 7,6A1,1 0 0,0 6,5M11,19V17H13V19H11M7,13H5V11H7V13Z" />    
                         </Viewbox>    
-                        <TextBlock DockPanel.Dock="Right" Foreground="{StaticResource TextWarningBrush}" FontWeight="Bold" FontSize="25" Text="100%"/>
-                        <TextBlock Margin="10,0,0,0"  VerticalAlignment="Center" FontSize="25" Text="WP1 => WP2"></TextBlock>
+                        <TextBlock x:Name="ProgressTextBlock" DockPanel.Dock="Right" Foreground="{StaticResource TextWarningBrush}" FontWeight="Bold" FontSize="25" Text="{TemplateBinding InternalProgressText}"/>
+                        <TextBlock Margin="10,0,0,0" VerticalAlignment="Center" FontSize="25" Text="{TemplateBinding Title}"/>
                     </DockPanel>
                     <Viewbox Height="50" HorizontalAlignment="Stretch">
                         <Canvas Width="800" Height="100">
@@ -98,10 +98,8 @@
                         </Canvas>
                     </Viewbox>
                         <StackPanel Orientation="Horizontal" Spacing="8">
-                            <TextBlock FontWeight="Heavy" Text="6 MIN" Foreground="#0071ee" />
-                            <TextBlock FontWeight="Heavy" Text="UNTIL COMPLETE" Foreground="#8c8b91" >
-                               
-                            </TextBlock>
+                            <TextBlock FontWeight="Heavy" Text="{TemplateBinding StatusText}" Foreground="#0071ee" />
+                            <TextBlock FontWeight="Heavy" Text="{TemplateBinding SubStatusText}" Foreground="#8c8b91"/>
                         </StackPanel>
                 </StackPanel>
                 </Border>
@@ -110,10 +108,16 @@
             </ControlTemplate>
         </Setter>
     </Style>
+    <Style Selector="controls|RouteIndicator:progress-disabled /template/ TextBlock#ProgressTextBlock">
+        <Setter Property="IsVisible" Value="False"/>
+    </Style>
     <Style Selector="controls|RouteIndicator:progress-disabled /template/ Ellipse#ProgressEllipse">
         <Setter Property="IsVisible" Value="False"/>
     </Style>
     <Style Selector="controls|RouteIndicator:progress-disabled /template/ Border#ProgressBorder">
+        <Setter Property="IsVisible" Value="False"/>
+    </Style>
+    <Style Selector="controls|RouteIndicator:progress-disabled /template/ Border#ProgressDisable">
         <Setter Property="IsVisible" Value="False"/>
     </Style>
     

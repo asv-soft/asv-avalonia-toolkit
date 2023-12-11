@@ -19,7 +19,7 @@
                     x:Name="MainBorder"
                     BorderThickness="1"
                     BorderBrush="{StaticResource IndicatorBorderBrush}"
-                    CornerRadius="30">
+                    CornerRadius="{StaticResource IndicatorCornerRadius}">
                     <Panel>
                         <Grid x:Name="RecordingControl" IsVisible="False" RowDefinitions="*,Auto,Auto" ColumnDefinitions="2*,Auto" >
                             <TextBlock  Grid.Column="0" Grid.Row="1" Margin="15,0,0,0" FontSize="15" FontWeight="Bold" Text="{TemplateBinding RecordingText}" Foreground="#e63f32" HorizontalAlignment="Left" VerticalAlignment="Center"  />
@@ -31,7 +31,7 @@
                                 </Panel>
                             </Button>
                         </Grid>
-                        <Button Command="{TemplateBinding StartCommand}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Padding="-5,5,5,5"  x:Name="NotRecordingControl" IsVisible="True" Background="Transparent" HorizontalContentAlignment="Stretch" CornerRadius="25">
+                        <Button Command="{TemplateBinding StartCommand}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Padding="-5,5,5,5"  x:Name="NotRecordingControl" IsVisible="True" Background="Transparent" HorizontalContentAlignment="Stretch" CornerRadius="15">
                             <Grid ColumnDefinitions="*,5, Auto">
                                 <TextBlock Margin="15,0,0,0" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{TemplateBinding StartCommandText}"></TextBlock>
                                 <Ellipse Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="15" Height="15" Fill="Red" />

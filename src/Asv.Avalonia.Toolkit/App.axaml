@@ -67,6 +67,7 @@
     </Design.PreviewWith>
     <Styles.Resources>
         <IterationCount x:Key="BlinkAnimationCount">2</IterationCount>
+        <CornerRadius x:Key="IndicatorCornerRadius">20</CornerRadius>
         <SolidColorBrush x:Key="IndicatorBorderBrush" Color="#616161"/>
         
         <SolidColorBrush x:Key="IndicatorSuccessBrush" Color="#558b2f"/>

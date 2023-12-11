@@ -4,12 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:Asv.Avalonia.ToolkitGallery.ViewModels"
              xmlns:toolkit="clr-namespace:Asv.Avalonia.Toolkit;assembly=Asv.Avalonia.Toolkit"
+             xmlns:route="clr-namespace:Asv.Avalonia.Toolkit.Route;assembly=Asv.Avalonia.Toolkit"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Asv.Avalonia.ToolkitGallery.Views.MainView"
              x:DataType="vm:MainViewModel">
   <Design.DataContext>
-    <!-- This only sets the DataContext for the previewer in an IDE,
-         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
     <vm:MainViewModel />
   </Design.DataContext>
 
@@ -33,7 +32,6 @@
                 LeftStatus="Success"
                 LeftText="-10.00"
                 LeftTitle="DDM, %"
-            
                 />
             <toolkit:DoubleCircular3Indicator 
                
@@ -97,13 +95,18 @@
           
       </TabItem>
       <TabItem Header="Record">
-          <toolkit:RecordIndicator 
-              RecordingStatusText="{Binding StringTime}" 
-              StartCommand="{Binding StartRecord}" 
-              StopCommand="{Binding StopRecord}"
-              IsRecording="{Binding IsRecording}">
-                    
-          </toolkit:RecordIndicator>
+          <StackPanel Spacing="8">
+              <toolkit:RecordIndicator 
+                  Width="400"
+                  RecordingStatusText="{Binding StringTime}" 
+                  StartCommand="{Binding StartRecord}" 
+                  StopCommand="{Binding StopRecord}"
+                  IsRecording="{Binding IsRecording}">
+              </toolkit:RecordIndicator>
+              <route:RouteIndicator Width="400" Progress="{Binding Progress}" Title="Zero progress" StatusText="6 MIN" SubStatusText="BEFORE COMPLETE" />
+          </StackPanel>
+          
+          
       </TabItem>
   </TabControl>
 </UserControl>
