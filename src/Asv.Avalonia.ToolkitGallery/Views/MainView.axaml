@@ -96,5 +96,14 @@
           </StackPanel>
           
       </TabItem>
+      <TabItem Header="Record">
+          <toolkit:RecordIndicator 
+              RecordingStatusText="{Binding StringTime}" 
+              StartCommand="{Binding StartRecord}" 
+              StopCommand="{Binding StopRecord}"
+              IsRecording="{Binding IsRecording}">
+                    
+          </toolkit:RecordIndicator>
+      </TabItem>
   </TabControl>
 </UserControl>

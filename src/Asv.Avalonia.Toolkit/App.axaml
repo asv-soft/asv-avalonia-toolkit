@@ -1,8 +1,68 @@
 <Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:toolkit="clr-namespace:Asv.Avalonia.Toolkit"
+        xmlns:route="clr-namespace:Asv.Avalonia.Toolkit.Route">
     <Design.PreviewWith>
         <Border Padding="20">
             <!-- Add Controls for Previewer Here -->
+            <StackPanel>
+                <toolkit:Circular3Indicator
+                    Grid.Row="0" Grid.Column="0"
+                    Title="Power"
+                    TopTitle="Total power, dBm" 
+                    TopStatus="Success" 
+                    TopText="-110.05" 
+                    TopMin="-90" 
+                    TopMax="10" 
+                    TopValue="-50" 
+            
+                    RightStatus="Warning"
+                    RightText="80.00"
+                    RightTitle="SDM, %"
+            
+                    LeftStatus="Success"
+                    LeftText="-10.00"
+                    LeftTitle="DDM, %"
+            
+                    Width="300" Height="300" />
+                <toolkit:DoubleCircular3Indicator 
+                    Width="400" 
+                    Height="200"
+                    Title="CRS \ CLR"
+                    LeftTopText="-90.0"
+                    LeftTopTitle="CLR Power, dBm"
+                    LeftTopStatus="Unknown"
+            
+                    LeftBottomLeftText="+40.0"
+                    LeftBottomLeftTitle="DDM,%"
+                    LeftBottomLeftStatus="Success"
+            
+                    LeftBottomRightText="-80.8"
+                    LeftBottomRightTitle="SDM,%"
+                    LeftBottomRightStatus="Warning"
+            
+                    RightTopText="-110.0"
+                    RightTopTitle="CRS Power, dBm"
+                    RightTopStatus="Critical"
+            
+                    RightBottomLeftText="+40.0"
+                    RightBottomLeftTitle="DDM,%"
+                    RightBottomLeftStatus="Success"
+            
+            
+                    RightBottomRightText="-80.8"
+                    RightBottomRightTitle="SDM,%"
+                    RightBottomRightStatus="Unknown"
+            
+                    BottomStatusText="Warning"
+                    BottomStatus="Warning"
+                />
+                <toolkit:RecordIndicator>
+                    
+                </toolkit:RecordIndicator>
+                
+                <route:RouteIndicator/>
+            </StackPanel>
         </Border>
     </Design.PreviewWith>
     <Styles.Resources>
@@ -10,18 +70,19 @@
         <SolidColorBrush x:Key="IndicatorBorderBrush" Color="#616161"/>
         
         <SolidColorBrush x:Key="IndicatorSuccessBrush" Color="#558b2f"/>
-        <SolidColorBrush x:Key="IndicatorWarningBrush" Color="#ef6c00"/>
+        <SolidColorBrush x:Key="IndicatorWarningBrush" Color="#ffba00"/>
         <SolidColorBrush x:Key="IndicatorCriticalBrush" Color="#d50000"/>
         <SolidColorBrush x:Key="IndicatorUnknownBrush" Color="#616161"/>
         
-        <SolidColorBrush x:Key="IndicatorTextBrush" Color="#616161"/>
+        <SolidColorBrush x:Key="IndicatorTextBrush" Color="#746868"/>
         
         <SolidColorBrush x:Key="TextSuccessBrush" Color="#558b2f"/>
-        <SolidColorBrush x:Key="TextWarningBrush" Color="#ef6c00"/>
+        <SolidColorBrush x:Key="TextWarningBrush" Color="#ffba00"/>
         <SolidColorBrush x:Key="TextCriticalBrush" Color="#d50000"/>
         <SolidColorBrush x:Key="TextUnknownBrush" Color="#616161"/>
     </Styles.Resources>
-    
     <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Circular/Circular3Indicator.axaml"/>
     <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Circular/DoubleCircular3Indicator.axaml"/>
+    <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Record/RecordIndicator.axaml"/>
+    <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Route/RouteIndicator.axaml"/>
 </Styles>
