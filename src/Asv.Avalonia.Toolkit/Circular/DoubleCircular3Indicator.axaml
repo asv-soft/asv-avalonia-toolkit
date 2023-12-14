@@ -8,7 +8,15 @@
             Title="CRS \ CLR"
             LeftTopText="-90.0"
             LeftTopTitle="CLR Power, dBm"
-            LeftTopStatus="Unknown"
+            LeftTopStatus="Success"
+            
+            TopRightProgressLinePoint="100,2.5"
+            TopRightProgressValue="50"
+            
+            
+            TopLeftProgressLinePoint="100,2.5"
+            TopLeftProgressValue="20"
+            
             
             LeftBottomLeftText="+40.0"
             LeftBottomLeftTitle="DDM,%"
@@ -25,7 +33,6 @@
             RightBottomLeftText="+40.0"
             RightBottomLeftTitle="DDM,%"
             RightBottomLeftStatus="Success"
-            
             
             RightBottomRightText="-80.8"
             RightBottomRightTitle="SDM,%"
@@ -62,9 +69,7 @@
                                 StartPoint="50,2.5"
                                 EndPoint="100,2.5"
                                 Stroke="{TemplateBinding BorderBrush}"
-                                StrokeThickness="{TemplateBinding BorderThickness}"
-                            />
-                            
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
                             
                             <Arc
                                 x:Name="TopRightArc"
@@ -76,36 +81,31 @@
                                 Stretch="None"
                                 Stroke="{TemplateBinding BorderBrush}"
                                 StrokeThickness="{TemplateBinding BorderThickness}"
-                                SweepAngle="-80"
-                            /> 
+                                SweepAngle="-80"/> 
                            
-                            <Line 
-                                  x:Name="TopRightLine"
+                            <Line x:Name="TopRightLine"
                                   StartPoint="100,2.5"
                                   EndPoint="150,2.5"
                                   Stroke="{TemplateBinding BorderBrush}"
-                                  StrokeThickness="{TemplateBinding BorderThickness}"
-                            />
-                            <Arc
-                                x:Name="BottomLeftArc"
-                                Canvas.Left="2"
-                                Canvas.Top="2"
-                                Height="96"
-                                Width="96"
-                                StartAngle="90"
-                                Stretch="None"
-                                Stroke="{TemplateBinding BorderBrush}"
-                                StrokeThickness="{TemplateBinding BorderThickness}"
-                                SweepAngle="80"
-                            />    
+                                  StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            
+                            <Arc x:Name="BottomLeftArc"
+                                 Canvas.Left="2"
+                                 Canvas.Top="2"
+                                 Height="96"
+                                 Width="96"
+                                 StartAngle="90"
+                                 Stretch="None"
+                                 Stroke="{TemplateBinding BorderBrush}"
+                                 StrokeThickness="{TemplateBinding BorderThickness}"
+                                 SweepAngle="80"/>    
+                            
                             <Line 
                                 x:Name="BottomLeftLine"
                                 StartPoint="50,97.5"
                                 EndPoint="100,97.5"
                                 Stroke="{TemplateBinding BorderBrush}"
-                                StrokeThickness="{TemplateBinding BorderThickness}"
-                            />
-                            
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
                             
                             <Arc
                                 x:Name="BottomRightArc"
@@ -117,22 +117,19 @@
                                 Stretch="None"
                                 Stroke="{TemplateBinding BorderBrush}"
                                 StrokeThickness="{TemplateBinding BorderThickness}"
-                                SweepAngle="80"
-                            /> 
+                                SweepAngle="80"/> 
+                            
                             <Line 
                                 x:Name="BottomRightLine"
                                 StartPoint="100,97.5"
                                 EndPoint="150,97.5"
                                 Stroke="{TemplateBinding BorderBrush}"
-                                StrokeThickness="{TemplateBinding BorderThickness}"
-                            />
-                            
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
                             <Line 
                                 StartPoint="10,50"
                                 EndPoint="190,50"
                                 Stroke="{TemplateBinding BorderBrush}"
-                                StrokeThickness="{TemplateBinding BorderThickness}"
-                            />
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
                             <Line 
                                 StartPoint="50,50"
                                 EndPoint="50,90" 
@@ -143,29 +140,42 @@
                                 EndPoint="100,80" 
                                 Stroke="{TemplateBinding BorderBrush}"
                                 StrokeThickness="{TemplateBinding BorderThickness}"/>
-                           
                             <Line 
                                 StartPoint="150,50"
                                 EndPoint="150,90" 
                                 Stroke="{TemplateBinding BorderBrush}"
                                 StrokeThickness="{TemplateBinding BorderThickness}"/>
                             
-                         <!--   <Line x:Name="TopRightProgressLine"
-                                  StartPoint="100,2.5"
-                                  EndPoint="150,2.5"
+                             <Line x:Name="TopLeftProgressLine" 
+                                  StartPoint="100,2.5" 
+                                  EndPoint="{TemplateBinding TopLeftProgressLinePoint}" 
                                   Stroke="{TemplateBinding BorderBrush}"
-                                  StrokeThickness="{TemplateBinding BorderThickness}"/>
+                                  StrokeThickness="5"/> 
+                            
+                            <Arc x:Name="TopLeftProgressArc"
+                                 Height="100"
+                                 StartAngle="-90"
+                                 Stretch="None"
+                                 StrokeThickness="5"
+                                 SweepAngle="{TemplateBinding TopLeftProgressAngle}"
+                                 Width="100"/>
+                            
+                            <Line x:Name="TopRightProgressLine"
+                                  StartPoint="100,2.5" 
+                                  EndPoint="{TemplateBinding TopRightProgressLinePoint}"  
+                                  Stroke="{TemplateBinding BorderBrush}"
+                                  StrokeThickness="5" />
+                            
                             <Arc x:Name="TopRightProgressArc"
                                  Canvas.Left="100"
-                                 Canvas.Top="1.5"
                                  Height="100"
-                                 StartAngle="271"
+                                 StartAngle="270"
                                  Stretch="None"
-                                 Stroke="{TemplateBinding BorderBrush}"
-                                 StrokeThickness="{TemplateBinding BorderThickness}"
-                                 SweepAngle="77"
-                                 Width="99"
-                                 /> -->
+                                 StrokeThickness="5"
+                                 SweepAngle="{TemplateBinding TopRightProgressAngle}"
+                                 Width="100"/>
+                            
+                            
                         </Canvas> 
                         
                         <Grid  RowDefinitions="35,10,8,20,10" ColumnDefinitions="*,5,*,5,*,5,*">
@@ -181,9 +191,9 @@
                                 Text="{TemplateBinding Title}"/>
                             <TextBlock 
                                 x:Name="BottomStatusText"
-                                Grid.Row="4" 
-                                Grid.ColumnSpan="3" 
-                                Grid.Column="2" 
+                                Grid.Row="4"
+                                Grid.ColumnSpan="3"
+                                Grid.Column="2"
                                 HorizontalAlignment="Center"
                                 Margin="0,9,0,0"
                                 VerticalAlignment="Bottom" 
@@ -192,21 +202,20 @@
                             <TextBlock 
                                 x:Name="LeftTopTextBlock"
                                 FontWeight="Bold" 
-                                Grid.Row="0" 
-                                Grid.ColumnSpan="3" 
-                                Grid.Column="0" 
+                                Grid.Row="0"
+                                Grid.ColumnSpan="3"
+                                Grid.Column="0"
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Bottom" 
                                 Text="{TemplateBinding LeftTopText}"/>
                             <TextBlock 
                                 Foreground="{StaticResource IndicatorTextBrush}"
-                                Grid.Row="1" 
-                                FontSize="8" 
-                                Grid.ColumnSpan="3" 
-                                Grid.Column="0" 
+                                Grid.Row="1"
+                                FontSize="8"
+                                Grid.ColumnSpan="3"
+                                Grid.Column="0"
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Bottom" Text="{TemplateBinding LeftTopTitle}"/>
-                            
                             <TextBlock 
                                 x:Name="LeftBottomLeftTextBlock"
                                 Grid.Row="3" Grid.Column="0" 
@@ -223,7 +232,6 @@
                                 HorizontalAlignment="Right" 
                                 VerticalAlignment="Top" 
                                 Text="{TemplateBinding LeftBottomLeftTitle}"/>
-                            
                             <TextBlock 
                                 x:Name="LeftBottomRightTextBlock"
                                 Margin="2,0,0,0" 
@@ -242,8 +250,6 @@
                                 HorizontalAlignment="Left" 
                                 VerticalAlignment="Top" 
                                 Text="{TemplateBinding LeftBottomRightTitle}"/>
-                            
-                            
                             <TextBlock 
                                 x:Name="RightTopTextBlock"
                                 FontWeight="Bold" 
@@ -262,7 +268,6 @@
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Bottom" 
                                 Text="{TemplateBinding RightTopTitle}"/>
-                            
                             <TextBlock 
                                 x:Name="RightBottomLeftTextBlock"
                                 Margin="0,0,2,0" 
@@ -281,7 +286,6 @@
                                 HorizontalAlignment="Right" 
                                 VerticalAlignment="Top" 
                                 Text="{TemplateBinding RightBottomLeftTitle}"/>
-                            
                             <TextBlock 
                                 x:Name="RightBottomRightTextBlock"
                                 Margin="3,0,0,0"
@@ -305,6 +309,64 @@
                 </Viewbox>
             </ControlTemplate>
         </Setter>
+    </Style>
+    
+    <!-- Right top Arc -->
+
+    <Style Selector="controls|DoubleCircular3Indicator:rt-critical /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rt-warning /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rt-success /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rt-unknown /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+    <!-- Top right progress line-->
+    
+    <Style Selector="controls|DoubleCircular3Indicator:rt-unknown /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rt-critical /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rt-warning /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rt-success /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    
+    <!-- Left top progress arc-->
+    
+    <Style Selector="controls|DoubleCircular3Indicator:lt-warning /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:lt-critical /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:lt-success /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:lt-unknown /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+    <Style Selector="controls|DoubleCircular3Indicator:lt-unknown /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:lt-critical /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:lt-warning /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:lt-success /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
     </Style>
     
     <!-- TopLeft Text Block -->
@@ -571,7 +633,6 @@
             </Animation>
         </Style.Animations>
     </Style>
-    
     
     <!-- Top Right Progress Line-->
     
