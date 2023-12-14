@@ -326,6 +326,19 @@
         <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
     </Style>
     
+    <Style Selector="controls|DoubleCircular3Indicator:rtp-critical /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rtp-warning /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rtp-success /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rtp-unknown /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
     <!-- Top right progress line-->
     
     <Style Selector="controls|DoubleCircular3Indicator:rt-unknown /template/ Line#TopRightProgressLine">
@@ -338,6 +351,19 @@
         <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
     </Style>
     <Style Selector="controls|DoubleCircular3Indicator:rt-success /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    
+    <Style Selector="controls|DoubleCircular3Indicator:rtp-unknown /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rtp-critical /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rtp-warning /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:rtp-success /template/ Line#TopRightProgressLine">
         <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
     </Style>
     
@@ -356,6 +382,21 @@
         <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
     </Style>
     
+    <Style Selector="controls|DoubleCircular3Indicator:ltp-warning /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:ltp-critical /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:ltp-success /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:ltp-unknown /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+    <!-- Left top progress line -->
+    
     <Style Selector="controls|DoubleCircular3Indicator:lt-unknown /template/ Line#TopLeftProgressLine">
         <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
     </Style>
@@ -366,6 +407,19 @@
         <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
     </Style>
     <Style Selector="controls|DoubleCircular3Indicator:lt-success /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    
+    <Style Selector="controls|DoubleCircular3Indicator:ltp-unknown /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:ltp-critical /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:ltp-warning /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="controls|DoubleCircular3Indicator:ltp-success /template/ Line#TopLeftProgressLine">
         <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
     </Style>
     
