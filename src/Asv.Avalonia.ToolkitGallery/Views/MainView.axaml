@@ -34,20 +34,35 @@
                 LeftTitle="DDM, %"
                 />
             <toolkit:DoubleCircular3Indicator 
-               
+                LeftTopStatus="Success"
+                TopLeftStatus="{Binding LeftTopStatus}"
+                TopLeftProgressValue="{Binding DoubleLeftTopProgress}"
+                TopLeftProgressLinePoint = "{Binding PointDoubleLeftTopLineEndPoint}"
+                
+                RightTopStatus="Critical"
+                TopRightProgressLinePoint="{Binding PointDoubleRightTopLineEndPoint}"
+                TopRightProgressValue="{Binding DoubleRightTopProgress}"
+                TopRightStatus="{Binding RightTopStatus}"
+                
                 Title="CRS \ CLR"
-                LeftTopText="-90.0"
+                LeftTopText="{Binding DoubleLeftTopText}"
                 LeftTopTitle="CLR Power, dBm"
                 LeftBottomLeftText="+40.0"
                 LeftBottomLeftTitle="DDM,%"
+                LeftBottomLeftStatus="Warning"
                 LeftBottomRightText="-80.8"
                 LeftBottomRightTitle="SDM,%"
-                RightTopText="-110.0"
+                LeftBottomRightStatus="Success"
+                RightTopText="{Binding DoubleRightTopText}"
                 RightTopTitle="CRS Power, dBm"
                 RightBottomLeftText="+40.0"
                 RightBottomLeftTitle="DDM,%"
+                RightBottomLeftStatus="Success"
                 RightBottomRightText="-80.8"
                 RightBottomRightTitle="SDM,%"
+                RightBottomRightStatus="Warning"
+                
+                BottomStatus="Warning"
                 BottomStatusText="Warning"
             
             />
@@ -70,6 +85,7 @@
                     LeftText="-10.00"
                     LeftTitle="DDM, %"
             
+                    
                 />
                 <toolkit:Circular3Indicator
                     Grid.Row="0" Grid.Column="1"
