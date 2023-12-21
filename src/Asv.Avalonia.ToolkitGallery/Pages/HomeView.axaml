@@ -2,12 +2,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:toolkit="clr-namespace:Asv.Avalonia.Toolkit;assembly=Asv.Avalonia.Toolkit"
-        xmlns:viewModels="clr-namespace:Asv.Avalonia.ToolkitGallery.ViewModels"
         xmlns:controls="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
+        xmlns:pages="clr-namespace:Asv.Avalonia.ToolkitGallery.Pages"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="550"
         x:Class="Asv.Avalonia.ToolkitGallery.Pages.HomeView"
-        x:DataType="viewModels:MeasureControlsViewModel"
+        x:DataType="pages:HomeViewModel"
          Background="#343D46">
     <Grid>
         <Grid.RowDefinitions>
@@ -67,39 +66,6 @@
         </StackPanel>
         
         <Image Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="150" Margin="0,40,0,0" Source="../Assets/drones.png" ></Image>
-        <toolkit:DoubleCircular3Indicator Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" Margin="0,0,50,0" Grid.Column="1" Grid.ColumnSpan="2" Height="200" 
-            LeftTopStatus="Success"
-            TopLeftStatus="Success"
-            TopLeftProgressLinePoint = "{Binding PointDoubleLeftTopLineEndPoint}"
-            TopLeftProgressValue="60"
-           
-                
-            RightTopStatus="Critical"
-            TopRightProgressLinePoint="{Binding PointDoubleRightTopLineEndPoint}"
-            TopRightProgressValue="100"
-            TopRightStatus="Critical"
-                
-            Title="CRS \ CLR"
-            LeftTopText="100,00"
-            LeftTopTitle="CLR Power, dBm"
-            LeftBottomLeftText="+40.0"
-            LeftBottomLeftTitle="DDM,%"
-            LeftBottomLeftStatus="Warning"
-            LeftBottomRightText="-80.8"
-            LeftBottomRightTitle="SDM,%"
-            LeftBottomRightStatus="Success"
-            RightTopText="-90"
-            RightTopTitle="CRS Power, dBm"
-            RightBottomLeftText="+40.0"
-            RightBottomLeftTitle="DDM,%"
-            RightBottomLeftStatus="Success"
-            RightBottomRightText="-80.8"
-            RightBottomRightTitle="SDM,%"
-            RightBottomRightStatus="Warning"
-                
-            BottomStatus="Warning"
-            BottomStatusText="Warning"
-            
-        />
+      
     </Grid>
 </UserControl>

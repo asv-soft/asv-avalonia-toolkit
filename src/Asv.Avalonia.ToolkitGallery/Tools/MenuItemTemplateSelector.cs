@@ -1,23 +1,24 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using Avalonia.Data;
 using FluentAvalonia.UI.Controls;
 using Asv.Avalonia.ToolkitGallery.Models;
+using Asv.Avalonia.ToolkitGallery.ViewModels;
 
 namespace Asv.Avalonia.ToolkitGallery.Tools;
 
 public class MenuItemTemplateSelector : DataTemplateSelector
     {
-        private static readonly FuncDataTemplate<IMenuItem> SimpleItem;
+        private static readonly FuncDataTemplate<IShellMenuItem> SimpleItem;
 
         static MenuItemTemplateSelector()
         {
-            SimpleItem = new FuncDataTemplate<IMenuItem>((value, namescope) =>
+            SimpleItem = new FuncDataTemplate<IShellMenuItem>((value, namescope) =>
                 new NavigationViewItem
                 {
                     //[!NavigationViewItem.InfoBadgeProperty] = new Binding(nameof(IShellMenuItem.InfoBadge)),
-                    [!NavigationViewItem.IconSourceProperty] = new Binding(nameof(IMenuItem.Icon)),
-                    [!ContentControl.ContentProperty] = new Binding(nameof(IMenuItem.Name)),
+                    [!NavigationViewItem.IconSourceProperty] = new Binding(nameof(IShellMenuItem.Icon)),
+                    [!ContentControl.ContentProperty] = new Binding(nameof(IShellMenuItem.Name)),
                     //[!NavigationViewItem.MenuItemsSourceProperty] = new Binding(nameof(IShellMenuItem.Items)),
                     //[!ListBoxItem.IsSelectedProperty] = new Binding(nameof(IShellMenuItem.IsSelected)),
                     //[!Visual.IsVisibleProperty] = new Binding(nameof(IShellMenuItem.IsVisible), BindingMode.TwoWay),

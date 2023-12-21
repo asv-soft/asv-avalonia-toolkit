@@ -9,18 +9,23 @@ using ReactiveUI.Fody.Helpers;
 
 namespace Asv.Avalonia.ToolkitGallery.ViewModels;
 
-public class MeasureControlsViewModel:ViewModelBase
+public class MeasureControlsViewModel: ViewModelBase
 {
      private IDisposable _recordTimer;
 
-    public MeasureControlsViewModel()
+     
+     public const string UriString = $"asv:measure";
+     public static readonly Uri Uri = new(UriString);
+     
+    public MeasureControlsViewModel():base(Uri)
     {
+        PointDoubleLeftTopLineEndPoint = new Point(100,2.5);
+        PointDoubleRightTopLineEndPoint = new Point(100,2.5);
         bool isProgressRun = false;
         Observable.Timer(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1))
             .Subscribe(_ =>
             {
-                PointDoubleLeftTopLineEndPoint = new Point(100,2.5);
-                PointDoubleRightTopLineEndPoint = new Point(100,2.5);
+               
                 TopText = (Random.Shared.NextDouble() * 100.0).ToString("000.00");
                 TopValue = Random.Shared.NextDouble();
                 if (_ % 3 == 0)

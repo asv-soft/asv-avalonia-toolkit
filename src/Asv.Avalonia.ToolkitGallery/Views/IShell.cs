@@ -1,10 +1,14 @@
-﻿namespace Asv.Avalonia.ToolkitGallery.Views
+﻿using Asv.Avalonia.ToolkitGallery.Models;
+using Asv.Avalonia.ToolkitGallery.ViewModels;
+
+namespace Asv.Avalonia.ToolkitGallery.Views
 {
     /// <summary>
     /// Main view interface
     /// </summary>
-    public interface IShell
+    public interface IShell : IViewModel
     {
-        IShell? CurrentPage { get; set; }
+        IShellPage? CurrentPage { get; set; }
+        
     }
 }

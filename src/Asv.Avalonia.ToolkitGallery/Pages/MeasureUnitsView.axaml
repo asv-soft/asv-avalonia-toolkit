@@ -4,10 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls = "clr-namespace:Asv.Avalonia.Toolkit;assembly=Asv.Avalonia.Toolkit"
              xmlns:ui = "clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
-             xmlns:vm = "clr-namespace:Asv.Avalonia.ToolkitGallery.ViewModels"
+             xmlns:pages="clr-namespace:Asv.Avalonia.ToolkitGallery.Pages"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Asv.Avalonia.ToolkitGallery.Pages.MeasureUnits"
-             x:DataType="vm:MeasureControlsViewModel" Background="#343D46">
+             x:Class="Asv.Avalonia.ToolkitGallery.Pages.MeasureUnitsView"
+             x:DataType="pages:MeasureUnitsViewModel" Background="#343D46">
    <UserControl.Styles>
        <Styles>
            <Style Selector="TextBlock">
@@ -28,7 +28,7 @@
         </Grid.RowDefinitions>
         
         <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"  Spacing="5">
-        <TextBlock Text="Measure units controls template" FontSize="26" />
+        <TextBlock Text="Measuring units controls template" FontSize="26" />
             <TextBlock Text="Example of our own controls to customize Asv.Afis."/>
     </StackPanel>
         <StackPanel HorizontalAlignment="Center" Spacing="10"  Grid.Row="1" >
@@ -88,7 +88,7 @@
                                               BottomStatusText="Warning"/>
         </StackPanel>
         <ui:SettingsExpander Description="Xaml example" Margin="20"  Grid.Row="2">
-            <TextBlock Foreground="Black"  TextWrapping="Wrap">
+            <TextBlock Foreground="White"  TextWrapping="Wrap">
                  <x:String xml:space="preserve">
  &lt;controls:Circular3Indicator
             Title="Power"
@@ -112,7 +112,7 @@
             </TextBlock>
         </ui:SettingsExpander>
         <ui:SettingsExpander Description="Xaml example" Margin="20" Background="Aquamarine" Grid.Row="2" Grid.Column="1">
-            <TextBlock Foreground="Black" TextWrapping="Wrap">
+            <TextBlock Foreground="White" TextWrapping="Wrap">
                 <x:String  xml:space="preserve">
  &lt;controls:DoubleCircular3Indicator 
                             VerticalAlignment="Center" 
