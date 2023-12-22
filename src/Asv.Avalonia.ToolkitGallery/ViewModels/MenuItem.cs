@@ -9,31 +9,22 @@ namespace Asv.Avalonia.ToolkitGallery.ViewModels;
 
 public class MenuItem: ViewModelBase, IShellMenuItem
 {
-    
-    
     public MenuItem(Uri uri):base(uri)
     {
         
     }
-    
     public InfoBadge InfoBadge { get; set; }
     public IShellMenuItem? Parent { get; set; }
-
     [Reactive]
     public string Name { get; set; }
     [Reactive]
      public Uri NavigateTo { get; set; }
     [Reactive]
     public string Icon { get; set; }
-
-    public ShellMenuPosition Position { get; }
-    public ShellMenuItemType Type { get; }
     public int Order { get; }
     public ReadOnlyObservableCollection<IShellMenuItem>? Items { get; }
     public bool IsSelected { get; set; }
     public bool IsVisible { get; set; }
-
-
     public event PropertyChangedEventHandler? PropertyChanged;
     public event PropertyChangingEventHandler? PropertyChanging;
     public void RaisePropertyChanging(PropertyChangingEventArgs args)

@@ -9,6 +9,5 @@ namespace Asv.Avalonia.ToolkitGallery.Views
     public interface IShell : IViewModel
     {
         IShellPage? CurrentPage { get; set; }
-        
     }
 }

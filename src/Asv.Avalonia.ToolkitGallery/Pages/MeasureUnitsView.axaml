@@ -26,7 +26,6 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        
         <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"  Spacing="5">
         <TextBlock Text="Measuring units controls template" FontSize="26" />
             <TextBlock Text="Example of our own controls to customize Asv.Afis."/>
@@ -41,15 +40,12 @@
                 TopMin="-90" 
                 TopMax="10" 
                 TopValue="-50" 
-            
                 RightStatus="Warning"
                 RightText="80.00"
                 RightTitle="SDM, %"
-            
                 LeftStatus="Success"
                 LeftText="-10.00"
                 LeftTitle="DDM, %"
-            
                 Width="100" Height="100" />
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Spacing="10">
@@ -59,13 +55,10 @@
                                               TopLeftStatus="Success"
                                               TopLeftProgressLinePoint = "{Binding PointDoubleLeftTopLineEndPoint}"
                                               TopLeftProgressValue="60"
-           
-                
                                               RightTopStatus="Critical"
                                               TopRightProgressLinePoint="{Binding PointDoubleRightTopLineEndPoint}"
                                               TopRightProgressValue="100"
                                               TopRightStatus="Critical"
-                
                                               Title="CRS \ CLR"
                                               LeftTopText="100,00"
                                               LeftTopTitle="CLR Power, dBm"
@@ -83,12 +76,11 @@
                                               RightBottomRightText="-80.8"
                                               RightBottomRightTitle="SDM,%"
                                               RightBottomRightStatus="Warning"
-                
                                               BottomStatus="Warning"
                                               BottomStatusText="Warning"/>
         </StackPanel>
-        <ui:SettingsExpander Description="Xaml example" Margin="20"  Grid.Row="2">
-            <TextBlock Foreground="White"  TextWrapping="Wrap">
+        <ui:SettingsExpander Description="XAML example" Margin="20"  Grid.Row="2">
+            <TextBox IsReadOnly="True" Background="Transparent" Foreground="#A7ADBA"  TextWrapping="Wrap">
                  <x:String xml:space="preserve">
  &lt;controls:Circular3Indicator
             Title="Power"
@@ -98,21 +90,18 @@
             TopMin="-90" 
             TopMax="10" 
             TopValue="-50" 
-            
             RightStatus="Warning"
             RightText="80.00"
             RightTitle="SDM, %"
-            
             LeftStatus="Success"
             LeftText="-10.00"
             LeftTitle="DDM, %"
-            
             Width="100" Height="100" />
                 </x:String>
-            </TextBlock>
+            </TextBox>
         </ui:SettingsExpander>
-        <ui:SettingsExpander Description="Xaml example" Margin="20" Background="Aquamarine" Grid.Row="2" Grid.Column="1">
-            <TextBlock Foreground="White" TextWrapping="Wrap">
+        <ui:SettingsExpander Description="XAML example" Margin="20" Grid.Row="2" Grid.Column="1">
+            <TextBox IsReadOnly="True" Background="Transparent" Foreground="#A7ADBA" TextWrapping="Wrap">
                 <x:String  xml:space="preserve">
  &lt;controls:DoubleCircular3Indicator 
                             VerticalAlignment="Center" 
@@ -145,7 +134,7 @@
                             BottomStatus="Warning"
                             BottomStatusText="Warning"/&gt;
     </x:String>
-            </TextBlock>
+            </TextBox>
         </ui:SettingsExpander>
     </Grid>
    </ScrollViewer>

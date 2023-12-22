@@ -16,7 +16,6 @@ namespace Asv.Avalonia.ToolkitGallery.ViewModels
         where TView : IViewModel
     {
         private readonly SourceCache<TView, Uri> _sourceCache;
-
         protected ViewModelProviderBase()
         {
             _sourceCache = new SourceCache<TView, Uri>(model => model.Id)
@@ -25,13 +24,12 @@ namespace Asv.Avalonia.ToolkitGallery.ViewModels
         protected ISourceCache<TView, Uri> Source => _sourceCache;
         public virtual IObservable<IChangeSet<TView, Uri>> Items => Source.Connect().DisposeMany();
     }
-
-
+    
     public interface IViewModel:IReactiveObject, IDisposable
     {
         Uri Id { get; }
     }
-
+    
     public class ViewModelBase : DisposableReactiveObject, IViewModel
     {
         protected ViewModelBase(Uri id)

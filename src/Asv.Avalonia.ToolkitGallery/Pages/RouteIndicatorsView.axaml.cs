@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace Asv.Avalonia.ToolkitGallery.Pages;
 
-public partial class IndicationControlsView : UserControl
+public partial class RouteIndicatorsView : UserControl
 {
-    public IndicationControlsView()
+    public RouteIndicatorsView()
     {
         InitializeComponent();
     }

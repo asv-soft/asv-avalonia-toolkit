@@ -16,17 +16,10 @@ public class MenuItemTemplateSelector : DataTemplateSelector
             SimpleItem = new FuncDataTemplate<IShellMenuItem>((value, namescope) =>
                 new NavigationViewItem
                 {
-                    //[!NavigationViewItem.InfoBadgeProperty] = new Binding(nameof(IShellMenuItem.InfoBadge)),
                     [!NavigationViewItem.IconSourceProperty] = new Binding(nameof(IShellMenuItem.Icon)),
                     [!ContentControl.ContentProperty] = new Binding(nameof(IShellMenuItem.Name)),
-                    //[!NavigationViewItem.MenuItemsSourceProperty] = new Binding(nameof(IShellMenuItem.Items)),
-                    //[!ListBoxItem.IsSelectedProperty] = new Binding(nameof(IShellMenuItem.IsSelected)),
-                    //[!Visual.IsVisibleProperty] = new Binding(nameof(IShellMenuItem.IsVisible), BindingMode.TwoWay),
                     SelectsOnInvoked = true,
-                    /*[!NavigationViewItem.SelectsOnInvokedProperty] =  new Binding(nameof(IShellMenuItem.NavigateTo))
-                    {
-                        Converter = ObjectConverters.IsNotNull
-                    }*/
+                  
                 });
         }
 

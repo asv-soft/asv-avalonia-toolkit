@@ -8,17 +8,14 @@ using Material.Icons;
 
 namespace Asv.Avalonia.ToolkitGallery.Pages;
 
-public class HomeViewModel: ViewModelBase, IShellPage
+public class HomeViewModel: ViewModelBase,IShellPage
 {
-    public const string UriString = $"{MainViewModel.UriString}.home-page";
-    public static readonly Uri Uri = new(UriString);
-    
     public HomeViewModel():base(Uri)
     {
-        Icon = MaterialIconKind.Home;
-        Title = "Home";
+       
     }
-
     public MaterialIconKind Icon { get; }
     public string Title { get; }
+    public const string UriString = $"{MainViewModel.UriString}.home-page";
+    public static readonly Uri Uri = new(UriString);
 }

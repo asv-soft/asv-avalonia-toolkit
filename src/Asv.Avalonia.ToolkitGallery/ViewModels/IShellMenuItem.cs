@@ -11,27 +11,11 @@ namespace Asv.Avalonia.ToolkitGallery.ViewModels
         string Name { get; set; }
         Uri NavigateTo { get; set; }
         string Icon { get; }
-        ShellMenuPosition Position { get; }
-        ShellMenuItemType Type { get; }
         int Order { get; }
         ReadOnlyObservableCollection<IShellMenuItem>? Items { get; }
         bool IsSelected { get; set; }
         bool IsVisible { get; set; }
     }
-
-    public enum ShellMenuPosition
-    {
-        Top,
-        Bottom,
-    }
-
-    public enum ShellMenuItemType
-    {
-        Header,
-        Group,
-        PageNavigation
-    }
-    
     
     public interface IShellMenuItem<in TTarget>:IShellMenuItem
     {

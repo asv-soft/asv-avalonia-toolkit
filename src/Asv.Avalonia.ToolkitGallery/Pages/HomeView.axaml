@@ -8,6 +8,13 @@
         x:Class="Asv.Avalonia.ToolkitGallery.Pages.HomeView"
         x:DataType="pages:HomeViewModel"
          Background="#343D46">
+    <UserControl.Styles>
+        <Styles>
+            <Style Selector="TextBlock">
+                <Setter Property="Foreground" Value="#A7ADBA"></Setter>
+            </Style>
+        </Styles>
+    </UserControl.Styles>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
@@ -64,8 +71,7 @@
                 </Border>
             </controls:HyperlinkButton> 
         </StackPanel>
-        
         <Image Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="150" Margin="0,40,0,0" Source="../Assets/drones.png" ></Image>
-      
+      <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="18" Margin="20" Text="This is a gallery app for the Asv.Drones project. The examples provided here can be used to customize the application. You can follow the links if you are not yet familiar with the main project or look at additional plugins for it" TextWrapping="Wrap" ></TextBlock>
     </Grid>
 </UserControl>
