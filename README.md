@@ -1,6 +1,21 @@
-# asv-avalonia-toolkit
+# Introduction asv-avalonia-toolkit
 A set of advanced controls for Avalonia UI, used in the Asv.Drones application
 
+# How to use
+
+## Where can i get controls?
+Controls avaliable to use in Asv.drones solution. Using this, you can customize UI by your need's. 
+You can see implementation example on asv asv-avalonia-toolkit-gallery pages. 
+
+## Binding
+All contols have propetries that set value to different elements of controls such as progress bar, text, title, status(critical,succes,warning,unknown), etc...
+Controls can be binded from View, direct to ViewModel current fields that's sets values to controll that you change. 
+Example like this:
+,,,
+code
+,,,
+# Avaliable controls:
+Images of controls realized in asv-avalonia-toolkit.
 ## Circular indicator
 ![image](https://github.com/asv-soft/asv-avalonia-toolkit/assets/1770739/8e75af96-91e9-4d04-a533-099b369f4a72)
 
