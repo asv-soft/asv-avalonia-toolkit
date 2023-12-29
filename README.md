@@ -11,9 +11,9 @@ You can see implementation example on asv asv-avalonia-toolkit-gallery pages.
 All contols have propetries that set value to different elements of controls such as progress bar, text, title, status(critical,succes,warning,unknown), etc...
 Controls can be binded from View, direct to ViewModel current fields that's sets values to controll that you change. 
 Example like this:
-,,,
+'''
 code
-,,,
+'''
 # Avaliable controls:
 Images of controls realized in asv-avalonia-toolkit.
 ## Circular indicator
