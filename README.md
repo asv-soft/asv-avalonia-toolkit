@@ -20,7 +20,7 @@ public double ProgressValue { get; set; } /// we don't change exist property
 ### View
 ```bash
 <toolkit:circular3indicator
-TopProgress="{Binding ProgressValue}"> /// we set exist property to new control
+TopProgress="{Binding ProgressValue}"/> /// we set exist property to new control
 ...
 ```
 
