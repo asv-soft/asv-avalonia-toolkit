@@ -1,0 +1,77 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
+        xmlns:pages="clr-namespace:Asv.Avalonia.ToolkitGallery.Pages"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="550"
+        x:Class="Asv.Avalonia.ToolkitGallery.Pages.HomeView"
+        x:DataType="pages:HomeViewModel"
+         Background="#343D46">
+    <UserControl.Styles>
+        <Styles>
+            <Style Selector="TextBlock">
+                <Setter Property="Foreground" Value="#A7ADBA"></Setter>
+            </Style>
+        </Styles>
+    </UserControl.Styles>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.ColumnSpan="3" Text="Asv Avalonia ToolKitGallery" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="28"></TextBlock>
+        <StackPanel Grid.Row="1" 
+                    Spacing="20"
+                    Margin="40,50,0,0"
+                    Grid.RowSpan="3">
+            <controls:HyperlinkButton Background="Transparent" Height="155" Width="155" CornerRadius="30" NavigateUri="https://asv.me" Foreground="Black">
+                <Border Height="150"
+                        Width="150"
+                        CornerRadius="30"
+                        Background="#D9D9D9">
+                     <Canvas>
+                         <PathIcon Canvas.Top="30"
+                                   Canvas.Left="25"
+                                   Width="100"
+                                   Height="50"
+                                   Foreground="Black"
+                                   Data="M39.3,49.1c-2,5.8-3.2,12-3.6,18.5h17.2V49.1H39.3L39.3,49.1z M42.4,41.6h10.5V26.8C48.7,31,45.2,36,42.4,41.6L42.4,41.6z   M34.2,41.6c2.2-5.1,5-9.9,8.3-14.2c-8.5,2.7-15.8,7.8-21.1,14.2H34.2L34.2,41.6z M97,49.1l-15.2,0c1.8,5.8,2.9,12,3.2,18.5h17.6  C102.1,60.9,100.1,54.7,97,49.1L97,49.1z M77.5,67.6c-0.3-6.5-1.6-12.7-3.6-18.5H60.3v18.5H77.5L77.5,67.6z M70.8,41.6  C68.1,36,64.5,31,60.3,26.8v14.8H70.8L70.8,41.6z M79,41.6h12.8c-5.4-6.3-12.7-11.5-21.1-14.2C74,31.7,76.8,36.5,79,41.6L79,41.6z   M16.2,93.6l15.2,0c-1.8-5.8-2.9-12-3.2-18.5H10.6C11.2,81.8,13.1,88.1,16.2,93.6L16.2,93.6z M35.7,75.1c0.3,6.5,1.6,12.7,3.6,18.5  h13.6V75.1H35.7L35.7,75.1z M42.4,101.1c2.8,5.6,6.4,10.6,10.5,14.8v-14.8H42.4L42.4,101.1z M34.2,101.1H21.3  c5.4,6.3,12.7,11.5,21.1,14.2C39.2,111.1,36.4,106.3,34.2,101.1L34.2,101.1z M81.8,93.6l15.2,0c3.1-5.6,5-11.8,5.6-18.5H85  C84.7,81.6,83.6,87.8,81.8,93.6L81.8,93.6z M73.9,93.6c2-5.8,3.2-12,3.6-18.5H60.3v18.5H73.9L73.9,93.6z M70.8,101.1H60.3v14.8  C64.5,111.8,68.1,106.8,70.8,101.1L70.8,101.1z M79,101.1c-2.2,5.1-5,9.9-8.3,14.2c8.5-2.7,15.8-7.8,21.1-14.2H79L79,101.1z   M31.4,49.1l-15.2,0c-3.1,5.6-5,11.9-5.6,18.5h17.6C28.6,61.2,29.7,54.9,31.4,49.1L31.4,49.1z M56.6,125C27,125,3,101,3,71.4  c0-29.6,24-53.6,53.6-53.6c29.6,0,53.6,24,53.6,53.6C110.2,101,86.2,125,56.6,125L56.6,125z" ></PathIcon> 
+                         <Border Canvas.Top="100" 
+                                 Height="51"
+                                 Width="150"
+                                 CornerRadius="0,0,30,30"
+                                 Background="#4F5B66"
+                                 VerticalAlignment="Bottom" 
+                                 HorizontalAlignment="Center"> 
+                             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Project Website"></TextBlock>    
+                        </Border> 
+                     </Canvas> 
+                </Border>
+            </controls:HyperlinkButton> 
+            
+             <controls:HyperlinkButton Foreground="Black" NavigateUri="https://github.com/asv-soft" Background="Transparent" Height="155" Width="155" CornerRadius="30">
+                 <Border Height="150"
+                         Width="150"
+                         CornerRadius="30"
+                         Background="#D9D9D9">
+                     <Canvas>
+                         <PathIcon Canvas.Top="30" Canvas.Left="25" Width="100" Height="50" Foreground="Black" Data="M41.0098 0.61026C18.4186 0.61026 0.120728 19.0646 0.120728 41.8489C0.120728 60.097 11.8252 75.51 28.0787 80.9741C30.1231 81.335 30.8898 80.0978 30.8898 79.0153C30.8898 78.0359 30.8387 74.7883 30.8387 71.3346C20.5653 73.2419 17.9075 68.8087 17.0897 66.489C16.6297 65.3034 14.6364 61.6435 12.8986 60.6641C11.4675 59.8908 9.423 57.9836 12.8475 57.932C16.0675 57.8805 18.3675 60.9218 19.1342 62.159C22.8142 68.3963 28.692 66.6437 31.0431 65.5612C31.4009 62.8807 32.4742 61.0765 33.6498 60.0455C24.552 59.0145 15.0453 55.4577 15.0453 39.6839C15.0453 35.1992 16.6297 31.4877 19.2364 28.601C18.8275 27.57 17.3964 23.3431 19.6453 17.6728C19.6453 17.6728 23.0697 16.5902 30.8898 21.8997C34.1609 20.9719 37.6365 20.5079 41.1121 20.5079C44.5877 20.5079 48.0632 20.9719 51.3344 21.8997C59.1544 16.5387 62.5789 17.6728 62.5789 17.6728C64.8278 23.3431 63.3966 27.57 62.9878 28.601C65.5944 31.4877 67.1789 35.1476 67.1789 39.6839C67.1789 55.5092 57.6211 59.0145 48.5232 60.0455C50.0055 61.3342 51.2832 63.8085 51.2832 67.6747C51.2832 73.1903 51.2321 77.6235 51.2321 79.0153C51.2321 80.0978 51.9988 81.3865 54.0433 80.9741C62.1609 78.2111 69.2149 72.9498 74.2119 65.9311C79.209 58.9123 81.8976 50.4897 81.899 41.8489C81.899 19.0646 63.6011 0.61026 41.0098 0.61026Z" ></PathIcon> 
+                         <Border Canvas.Top="100" Height="51" Width="150" CornerRadius="0,0,30,30" Background="#4F5B66" VerticalAlignment="Bottom" HorizontalAlignment="Center"> 
+                             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Project GitHub"></TextBlock>    
+                        </Border> 
+                     </Canvas> 
+                </Border>
+            </controls:HyperlinkButton> 
+        </StackPanel>
+        <Image Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="150" Margin="0,40,0,0" Source="../Assets/drones.png" ></Image>
+      <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="18" Margin="20" Text="This is a gallery app for the Asv.Drones project. The examples provided here can be used to customize the application. You can follow the links if you are not yet familiar with the main project or look at additional plugins for it" TextWrapping="Wrap" ></TextBlock>
+    </Grid>
+</UserControl>
