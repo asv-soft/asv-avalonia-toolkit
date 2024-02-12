@@ -7,6 +7,7 @@ using Asv.Avalonia.ToolkitGallery.Models;
 using Asv.Avalonia.ToolkitGallery.ViewModels;
 using Asv.Common;
 using Avalonia;
+using Avalonia.Controls;
 using Material.Icons;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
@@ -34,12 +35,12 @@ public class DateTimeViewModel: ViewModelBase,IShellPage
                  TimeUserValue = SelectedDateTimeValue.ToString();
              })
              .DisposeItWith(Disposable);
-         SelectionChange = ReactiveCommand.Create(() =>
-         {
-             TimeUserValue = SelectedDateTimeValue.ToString();
-         });
+         
     }
-    public ReactiveCommand<Unit,Unit> SelectionChange { get; set; }
+
+    
+    
+    
     [Reactive] 
     public DateTimeOffset SelectedDateTimeValue { get; set; }
     [Reactive]

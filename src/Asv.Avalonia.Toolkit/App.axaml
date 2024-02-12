@@ -87,4 +87,6 @@
     <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Record/RecordIndicator.axaml"/>
     <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Route/RouteIndicator.axaml"/>
     <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Battery/BatteryIndicator.axaml"/>
+    <StyleInclude Source="avares://Asv.Avalonia.Toolkit/DateTime/DatePickerControl.axaml"></StyleInclude>
+    <StyleInclude Source="avares://Asv.Avalonia.Toolkit/DateTime/TimePickerControl.axaml"></StyleInclude>
 </Styles>

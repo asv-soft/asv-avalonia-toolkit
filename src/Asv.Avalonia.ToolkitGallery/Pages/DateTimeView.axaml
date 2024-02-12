@@ -18,14 +18,14 @@
                    <Border Width="220"  Margin="0,40,0,0" BorderThickness="0,2,0,2" BorderBrush="{StaticResource IndicatorSuccessBrush}" >
                        <StackPanel Orientation="Horizontal">
                            <TextBlock  Text="Selected Date: " FontSize="18" ></TextBlock>
-                           <TextBlock Text="{CompiledBinding TimeUserValue,Mode=TwoWay}" FontSize="18" FontWeight="Bold"></TextBlock>
-                           <Button Content="Refresh" Command="{Binding SelectionChange}"></Button>
+                           <TextBlock  FontSize="18" FontWeight="Bold"></TextBlock>
+                           <TextBlock ></TextBlock>
                        </StackPanel>
                    </Border>
               </StackPanel>
            <StackPanel Grid.Row="1" Spacing="10" HorizontalAlignment="Center" Width="250" >
                <TextBlock HorizontalAlignment="Center" Text="Time picker controller:"/>
-               <toolkit:TimePickerControl SelectedTimeValue="{CompiledBinding SelectedDateTimeValue,Mode=TwoWay}"/>
+               <toolkit:TimePickerControl />
                <Expander Header="XAML Example">
                    <TextBox TextWrapping="Wrap" IsReadOnly="True">
                        <x:String xml:space="preserve">&lt;toolkit:TimePickerControl/></x:String>
@@ -34,8 +34,7 @@
            </StackPanel>
            <StackPanel Grid.Row="1" Grid.Column="1" Spacing="10" Width="250" HorizontalAlignment="Center">
                <TextBlock Text="Date picker controller:" HorizontalAlignment="Center"/>
-                <toolkit:DatePickerControl DateValue="{CompiledBinding SelectedDateTimeValue,Mode=TwoWay}" 
-                                           />
+                <toolkit:DatePickerControl Name="DatePickerControl" DateValue="{CompiledBinding SelectedDateTimeValue.Date}" />
                <Expander Header="XAML Example">
                    <TextBox TextWrapping="Wrap" IsReadOnly="True">
                        <x:String xml:space="preserve">&lt;toolkit:DatePickerControl/></x:String>
