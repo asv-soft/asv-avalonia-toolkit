@@ -1,0 +1,48 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:toolkit="clr-namespace:Asv.Avalonia.Toolkit.DateTime;assembly=Asv.Avalonia.Toolkit"
+             xmlns:pages="clr-namespace:Asv.Avalonia.ToolkitGallery.Pages"
+             x:Class="Asv.Avalonia.ToolkitGallery.Pages.DateTimeView"
+             x:DataType="pages:DateTimeViewModel" >
+    <Design.DataContext>
+        <pages:DateTimeViewModel></pages:DateTimeViewModel>
+    </Design.DataContext>
+    <ScrollViewer>
+       <Grid RowDefinitions="*,*" ColumnDefinitions="*,*">
+           <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Spacing="10">
+               <TextBlock Text="Date and Time picker controls" FontSize="28"/>
+               <TextBlock HorizontalAlignment="Center" Text="More space-effective controls"></TextBlock>
+                   <Border Width="220"  Margin="0,40,0,0" BorderThickness="0,2,0,2" BorderBrush="{StaticResource IndicatorSuccessBrush}" >
+                       <StackPanel Orientation="Horizontal">
+                           <TextBlock  Text="Selected Date: " FontSize="18" ></TextBlock>
+                           <TextBlock Text="{CompiledBinding TimeUserValue,Mode=TwoWay}" FontSize="18" FontWeight="Bold"></TextBlock>
+                           <Button Content="Refresh" Command="{Binding SelectionChange}"></Button>
+                       </StackPanel>
+                   </Border>
+              </StackPanel>
+           <StackPanel Grid.Row="1" Spacing="10" HorizontalAlignment="Center" Width="250" >
+               <TextBlock HorizontalAlignment="Center" Text="Time picker controller:"/>
+               <toolkit:TimePickerControl SelectedTimeValue="{CompiledBinding SelectedDateTimeValue,Mode=TwoWay}"/>
+               <Expander Header="XAML Example">
+                   <TextBox TextWrapping="Wrap" IsReadOnly="True">
+                       <x:String xml:space="preserve">&lt;toolkit:TimePickerControl/></x:String>
+                   </TextBox>
+               </Expander>
+           </StackPanel>
+           <StackPanel Grid.Row="1" Grid.Column="1" Spacing="10" Width="250" HorizontalAlignment="Center">
+               <TextBlock Text="Date picker controller:" HorizontalAlignment="Center"/>
+                <toolkit:DatePickerControl DateValue="{CompiledBinding SelectedDateTimeValue,Mode=TwoWay}" 
+                                           />
+               <Expander Header="XAML Example">
+                   <TextBox TextWrapping="Wrap" IsReadOnly="True">
+                       <x:String xml:space="preserve">&lt;toolkit:DatePickerControl/></x:String>
+                   </TextBox>
+               </Expander>
+           </StackPanel>
+       </Grid>
+   </ScrollViewer>
+    
+</UserControl>

@@ -1,0 +1,45 @@
+<Styles xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:toolkit="using:Asv.Avalonia.Toolkit.DateTime">
+    
+    <Design.PreviewWith>
+        <Grid Height="200" Width="300" >
+            <toolkit:DatePickerControl ></toolkit:DatePickerControl>
+            
+           </Grid>
+    </Design.PreviewWith>
+    <Style Selector="toolkit|DatePickerControl" >
+       <Setter Property="Template">
+           <ControlTemplate>
+               <Border Height="50"
+                       Width="230"
+                       CornerRadius="30" 
+                       BorderThickness="3,3,3,3"
+                       BorderBrush="{StaticResource IndicatorSuccessBrush}">
+                   <StackPanel Orientation="Horizontal" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center">
+                       <PathIcon Margin="5,0,0,0"  Data="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z 
+                                        M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 
+                                        1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                       <ComboBox ItemsSource="{TemplateBinding DayList} " 
+                                 SelectedItem="{TemplateBinding DayValue}" />
+                       <ComboBox ItemsSource="{TemplateBinding MonthList} " 
+                                 SelectedItem="{TemplateBinding MonthValue}"/>
+                       <ComboBox Width="80" ItemsSource="{TemplateBinding YearList} " 
+                                 SelectedItem="{TemplateBinding YearValue}"/>
+                   </StackPanel>
+               </Border>
+       </ControlTemplate>
+    </Setter>
+   </Style>
+    <Style Selector="ComboBox">
+        <Setter Property="MaxDropDownHeight" Value="100"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="13"></Setter>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0,0,0,0"/>
+    </Style>
+</Styles>
