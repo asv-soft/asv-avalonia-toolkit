@@ -3,18 +3,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls = "clr-namespace:Asv.Avalonia.Toolkit;assembly=Asv.Avalonia.Toolkit"
-             xmlns:ui = "clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
              xmlns:pages="clr-namespace:Asv.Avalonia.ToolkitGallery.Pages"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Asv.Avalonia.ToolkitGallery.Pages.MeasureUnitsView"
-             x:DataType="pages:MeasureUnitsViewModel" Background="#343D46">
-   <UserControl.Styles>
-       <Styles>
-           <Style Selector="TextBlock">
-               <Setter Property="Foreground" Value="#A7ADBA"></Setter>
-           </Style>
-       </Styles>
-   </UserControl.Styles>
+             x:DataType="pages:MeasureUnitsViewModel">
     <ScrollViewer>
        <Grid>
         <Grid.ColumnDefinitions>
@@ -79,8 +71,8 @@
                                               BottomStatus="Warning"
                                               BottomStatusText="Warning"/>
         </StackPanel>
-        <ui:SettingsExpander Description="XAML example" Margin="20"  Grid.Row="2">
-            <TextBox IsReadOnly="True" Background="Transparent" Foreground="#A7ADBA"  TextWrapping="Wrap">
+        <Expander Header="XAML Example" Margin="20"  Grid.Row="2">
+            <TextBox IsReadOnly="True" Background="Transparent"  TextWrapping="Wrap">
                  <x:String xml:space="preserve">
  &lt;controls:Circular3Indicator
             Title="Power"
@@ -99,11 +91,11 @@
             Width="100" Height="100" />
                 </x:String>
             </TextBox>
-        </ui:SettingsExpander>
-        <ui:SettingsExpander Description="XAML example" Margin="20" Grid.Row="2" Grid.Column="1">
-            <TextBox IsReadOnly="True" Background="Transparent" Foreground="#A7ADBA" TextWrapping="Wrap">
+        </Expander>
+        <Expander Header="XAML example" Margin="20" Grid.Row="2" Grid.Column="1">
+            <TextBox IsReadOnly="True" Background="Transparent" TextWrapping="Wrap">
                 <x:String  xml:space="preserve">
- &lt;controls:DoubleCircular3Indicator 
+                            &lt;controls:DoubleCircular3Indicator 
                             VerticalAlignment="Center" 
                             Height="100" 
                             LeftTopStatus="Success"
@@ -133,9 +125,9 @@
                             RightBottomRightStatus="Warning"
                             BottomStatus="Warning"
                             BottomStatusText="Warning"/&gt;
-    </x:String>
+                </x:String>
             </TextBox>
-        </ui:SettingsExpander>
+        </Expander>
     </Grid>
    </ScrollViewer>
 </UserControl>

@@ -18,7 +18,7 @@ public class MeasureUnitsViewModel: ViewModelBase, IShellPage
     {
         PointDoubleLeftTopLineEndPoint = new Point(50, 2.5);
         PointDoubleRightTopLineEndPoint = new Point(150, 2.5);
-        bool isProgressRun = false;
+        bool isProgressRun = true;
         Observable.Timer(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1))
             .Subscribe(_ =>
             {
