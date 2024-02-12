@@ -1,0 +1,27 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:pages="clr-namespace:Asv.Avalonia.ToolkitGallery.Pages"
+             xmlns:ui="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
+             xmlns:core = "clr-namespace:Asv.Avalonia.ToolkitGallery.Pages"
+             x:Class="Asv.Avalonia.ToolkitGallery.Pages.SettingsView"
+             x:DataType="pages:SettingsViewModel">
+    <Design.DataContext >
+        <core:SettingsViewModel></core:SettingsViewModel>
+    </Design.DataContext>
+    <StackPanel Spacing="10" Margin="15">
+        <ui:SettingsExpander Header="App Theme"
+                             Description="Change the current app theme">
+            <ui:SettingsExpander.Footer>
+                <ComboBox ItemsSource="{Binding AppThemes}"
+                          DisplayMemberBinding="{Binding Name}"
+                          SelectedItem="{CompiledBinding SelectedTheme}"
+                          MinWidth="150"/>
+            </ui:SettingsExpander.Footer>
+                
+        </ui:SettingsExpander>
+    </StackPanel>
+    
+</UserControl>

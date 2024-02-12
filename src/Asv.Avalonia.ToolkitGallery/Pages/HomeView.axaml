@@ -6,15 +6,7 @@
         xmlns:pages="clr-namespace:Asv.Avalonia.ToolkitGallery.Pages"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="550"
         x:Class="Asv.Avalonia.ToolkitGallery.Pages.HomeView"
-        x:DataType="pages:HomeViewModel"
-         Background="#343D46">
-    <UserControl.Styles>
-        <Styles>
-            <Style Selector="TextBlock">
-                <Setter Property="Foreground" Value="#A7ADBA"></Setter>
-            </Style>
-        </Styles>
-    </UserControl.Styles>
+        x:DataType="pages:HomeViewModel">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
