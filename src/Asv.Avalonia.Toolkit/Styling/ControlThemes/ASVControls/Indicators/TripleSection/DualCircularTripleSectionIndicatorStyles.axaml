@@ -1,0 +1,1051 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:indicators="clr-namespace:Asv.Avalonia.Toolkit.UI.Controls.Indicators">
+    
+    <Design.PreviewWith>
+        <indicators:DualCircularTripleSectionIndicator 
+            Width="400" 
+            Height="200"
+            Title="CRS \ CLR"
+            LeftTopText="-90.0"
+            LeftTopTitle="CLR Power, dBm"
+            LeftTopStatus="Success"
+            
+            TopRightProgressLinePoint="100,2.5"
+            TopRightProgressValue="50"
+            
+            
+            TopLeftProgressLinePoint="100,2.5"
+            TopLeftProgressValue="20"
+            
+            
+            LeftBottomLeftText="+40.0"
+            LeftBottomLeftTitle="DDM,%"
+            LeftBottomLeftStatus="Success"
+            
+            LeftBottomRightText="-80.8"
+            LeftBottomRightTitle="SDM,%"
+            LeftBottomRightStatus="Warning"
+            
+            RightTopText="-110.0"
+            RightTopTitle="CRS Power, dBm"
+            RightTopStatus="Critical"
+            
+            RightBottomLeftText="+40.0"
+            RightBottomLeftTitle="DDM,%"
+            RightBottomLeftStatus="Success"
+            
+            RightBottomRightText="-80.8"
+            RightBottomRightTitle="SDM,%"
+            RightBottomRightStatus="Unknown"
+            
+            BottomStatusText="Warning"
+            BottomStatus="Warning"
+            
+            />
+    </Design.PreviewWith>
+    
+    <ControlTheme x:Key="{x:Type indicators:DualCircularTripleSectionIndicator}" TargetType="indicators:DualCircularTripleSectionIndicator">
+        <!-- Set Defaults -->
+        <Setter Property="BorderBrush" Value="{StaticResource IndicatorBorderBrush}"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Viewbox>
+                    <Panel>
+                        <Canvas HorizontalAlignment="Left" Width="200" Height="100">
+                            <Arc
+                                x:Name="TopLeftArc"
+                                Canvas.Left="2"
+                                Canvas.Top="2"
+                                Height="96"
+                                Width="96"
+                                StartAngle="190"
+                                Stretch="None"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                                SweepAngle="80"
+                            />    
+                            <Line 
+                                x:Name="TopLeftLine"
+                                StartPoint="50,2.5"
+                                EndPoint="100,2.5"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            
+                            <Arc
+                                x:Name="TopRightArc"
+                                Canvas.Left="102"
+                                Canvas.Top="2"
+                                Height="96"
+                                Width="96"
+                                StartAngle="-10"
+                                Stretch="None"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                                SweepAngle="-80"/> 
+                           
+                            <Line x:Name="TopRightLine"
+                                  StartPoint="100,2.5"
+                                  EndPoint="150,2.5"
+                                  Stroke="{TemplateBinding BorderBrush}"
+                                  StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            
+                            <Arc x:Name="BottomLeftArc"
+                                 Canvas.Left="2"
+                                 Canvas.Top="2"
+                                 Height="96"
+                                 Width="96"
+                                 StartAngle="90"
+                                 Stretch="None"
+                                 Stroke="{TemplateBinding BorderBrush}"
+                                 StrokeThickness="{TemplateBinding BorderThickness}"
+                                 SweepAngle="80"/>    
+                            
+                            <Line 
+                                x:Name="BottomLeftLine"
+                                StartPoint="50,97.5"
+                                EndPoint="100,97.5"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            
+                            <Arc
+                                x:Name="BottomRightArc"
+                                Canvas.Left="102"
+                                Canvas.Top="2"
+                                Height="96"
+                                Width="96"
+                                StartAngle="10"
+                                Stretch="None"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                                SweepAngle="80"/> 
+                            
+                            <Line 
+                                x:Name="BottomRightLine"
+                                StartPoint="100,97.5"
+                                EndPoint="150,97.5"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            <Line 
+                                StartPoint="10,50"
+                                EndPoint="190,50"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            <Line 
+                                StartPoint="50,50"
+                                EndPoint="50,90" 
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            <Line 
+                                StartPoint="100,20"
+                                EndPoint="100,80" 
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            <Line 
+                                StartPoint="150,50"
+                                EndPoint="150,90" 
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            
+                             <Line x:Name="TopLeftProgressLine" 
+                                  StartPoint="100,2.5" 
+                                  EndPoint="{TemplateBinding TopLeftProgressLinePoint}" 
+                                  Stroke="{TemplateBinding BorderBrush}"
+                                  StrokeThickness="5"/> 
+                            
+                            <Arc x:Name="TopLeftProgressArc"
+                                 Height="100"
+                                 StartAngle="-90"
+                                 Stretch="None"
+                                 StrokeThickness="5"
+                                 SweepAngle="{TemplateBinding TopLeftProgressAngle}"
+                                 Width="100"/>
+                            
+                            <Line x:Name="TopRightProgressLine"
+                                  StartPoint="100,2.5" 
+                                  EndPoint="{TemplateBinding TopRightProgressLinePoint}"  
+                                  Stroke="{TemplateBinding BorderBrush}"
+                                  StrokeThickness="5" />
+                            
+                            <Arc x:Name="TopRightProgressArc"
+                                 Canvas.Left="100"
+                                 Height="100"
+                                 StartAngle="270"
+                                 Stretch="None"
+                                 StrokeThickness="5"
+                                 SweepAngle="{TemplateBinding TopRightProgressAngle}"
+                                 Width="100"/>
+                            
+                            
+                        </Canvas> 
+                        
+                        <Grid  RowDefinitions="35,10,8,20,10" ColumnDefinitions="*,5,*,5,*,5,*">
+                            <TextBlock 
+                                Grid.Row="0" 
+                                Grid.ColumnSpan="3" 
+                                Grid.Column="2" 
+                                Foreground="{StaticResource IndicatorTextBrush}"
+                                HorizontalAlignment="Center"
+                                Margin="0,4,0,0"
+                                VerticalAlignment="Top" 
+                                FontSize="10"
+                                Text="{TemplateBinding Title}"/>
+                            <TextBlock 
+                                x:Name="BottomStatusText"
+                                Grid.Row="4"
+                                Grid.ColumnSpan="3"
+                                Grid.Column="2"
+                                HorizontalAlignment="Center"
+                                Margin="0,9,0,0"
+                                VerticalAlignment="Bottom" 
+                                FontSize="10"
+                                Text="{TemplateBinding BottomStatusText}"/>
+                            <TextBlock 
+                                x:Name="LeftTopTextBlock"
+                                FontWeight="Bold" 
+                                Grid.Row="0"
+                                Grid.ColumnSpan="3"
+                                Grid.Column="0"
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Bottom" 
+                                Text="{TemplateBinding LeftTopText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}"
+                                Grid.Row="1"
+                                FontSize="8"
+                                Grid.ColumnSpan="3"
+                                Grid.Column="0"
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Bottom" Text="{TemplateBinding LeftTopTitle}"/>
+                            <TextBlock 
+                                x:Name="LeftBottomLeftTextBlock"
+                                Grid.Row="3" Grid.Column="0" 
+                                FontSize="12" 
+                                HorizontalAlignment="Right" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding LeftBottomLeftText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}"
+                                Margin="0,-3,2,0" 
+                                Grid.Row="4" 
+                                FontSize="7"
+                                Grid.Column="0" 
+                                HorizontalAlignment="Right" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding LeftBottomLeftTitle}"/>
+                            <TextBlock 
+                                x:Name="LeftBottomRightTextBlock"
+                                Margin="2,0,0,0" 
+                                Grid.Row="3" 
+                                Grid.Column="2" 
+                                FontSize="12" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top"
+                                Text="{TemplateBinding LeftBottomRightText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}"
+                                Margin="5,-3,0,0" 
+                                Grid.Row="4" 
+                                FontSize="7" 
+                                Grid.Column="2" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding LeftBottomRightTitle}"/>
+                            <TextBlock 
+                                x:Name="RightTopTextBlock"
+                                FontWeight="Bold" 
+                                Grid.Row="0" 
+                                Grid.ColumnSpan="3" 
+                                Grid.Column="4" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Bottom" 
+                                Text="{TemplateBinding RightTopText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}" 
+                                Grid.Row="1" 
+                                FontSize="8" 
+                                Grid.ColumnSpan="3" 
+                                Grid.Column="4" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Bottom" 
+                                Text="{TemplateBinding RightTopTitle}"/>
+                            <TextBlock 
+                                x:Name="RightBottomLeftTextBlock"
+                                Margin="0,0,2,0" 
+                                Grid.Row="3" 
+                                Grid.Column="4" 
+                                FontSize="12" 
+                                HorizontalAlignment="Right" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding RightBottomLeftText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}" 
+                                Margin="0,-3,2,0" 
+                                Grid.Row="4" 
+                                FontSize="7" 
+                                Grid.Column="4" 
+                                HorizontalAlignment="Right" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding RightBottomLeftTitle}"/>
+                            <TextBlock 
+                                x:Name="RightBottomRightTextBlock"
+                                Margin="3,0,0,0"
+                                Grid.Row="3" 
+                                Grid.Column="6" 
+                                FontSize="12" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding RightBottomRightText}"/>
+                            <TextBlock 
+                                Foreground="{StaticResource IndicatorTextBrush}" 
+                                Margin="3,-3,0,0" 
+                                Grid.Row="4" 
+                                FontSize="7" 
+                                Grid.Column="6" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top" 
+                                Text="{TemplateBinding RightBottomRightTitle}"/>
+                        </Grid>
+                    </Panel>
+                </Viewbox>
+            </ControlTemplate>
+        </Setter>
+        
+        
+    <!-- Right top Arc -->
+
+    <Style Selector="^:rt-critical /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:rt-warning /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:rt-success /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="^:rt-unknown /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+    <Style Selector="^:rtp-critical /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:rtp-warning /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:rtp-success /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="^:rtp-unknown /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+    <!-- Top right progress line-->
+    
+    <Style Selector="^:rt-unknown /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    <Style Selector="^:rt-critical /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:rt-warning /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:rt-success /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    
+    <Style Selector="^:rtp-unknown /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    <Style Selector="^:rtp-critical /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:rtp-warning /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:rtp-success /template/ Line#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    
+    <!-- Left top progress arc-->
+    
+    <Style Selector="^:lt-warning /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:lt-critical /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:lt-success /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="^:lt-unknown /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+    <Style Selector="^:ltp-warning /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:ltp-critical /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:ltp-success /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="^:ltp-unknown /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+    <!-- Left top progress line -->
+    
+    <Style Selector="^:lt-unknown /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    <Style Selector="^:lt-critical /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:lt-warning /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:lt-success /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    
+    <Style Selector="^:ltp-unknown /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    <Style Selector="^:ltp-critical /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:ltp-warning /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:ltp-success /template/ Line#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    
+    <!-- TopLeft Text Block -->
+    
+    <Style Selector="^:lt-critical /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lt-success /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextSuccessBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lt-warning /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lt-unknown /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource IndicatorUnknownBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <!-- Top Left Progress Arc-->
+    
+    <Style Selector="^:top-warning /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:top-critical /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:top-success /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="^:top-unknown /template/ Arc#TopLeftProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+    <!-- Top Left Progress Line-->
+    
+    <Style Selector="^:top-warning /template/ Arc#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:top-critical /template/ Arc#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:top-success /template/ Arc#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="^:top-unknown /template/ Arc#TopLeftProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+    <!-- Top Right Progress Arc-->
+    
+    <Style Selector="^:top-warning /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:top-critical /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:top-success /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="^:top-unknown /template/ Arc#TopRightProgressArc">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+     <!-- Left Bottom Left Text Block -->
+    
+    <Style Selector="^:lbl-critical /template/ TextBlock#LeftBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lbl-success /template/ TextBlock#LeftBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextSuccessBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lbl-warning /template/ TextBlock#LeftBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lbl-unknown /template/ TextBlock#LeftBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource IndicatorUnknownBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <!-- Left Bottom Right Text Block -->
+    
+    <Style Selector="^:lbr-critical /template/ TextBlock#LeftBottomRightTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lbr-success /template/ TextBlock#LeftBottomRightTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextSuccessBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lbr-warning /template/ TextBlock#LeftBottomRightTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lbr-unknown /template/ TextBlock#LeftBottomRightTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource IndicatorUnknownBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <!-- Left Top TextBlock -->
+    
+     <Style Selector="^:lt-critical /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lt-success /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextSuccessBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lt-warning /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lt-unknown /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource IndicatorUnknownBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <!-- Top Right Progress Line-->
+    
+    <Style Selector="^:top-warning /template/ Arc#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+    </Style>
+    <Style Selector="^:top-critical /template/ Arc#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+    </Style>
+    <Style Selector="^:top-success /template/ Arc#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+    </Style>
+    <Style Selector="^:top-unknown /template/ Arc#TopRightProgressLine">
+        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+    </Style>
+    
+    <!-- Right Top TextBlock -->
+    
+     <Style Selector="^:rt-critical /template/ TextBlock#RightTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:rt-success /template/ TextBlock#RightTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextSuccessBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+   
+    <Style Selector="^:rt-warning /template/ TextBlock#RightTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <Style Selector="^:rt-unknown /template/ TextBlock#RightTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource IndicatorUnknownBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <!-- Left Top TextBlock -->
+    
+     <Style Selector="^:lt-critical /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lt-success /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextSuccessBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+   
+    <Style Selector="^:lt-warning /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <Style Selector="^:lt-unknown /template/ TextBlock#LeftTopTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource IndicatorUnknownBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <!-- Left Bottom Left Text Block -->
+    
+    <Style Selector="^:lbl-critical /template/ TextBlock#LeftBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lbl-success /template/ TextBlock#LeftBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextSuccessBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+   
+    <Style Selector="^:lbl-warning /template/ TextBlock#LeftBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <Style Selector="^:lbl-unknown /template/ TextBlock#LeftBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource IndicatorUnknownBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <!-- Right Bottom Right Text Block -->
+    
+    <Style Selector="^:rbr-critical /template/ TextBlock#RightBottomRightTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:lbr-success /template/ TextBlock#RightBottomRightTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextSuccessBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+   
+    <Style Selector="^:lbr-warning /template/ TextBlock#RightBottomRightTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <Style Selector="^:lbr-unknown /template/ TextBlock#RightBottomRightTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource IndicatorUnknownBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <!-- Right bottom Left TextBlock -->
+    
+     <Style Selector="^:rbl-critical /template/ TextBlock#RightBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:rbl-success /template/ TextBlock#RightBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextSuccessBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+   
+    <Style Selector="^:rbl-warning /template/ TextBlock#RightBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <Style Selector="^:rbl-unknown /template/ TextBlock#RightBottomLeftTextBlock">
+        <Setter Property="Foreground" Value="{StaticResource IndicatorUnknownBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    
+    <!-- Bottom Status -->
+    
+    <Style Selector="^:bottom-critical /template/ TextBlock#BottomStatusText">
+        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:bottom-success /template/ TextBlock#BottomStatusText">
+        <Setter Property="Foreground" Value="{StaticResource TextSuccessBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:bottom-warning /template/ TextBlock#BottomStatusText">
+        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    <Style Selector="^:bottom-unknown /template/ TextBlock#BottomStatusText">
+        <Setter Property="Foreground" Value="{StaticResource TextUnknownBrush}"/>
+        <Style.Animations>
+            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.0"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+        
+    </ControlTheme>
+    
+    
+</ResourceDictionary>

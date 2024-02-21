@@ -1,0 +1,83 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:indicators="clr-namespace:Asv.Avalonia.Toolkit.UI.Controls.Indicators">
+    
+    <Styles.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/CommonIndicatorResources.axaml"/>
+                
+                <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/TripleSection/CircularTripleSectionIndicatorStyles.axaml"/>
+                <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/TripleSection/DualCircularTripleSectionIndicatorStyles.axaml"/>
+                <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/RouteIndicatorStyles.axaml"/>
+                <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/RecordIndicatorStyles.axaml"/>
+                
+                <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/DateTime/StretchableDatePickerStyles.axaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Styles.Resources>
+    
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+            <StackPanel>
+                <indicators:CircularTripleSectionIndicator
+                    Grid.Row="0" Grid.Column="0"
+                    Title="Power"
+                    TopTitle="Total power, dBm" 
+                    TopStatus="Success" 
+                    TopText="-110.05" 
+                    TopMin="-90" 
+                    TopMax="10" 
+                    TopValue="-50" 
+            
+                    RightStatus="Warning"
+                    RightText="80.00"
+                    RightTitle="SDM, %"
+            
+                    LeftStatus="Success"
+                    LeftText="-10.00"
+                    LeftTitle="DDM, %"
+            
+                    Width="300" Height="300" />
+                <indicators:DualCircularTripleSectionIndicator 
+                    Width="400" 
+                    Height="200"
+                    Title="CRS \ CLR"
+                    LeftTopText="-90.0"
+                    LeftTopTitle="CLR Power, dBm"
+                    LeftTopStatus="Unknown"
+            
+                    LeftBottomLeftText="+40.0"
+                    LeftBottomLeftTitle="DDM,%"
+                    LeftBottomLeftStatus="Success"
+            
+                    LeftBottomRightText="-80.8"
+                    LeftBottomRightTitle="SDM,%"
+                    LeftBottomRightStatus="Warning"
+            
+                    RightTopText="-110.0"
+                    RightTopTitle="CRS Power, dBm"
+                    RightTopStatus="Critical"
+            
+                    RightBottomLeftText="+40.0"
+                    RightBottomLeftTitle="DDM,%"
+                    RightBottomLeftStatus="Success"
+            
+            
+                    RightBottomRightText="-80.8"
+                    RightBottomRightTitle="SDM,%"
+                    RightBottomRightStatus="Unknown"
+            
+                    BottomStatusText="Warning"
+                    BottomStatus="Warning"
+                />
+                <indicators:RecordIndicator>
+                    
+                </indicators:RecordIndicator>
+                
+                <indicators:RouteIndicator/>
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+</Styles>
