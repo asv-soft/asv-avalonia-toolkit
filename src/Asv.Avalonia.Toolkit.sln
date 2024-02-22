@@ -20,7 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asv.Avalonia.Toolkit", "Asv.Avalonia.Toolkit\Asv.Avalonia.Toolkit.csproj", "{5B01818A-0A07-48C1-90E1-7EC331913C2E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{45C83518-29C6-4FDE-93FC-4005FAF6147F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gallery", "Gallery", "{45C83518-29C6-4FDE-93FC-4005FAF6147F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

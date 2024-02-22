@@ -24,9 +24,26 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Record\RecordIndicator.axaml.cs">
+    <Compile Update="UI\Controls\Indicators\TripleSection\CircularTripleSectionIndicator.cs">
+      <DependentUpon>Circular3Indicator.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\Indicators\TripleSection\DualCircularTripleSectionIndicator.cs">
+      <DependentUpon>DoubleCircular3Indicator.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\Indicators\RecordIndicator.cs">
       <DependentUpon>RecordIndicator.axaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UI\Controls\Indicators\RouteIndicator.cs">
+      <DependentUpon>RouteIndicator.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FluentAvalonia">
+      <HintPath>..\..\..\..\..\Users\VitalyAnofriev\.nuget\packages\fluentavaloniaui\2.0.4\lib\net6.0\FluentAvalonia.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

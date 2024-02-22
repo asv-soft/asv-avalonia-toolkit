@@ -1,4 +1,5 @@
 using System;
+using Asv.Avalonia.ToolkitGallery.Models;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using Asv.Avalonia.ToolkitGallery.ViewModels;
@@ -25,6 +26,6 @@ public class ViewLocator : IDataTemplate
 
     public bool Match(object? data)
     {
-        return data is ViewModelBase;
+        return data is DisposableReactiveObject;
     }
 }

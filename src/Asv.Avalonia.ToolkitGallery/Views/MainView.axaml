@@ -5,10 +5,8 @@
              xmlns:core="clr-namespace:Asv.Avalonia.ToolkitGallery.ViewModels"
              xmlns:ui = "clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
              xmlns:tools = "clr-namespace:Asv.Avalonia.ToolkitGallery.Tools"
-             xmlns:controls="clr-namespace:Asv.Avalonia.ToolkitGallery.Controls"
              mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="550"
              x:Class="Asv.Avalonia.ToolkitGallery.Views.MainView"
-             Background="#A7ADBA"
              x:DataType="core:MainViewModel">
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -16,10 +14,9 @@
         <core:MainViewModel/>
     </Design.DataContext>
     <ui:NavigationView
-        
         IsSettingsVisible="False"
         PaneDisplayMode="Left"
-        IsPaneOpen="True"
+        IsPaneOpen="False"
         CompactPaneLength="60"
         SelectedItem="{Binding SelectedMenu, Mode=TwoWay}"
         MenuItemsSource="{CompiledBinding Items}"

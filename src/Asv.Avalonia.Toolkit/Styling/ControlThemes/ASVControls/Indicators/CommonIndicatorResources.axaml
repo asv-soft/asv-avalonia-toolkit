@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <IterationCount  x:Key="IndicatorBlinkAnimationCount">2</IterationCount>
+    <CornerRadius    x:Key="IndicatorCornerRadius">20</CornerRadius>
+                
+    <SolidColorBrush x:Key="IndicatorBorderBrush" Color="#616161"/>
+        
+    <SolidColorBrush x:Key="IndicatorSuccessBrush" Color="#558b2f"/>
+    <SolidColorBrush x:Key="IndicatorWarningBrush" Color="#ffba00"/>
+    <SolidColorBrush x:Key="IndicatorCriticalBrush" Color="#d50000"/>
+    <SolidColorBrush x:Key="IndicatorUnknownBrush" Color="#616161"/>
+        
+    <SolidColorBrush x:Key="IndicatorTextBrush" Color="#746868"/>
+        
+    <SolidColorBrush x:Key="TextSuccessBrush" Color="#558b2f"/>
+    <SolidColorBrush x:Key="TextWarningBrush" Color="#ffba00"/>
+    <SolidColorBrush x:Key="TextCriticalBrush" Color="#d50000"/>
+    <SolidColorBrush x:Key="TextUnknownBrush" Color="#616161"/>
+</ResourceDictionary>

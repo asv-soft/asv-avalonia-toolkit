@@ -19,8 +19,8 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
     <PackageReference Include="FluentAvaloniaUI" Version="2.0.4" />
     <PackageReference Include="Material.Icons" Version="2.1.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="ReactiveUI.Fody" Version="19.5.1" />
-    <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +32,38 @@
       <DependentUpon>HomeView.axaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="RS.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RS.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pages\DateTimeView.axaml.cs">
+      <DependentUpon>DateTimeView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\HomeView.axaml.cs">
+      <DependentUpon>HomeView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\MeasureUnitsView.axaml.cs">
+      <DependentUpon>MeasureUnitsView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\RouteIndicatorsView.axaml.cs">
+      <DependentUpon>RouteIndicatorsView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\SettingsView.axaml.cs">
+      <DependentUpon>SettingsView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="RS.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RS.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   
 </Project>

@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Reactive.Disposables;
 using System.Threading;
-using ReactiveUI;
 
-namespace Asv.Avalonia.ToolkitGallery.Models;
-
-public class DisposableReactiveObject : ReactiveObject, IDisposable
+namespace Asv.Avalonia.ToolkitGallery.Tools
+{
+    public class DisposableReactiveObjectWithValidation : IDisposable
     {
         private const int Disposed = 1;
         private const int NotDisposed = 0;
@@ -75,3 +74,4 @@ public class DisposableReactiveObject : ReactiveObject, IDisposable
             GC.SuppressFinalize(this);
         }
     }
+}

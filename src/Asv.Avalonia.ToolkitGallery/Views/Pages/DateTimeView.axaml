@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:dateTime="clr-namespace:Asv.Avalonia.Toolkit.UI.Controls.DateTime;assembly=Asv.Avalonia.Toolkit"
+             xmlns:pages="clr-namespace:Asv.Avalonia.ToolkitGallery.ViewModels.Pages"
+             x:Class="Asv.Avalonia.ToolkitGallery.Views.Pages.DateTimeView"
+             x:DataType="pages:DateTimeViewModel" >
+    <Design.DataContext>
+        <pages:DateTimeViewModel/>
+    </Design.DataContext>
+    <ScrollViewer>
+       <Grid RowDefinitions="*,*" ColumnDefinitions="*,*">
+           <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Spacing="10">
+               <TextBlock HorizontalAlignment="Center" 
+                          Text="Date and Time picker controls" 
+                          FontSize="28"/>
+               <TextBlock HorizontalAlignment="Center" 
+                          Text="More space-effective controls"/>
+               <Border Margin="0,10,0,0" 
+                       BorderThickness="0,2,0,2" 
+                       BorderBrush="#008FFA" >
+                   <TextBlock Margin="10" 
+                              Text="{CompiledBinding DateTimeResult, StringFormat='Selected Date: {0}'}" 
+                              FontSize="18"/>
+               </Border>
+              </StackPanel>
+           <StackPanel Grid.Column="0" Grid.Row="1" Spacing="10" HorizontalAlignment="Center" Width="250" >
+               <TextBlock HorizontalAlignment="Center" Text="Stretchable time picker control:"/>
+               <Expander Header="XAML Example">
+                   <TextBox TextWrapping="Wrap" IsReadOnly="True">
+                       <x:String xml:space="preserve">&lt;toolkit:StretchableTimePicker/&gt;</x:String>
+                   </TextBox>
+               </Expander>
+           </StackPanel>
+           <StackPanel Grid.Row="1" Grid.Column="1" Spacing="10" Width="250" HorizontalAlignment="Center">
+               <TextBlock Text="Stretchable date picker control:" HorizontalAlignment="Center"/>
+               <dateTime:StretchableDatePicker Width="100" SelectedDate="{CompiledBinding SelectedDateValue}"/>
+               <dateTime:StretchableDatePicker Width="175" SelectedDate="{CompiledBinding SelectedDateValue}"/>
+               <dateTime:StretchableDatePicker SelectedDate="{CompiledBinding SelectedDateValue}"/>
+               <Expander Header="XAML Example">
+                   <TextBox TextWrapping="Wrap" IsReadOnly="True">
+                       <x:String xml:space="preserve">&lt;toolkit:StretchableDatePicker/&gt;</x:String>
+                   </TextBox>
+               </Expander>
+           </StackPanel>
+       </Grid>
+   </ScrollViewer>
+    
+</UserControl>

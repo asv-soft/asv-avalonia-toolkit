@@ -2,43 +2,46 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controls="clr-namespace:Asv.Avalonia.ToolkitGallery.Controls">
         
-        <Design.PreviewWith >
-                <Border Padding="10">
-                        <StackPanel >
-                                <controls:MenuDisplayItem   Width="100"
-                                                            MenuItemText="Home"
-                                                            Icon="M31.625 84.625V62.7187C31.625 61.1875 33.1875 59.625 34.75 59.625H47.25C48.8125 59.625 50.375 61.1875 50.375 62.75V84.625C50.375 85.4538 50.7042 86.2486 51.2903 86.8347C51.8764 87.4207 52.6712 87.75 53.5 87.75H78.5C79.3288 87.75 80.1237 87.4207 80.7097 86.8347C81.2958 86.2486 81.625 85.4538 81.625 84.625V40.875C81.6257 40.4643 81.5455 40.0575 81.389 39.6779C81.2324 39.2983 81.0025 38.9532 80.7125 38.6625L72.25 30.2062V9.62497C72.25 8.79617 71.9208 8.00131 71.3347 7.41526C70.7487 6.82921 69.9538 6.49997 69.125 6.49997H62.875C62.0462 6.49997 61.2514 6.82921 60.6653 7.41526C60.0792 8.00131 59.75 8.79617 59.75 9.62497V17.7062L43.2125 1.16247C42.9222 0.871451 42.5774 0.640558 42.1977 0.483018C41.8181 0.325477 41.4111 0.244385 41 0.244385C40.589 0.244385 40.182 0.325477 39.8023 0.483018C39.4226 0.640558 39.0778 0.871451 38.7875 1.16247L1.28751 38.6625C0.997494 38.9532 0.76763 39.2983 0.611057 39.6779C0.454484 40.0575 0.374272 40.4643 0.375005 40.875V84.625C0.375005 85.4538 0.704245 86.2486 1.2903 86.8347C1.87635 87.4207 2.6712 87.75 3.50001 87.75H28.5C29.3288 87.75 30.1237 87.4207 30.7097 86.8347C31.2958 86.2486 31.625 85.4538 31.625 84.625Z"/>
-                                <controls:MenuDisplayItem Width="100"
-                                                          Icon="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"
-                                                          MenuItemText="Measure Units"></controls:MenuDisplayItem>
-                        </StackPanel>
-                      </Border>
+        <Styles.Resources>
+            <StreamGeometry x:Key="HomeIcon">M31.625 84.625V62.7187C31.625 61.1875 33.1875 59.625 34.75 59.625H47.25C48.8125 59.625 50.375 61.1875 50.375 62.75V84.625C50.375 85.4538 50.7042 86.2486 51.2903 86.8347C51.8764 87.4207 52.6712 87.75 53.5 87.75H78.5C79.3288 87.75 80.1237 87.4207 80.7097 86.8347C81.2958 86.2486 81.625 85.4538 81.625 84.625V40.875C81.6257 40.4643 81.5455 40.0575 81.389 39.6779C81.2324 39.2983 81.0025 38.9532 80.7125 38.6625L72.25 30.2062V9.62497C72.25 8.79617 71.9208 8.00131 71.3347 7.41526C70.7487 6.82921 69.9538 6.49997 69.125 6.49997H62.875C62.0462 6.49997 61.2514 6.82921 60.6653 7.41526C60.0792 8.00131 59.75 8.79617 59.75 9.62497V17.7062L43.2125 1.16247C42.9222 0.871451 42.5774 0.640558 42.1977 0.483018C41.8181 0.325477 41.4111 0.244385 41 0.244385C40.589 0.244385 40.182 0.325477 39.8023 0.483018C39.4226 0.640558 39.0778 0.871451 38.7875 1.16247L1.28751 38.6625C0.997494 38.9532 0.76763 39.2983 0.611057 39.6779C0.454484 40.0575 0.374272 40.4643 0.375005 40.875V84.625C0.375005 85.4538 0.704245 86.2486 1.2903 86.8347C1.87635 87.4207 2.6712 87.75 3.50001 87.75H28.5C29.3288 87.75 30.1237 87.4207 30.7097 86.8347C31.2958 86.2486 31.625 85.4538 31.625 84.625Z</StreamGeometry>
+            <StreamGeometry x:Key="MeasureUnitsIcon">M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z</StreamGeometry>
+        </Styles.Resources>
+        
+        <Design.PreviewWith>
+            <Border Padding="10">
+                <StackPanel>
+                    <controls:MenuDisplayItem Width="100"
+                                              MenuItemText="Home"
+                                              Icon="{StaticResource HomeIcon}"/>
+                    <controls:MenuDisplayItem Width="100"
+                                              MenuItemText="Measure Units"
+                                              Icon="{StaticResource MeasureUnitsIcon}"/>
+                </StackPanel>
+            </Border>
         </Design.PreviewWith>
         
         <Style Selector="controls|MenuDisplayItem">
-                <Setter Property="Template">
-                        <ControlTemplate>
-                        <Viewbox>
-                                <Button Background="Transparent">
-                                        <StackPanel MinHeight="40" 
-                                                    MinWidth="30" 
-                                                    VerticalAlignment="Center" 
-                                                    HorizontalAlignment="Center">
-                                                <PathIcon Height="20"
-                                                          VerticalAlignment="Center"
-                                                          HorizontalAlignment="Center"
-                                                          Data="{TemplateBinding Icon}"/>
-                                                <TextBlock HorizontalAlignment="Center" 
-                                                           TextWrapping="Wrap" 
-                                                           MaxWidth="70" 
-                                                           TextAlignment="Center" 
-                                                           />
-                                        </StackPanel>
-                                </Button>         
-                        </Viewbox>
-                     </ControlTemplate>
-                </Setter>
-                
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Viewbox>
+                        <Button Background="Transparent">
+                            <StackPanel MinHeight="40" 
+                                        MinWidth="30" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center">
+                                <PathIcon Height="20"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"
+                                          Data="{TemplateBinding Icon}"/>
+                                <TextBlock HorizontalAlignment="Center" 
+                                           TextWrapping="Wrap" 
+                                           MaxWidth="70" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Button>         
+                    </Viewbox>
+                </ControlTemplate>
+            </Setter>
         </Style>
 </Styles>
 
