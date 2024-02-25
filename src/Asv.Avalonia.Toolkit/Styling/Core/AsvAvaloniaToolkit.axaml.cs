@@ -5,8 +5,7 @@ using Avalonia.Styling;
 namespace Asv.Avalonia.Toolkit.Styling.Core;
 
 /// <summary>
-/// Theme manager for FluentAvalonia, managing various components of the Fluentv2 theme
-/// like AccentColor, styles, and platform settings
+/// Theme manager for AsvAvaloniaToolkit, managing various components
 /// </summary>
 public partial class AsvAvaloniaToolkit : Styles, IResourceProvider
 {

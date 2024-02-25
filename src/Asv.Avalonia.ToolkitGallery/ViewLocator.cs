@@ -1,5 +1,5 @@
 using System;
-using Asv.Avalonia.ToolkitGallery.Models;
+using Asv.Avalonia.ToolkitGallery.Tools;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using Asv.Avalonia.ToolkitGallery.ViewModels;

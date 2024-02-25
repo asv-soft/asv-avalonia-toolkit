@@ -1,5 +1,5 @@
 using System;
-using Asv.Avalonia.ToolkitGallery.Models;
+using Asv.Avalonia.ToolkitGallery.Tools;
 using Asv.Avalonia.ToolkitGallery.ViewModels.Pages;
 using ReactiveUI.Fody.Helpers;
 

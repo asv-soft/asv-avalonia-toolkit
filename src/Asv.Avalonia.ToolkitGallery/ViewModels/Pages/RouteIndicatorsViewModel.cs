@@ -1,7 +1,7 @@
 using System;
 using System.Reactive;
 using System.Reactive.Linq;
-using Asv.Avalonia.ToolkitGallery.Models;
+using Asv.Avalonia.ToolkitGallery.Tools;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 

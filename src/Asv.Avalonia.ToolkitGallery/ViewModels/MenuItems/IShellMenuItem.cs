@@ -1,5 +1,4 @@
-﻿using Asv.Avalonia.ToolkitGallery.Models;
-using Asv.Avalonia.ToolkitGallery.ViewModels.Pages;
+﻿using Asv.Avalonia.ToolkitGallery.ViewModels.Pages;
 
 namespace Asv.Avalonia.ToolkitGallery.ViewModels.MenuItems
 {

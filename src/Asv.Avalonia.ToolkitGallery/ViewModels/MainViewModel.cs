@@ -1,6 +1,6 @@
 using System;
 using System.Collections.ObjectModel;
-using Asv.Avalonia.ToolkitGallery.Models;
+using Asv.Avalonia.ToolkitGallery.Tools;
 using Asv.Avalonia.ToolkitGallery.ViewModels.MenuItems;
 using Asv.Avalonia.ToolkitGallery.ViewModels.Pages;
 using DynamicData.Binding;
