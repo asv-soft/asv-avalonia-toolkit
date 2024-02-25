@@ -229,7 +229,7 @@
         <Setter Property="Padding" Value="0" />
 
         <Style Selector="^:pointerover">
-            <Style Selector="^ /template/ ui|FABorder#Root">
+            <Style Selector="^ /template/ Border#Root">
                 <Setter Property="Background" Value="{DynamicResource DatePickerButtonBackgroundPointerOver}" />
                 <Setter Property="BorderBrush" Value="{DynamicResource DatePickerButtonBorderBrushPointerOver}" />
             </Style>
@@ -239,7 +239,7 @@
         </Style>
 
         <Style Selector="^:pressed">
-            <Style Selector="^ /template/ ui|FABorder#Root">
+            <Style Selector="^ /template/ Border#Root">
                 <Setter Property="Background" Value="{DynamicResource DatePickerButtonBackgroundPressed}" />
                 <Setter Property="BorderBrush" Value="{DynamicResource DatePickerButtonBorderBrushPressed}" />
             </Style>
@@ -249,7 +249,7 @@
         </Style>
 
         <Style Selector="^:disabled">
-            <Style Selector="^ /template/ ui|FABorder#Root">
+            <Style Selector="^ /template/ Border#Root">
                 <Setter Property="Background" Value="{DynamicResource DatePickerButtonBackgroundDisabled}" />
                 <Setter Property="BorderBrush" Value="{DynamicResource DatePickerButtonBorderBrushDisabled}" />
             </Style>
@@ -367,7 +367,7 @@
         <Setter Property="CornerRadius" Value="{DynamicResource OverlayCornerRadius}" />
         <Setter Property="Template">
             <ControlTemplate>
-                <ui:FABorder Name="Background" Background="{TemplateBinding Background}"
+                <Border Name="Background" Background="{TemplateBinding Background}"
                              BorderBrush="{TemplateBinding BorderBrush}"
                              BorderThickness="{TemplateBinding BorderThickness}"
                              Padding="{DynamicResource DateTimeFlyoutBorderPadding}"
@@ -464,7 +464,7 @@
                             </Button>
                         </Grid>
                     </Grid>
-                </ui:FABorder>
+                </Border>
             </ControlTemplate>
         </Setter>
 

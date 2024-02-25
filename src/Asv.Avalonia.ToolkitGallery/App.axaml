@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:Asv.Avalonia.ToolkitGallery"
              xmlns:styling="clr-namespace:FluentAvalonia.Styling;assembly=FluentAvalonia"
+             xmlns:core="clr-namespace:Asv.Avalonia.Toolkit.Styling.Core;assembly=Asv.Avalonia.Toolkit"
              x:Class="Asv.Avalonia.ToolkitGallery.App"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
@@ -12,6 +13,11 @@
 
     <Application.Styles>
         <styling:FluentAvaloniaTheme PreferUserAccentColor="True" PreferSystemTheme="False"/>
-        <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/Controls.axaml"/>
+        <core:AsvAvaloniaToolkit/>
+        <!-- Also can be imported like this -->
+        <!-- <StyleInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/Controls.axaml"/> -->
+        <!-- Or like this -->
+        <!-- <StyleInclude Source="avares://Asv.Avalonia.Toolkit/App.axaml"/> -->
+        <!-- Both are wrong and must be strictly prohibited in future, but it's ok for the current realisation. -->
     </Application.Styles>
 </Application>
