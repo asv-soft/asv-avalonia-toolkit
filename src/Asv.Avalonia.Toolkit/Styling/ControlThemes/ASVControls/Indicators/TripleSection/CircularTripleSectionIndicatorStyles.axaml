@@ -86,7 +86,7 @@
     <ControlTheme x:Key="{x:Type indicators:CircularTripleSectionIndicator}" TargetType="indicators:CircularTripleSectionIndicator">
         <!-- Set Defaults -->
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="BorderBrush" Value="{StaticResource IndicatorBorderBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource IndicatorBorderBrush}"/>
         <Setter Property="Template">
             <ControlTemplate>
                 <Viewbox>
@@ -142,16 +142,16 @@
                         </Canvas>
                         <Grid RowDefinitions="35,10,8,20,10" ColumnDefinitions="*,4,*">
 
-                            <TextBlock Foreground="{StaticResource IndicatorTextBrush}"  Grid.Row="0" Grid.ColumnSpan="3" FontSize="9" Margin="0,9,0,0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Text="{TemplateBinding Title}"/>
+                            <TextBlock Foreground="{DynamicResource IndicatorTextBrush}"  Grid.Row="0" Grid.ColumnSpan="3" FontSize="9" Margin="0,9,0,0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Text="{TemplateBinding Title}"/>
                             
                             <TextBlock x:Name="TopTextBlock" Margin="0,0,0,-2" FontWeight="Bold" Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="{TemplateBinding TopText}"/>
-                            <TextBlock Foreground="{StaticResource IndicatorTextBrush}"  Grid.Row="1" FontSize="8" Grid.ColumnSpan="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="{TemplateBinding TopTitle}"/>
+                            <TextBlock Foreground="{DynamicResource IndicatorTextBrush}"  Grid.Row="1" FontSize="8" Grid.ColumnSpan="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="{TemplateBinding TopTitle}"/>
                             
                             <TextBlock x:Name="LeftTextBlock" Margin="0,0,2,0" Grid.Row="3" Grid.Column="0" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Text="{TemplateBinding LeftText}"/>
-                            <TextBlock Foreground="{StaticResource IndicatorTextBrush}"  Margin="0,-3,2,0" Grid.Row="4" FontSize="7" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Text="{TemplateBinding LeftTitle}"/>
+                            <TextBlock Foreground="{DynamicResource IndicatorTextBrush}"  Margin="0,-3,2,0" Grid.Row="4" FontSize="7" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Text="{TemplateBinding LeftTitle}"/>
                             
                             <TextBlock x:Name="RightTextBlock" Margin="3,0,0,0" Grid.Row="3" Grid.Column="2" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{TemplateBinding RightText}"/>
-                            <TextBlock Foreground="{StaticResource IndicatorTextBrush}"  Margin="3,-3,0,0" Grid.Row="4" FontSize="7" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{TemplateBinding RightTitle}"/>
+                            <TextBlock Foreground="{DynamicResource IndicatorTextBrush}"  Margin="3,-3,0,0" Grid.Row="4" FontSize="7" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{TemplateBinding RightTitle}"/>
                         </Grid>
                     </Panel>
                     
@@ -164,23 +164,23 @@
         
     <!-- TopArc -->
     <Style Selector="^:top-warning /template/ Arc#TopArc">
-        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+        <Setter Property="Stroke" Value="{DynamicResource IndicatorWarningBrush}"/>
     </Style>
     <Style Selector="^:top-critical /template/ Arc#TopArc">
-        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+        <Setter Property="Stroke" Value="{DynamicResource IndicatorCriticalBrush}"/>
     </Style>
     <Style Selector="^:top-success /template/ Arc#TopArc">
-        <Setter Property="Stroke" Value="{StaticResource IndicatorSuccessBrush}"/>
+        <Setter Property="Stroke" Value="{DynamicResource IndicatorSuccessBrush}"/>
     </Style>
     <Style Selector="^:top-unknown /template/ Arc#TopArc">
-        <Setter Property="Stroke" Value="{StaticResource IndicatorUnknownBrush}"/>
+        <Setter Property="Stroke" Value="{DynamicResource IndicatorUnknownBrush}"/>
     </Style>
     
     <!-- TopTextBlock -->
     <Style Selector="^:top-warning /template/ TextBlock#TopTextBlock">
-        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextWarningBrush}"/>
         <Style.Animations>
-            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+            <Animation Duration="0:0:0.5" IterationCount="{DynamicResource IndicatorBlinkAnimationCount}">
                 <KeyFrame Cue="0%">
                     <Setter Property="Opacity" Value="0.0"/>
                 </KeyFrame>
@@ -191,9 +191,9 @@
         </Style.Animations>
     </Style>
     <Style Selector="^:top-critical /template/ TextBlock#TopTextBlock">
-        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextCriticalBrush}"/>
         <Style.Animations>
-            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+            <Animation Duration="0:0:0.5" IterationCount="{DynamicResource IndicatorBlinkAnimationCount}">
                 <KeyFrame Cue="0%">
                     <Setter Property="Opacity" Value="0.0"/>
                 </KeyFrame>
@@ -204,7 +204,7 @@
         </Style.Animations>
     </Style>
     <Style Selector="^:top-unknown /template/ TextBlock#TopTextBlock">
-        <Setter Property="Foreground" Value="{StaticResource TextUnknownBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextUnknownBrush}"/>
     </Style>
     
     
@@ -212,9 +212,9 @@
     <!-- RightArc -->
     
     <Style Selector="^:right-critical /template/ Arc#RightArc">
-        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+        <Setter Property="Stroke" Value="{DynamicResource IndicatorCriticalBrush}"/>
         <Style.Animations>
-            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+            <Animation Duration="0:0:0.5" IterationCount="{DynamicResource IndicatorBlinkAnimationCount}">
                 <KeyFrame Cue="0%">
                     <Setter Property="Opacity" Value="0.0"/>
                 </KeyFrame>
@@ -225,9 +225,9 @@
         </Style.Animations>
     </Style>
     <Style Selector="^:right-warning /template/ Arc#RightArc">
-        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+        <Setter Property="Stroke" Value="{DynamicResource IndicatorWarningBrush}"/>
         <Style.Animations>
-            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+            <Animation Duration="0:0:0.5" IterationCount="{DynamicResource IndicatorBlinkAnimationCount}">
                 <KeyFrame Cue="0%">
                     <Setter Property="Opacity" Value="0.0"/>
                 </KeyFrame>
@@ -240,9 +240,9 @@
     
     <!-- RightTextBlock -->
     <Style Selector="^:right-warning /template/ TextBlock#RightTextBlock">
-        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextWarningBrush}"/>
         <Style.Animations>
-            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+            <Animation Duration="0:0:0.5" IterationCount="{DynamicResource IndicatorBlinkAnimationCount}">
                 <KeyFrame Cue="0%">
                     <Setter Property="Opacity" Value="0.0"/>
                 </KeyFrame>
@@ -253,9 +253,9 @@
         </Style.Animations>
     </Style>
     <Style Selector="^:right-critical /template/ TextBlock#RightTextBlock">
-        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextCriticalBrush}"/>
         <Style.Animations>
-            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+            <Animation Duration="0:0:0.5" IterationCount="{DynamicResource IndicatorBlinkAnimationCount}">
                 <KeyFrame Cue="0%">
                     <Setter Property="Opacity" Value="0.0"/>
                 </KeyFrame>
@@ -266,14 +266,14 @@
         </Style.Animations>
     </Style>
     <Style Selector="^:right-unknown /template/ TextBlock#RightTextBlock">
-        <Setter Property="Foreground" Value="{StaticResource TextUnknownBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextUnknownBrush}"/>
     </Style>
     
     <!-- LeftArc -->
     <Style Selector="^:left-warning /template/ Arc#LeftArc">
-        <Setter Property="Stroke" Value="{StaticResource IndicatorWarningBrush}"/>
+        <Setter Property="Stroke" Value="{DynamicResource IndicatorWarningBrush}"/>
         <Style.Animations>
-            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+            <Animation Duration="0:0:0.5" IterationCount="{DynamicResource IndicatorBlinkAnimationCount}">
                 <KeyFrame Cue="0%">
                     <Setter Property="Opacity" Value="0.0"/>
                 </KeyFrame>
@@ -284,9 +284,9 @@
         </Style.Animations>
     </Style>
     <Style Selector="^:left-critical /template/ Arc#LeftArc">
-        <Setter Property="Stroke" Value="{StaticResource IndicatorCriticalBrush}"/>
+        <Setter Property="Stroke" Value="{DynamicResource IndicatorCriticalBrush}"/>
         <Style.Animations>
-            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+            <Animation Duration="0:0:0.5" IterationCount="{DynamicResource IndicatorBlinkAnimationCount}">
                 <KeyFrame Cue="0%">
                     <Setter Property="Opacity" Value="0.0"/>
                 </KeyFrame>
@@ -298,9 +298,9 @@
     </Style>
     <!-- LeftTextBlock -->
     <Style Selector="^:left-warning /template/ TextBlock#LeftTextBlock">
-        <Setter Property="Foreground" Value="{StaticResource TextWarningBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextWarningBrush}"/>
         <Style.Animations>
-            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+            <Animation Duration="0:0:0.5" IterationCount="{DynamicResource IndicatorBlinkAnimationCount}">
                 <KeyFrame Cue="0%">
                     <Setter Property="Opacity" Value="0.0"/>
                 </KeyFrame>
@@ -311,9 +311,9 @@
         </Style.Animations>
     </Style>
     <Style Selector="^:left-critical /template/ TextBlock#LeftTextBlock">
-        <Setter Property="Foreground" Value="{StaticResource TextCriticalBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextCriticalBrush}"/>
         <Style.Animations>
-            <Animation Duration="0:0:0.5" IterationCount="{StaticResource IndicatorBlinkAnimationCount}">
+            <Animation Duration="0:0:0.5" IterationCount="{DynamicResource IndicatorBlinkAnimationCount}">
                 <KeyFrame Cue="0%">
                     <Setter Property="Opacity" Value="0.0"/>
                 </KeyFrame>
@@ -324,7 +324,7 @@
         </Style.Animations>
     </Style>
     <Style Selector="^:left-unknown /template/ TextBlock#LeftTextBlock">
-        <Setter Property="Foreground" Value="{StaticResource TextUnknownBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextUnknownBrush}"/>
     </Style>
         
     </ControlTheme>

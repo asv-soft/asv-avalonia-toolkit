@@ -2,7 +2,7 @@ using System;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using Asv.Avalonia.Toolkit.UI.Controls.Indicators;
-using Asv.Avalonia.ToolkitGallery.Models;
+using Asv.Avalonia.ToolkitGallery.Tools;
 using Avalonia;
 using ReactiveUI.Fody.Helpers;
 

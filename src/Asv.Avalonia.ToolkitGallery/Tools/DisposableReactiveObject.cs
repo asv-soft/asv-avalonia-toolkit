@@ -3,7 +3,7 @@ using System.Reactive.Disposables;
 using System.Threading;
 using ReactiveUI;
 
-namespace Asv.Avalonia.ToolkitGallery.Models;
+namespace Asv.Avalonia.ToolkitGallery.Tools;
 
 public class DisposableReactiveObject : ReactiveObject, IDisposable
     {

@@ -1,4 +1,4 @@
-using Asv.Avalonia.ToolkitGallery.Models;
+using Asv.Avalonia.ToolkitGallery.Tools;
 
 namespace Asv.Avalonia.ToolkitGallery.ViewModels.Pages;
 

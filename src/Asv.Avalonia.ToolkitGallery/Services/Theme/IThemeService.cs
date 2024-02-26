@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Asv.Avalonia.ToolkitGallery.Models;
+using Asv.Avalonia.ToolkitGallery.Tools;
 using Avalonia.Styling;
 using ReactiveUI.Fody.Helpers;
 

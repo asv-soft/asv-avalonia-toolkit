@@ -2,7 +2,6 @@ using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using Avalonia.Data;
 using FluentAvalonia.UI.Controls;
-using Asv.Avalonia.ToolkitGallery.Models;
 using Asv.Avalonia.ToolkitGallery.ViewModels;
 using Asv.Avalonia.ToolkitGallery.ViewModels.MenuItems;
 

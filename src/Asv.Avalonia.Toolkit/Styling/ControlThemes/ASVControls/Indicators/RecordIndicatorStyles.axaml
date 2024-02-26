@@ -18,8 +18,8 @@
                 <Border
                     x:Name="MainBorder"
                     BorderThickness="1"
-                    BorderBrush="{StaticResource IndicatorBorderBrush}"
-                    CornerRadius="{StaticResource IndicatorCornerRadius}">
+                    BorderBrush="{DynamicResource IndicatorBorderBrush}"
+                    CornerRadius="{DynamicResource IndicatorCornerRadius}">
                     <Panel>
                         <Grid x:Name="RecordingControl" IsVisible="False" RowDefinitions="*,Auto,Auto" ColumnDefinitions="2*,Auto" >
                             <TextBlock  Grid.Column="0" Grid.Row="1" Margin="15,0,0,0" FontSize="15" FontWeight="Bold" Text="{TemplateBinding RecordingText}" Foreground="#e63f32" HorizontalAlignment="Left" VerticalAlignment="Center"  />

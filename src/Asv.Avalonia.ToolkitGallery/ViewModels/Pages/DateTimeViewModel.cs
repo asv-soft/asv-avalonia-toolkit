@@ -1,6 +1,6 @@
 using System;
 using System.Globalization;
-using Asv.Avalonia.ToolkitGallery.Models;
+using Asv.Avalonia.ToolkitGallery.Tools;
 using Asv.Common;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
