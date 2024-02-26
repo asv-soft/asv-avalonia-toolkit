@@ -1,7 +1,6 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=System.Runtime"
-                    xmlns:ui="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
                     xmlns:dateTime="clr-namespace:Asv.Avalonia.Toolkit.UI.Controls.DateTime">
  
     <Design.PreviewWith>
@@ -454,13 +453,21 @@
                                     Theme="{StaticResource DateTimeFlyoutButtonStyle}"
                                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                     Margin="{DynamicResource DatePickerFlyoutPresenterAcceptMargin}">
-                                <ui:SymbolIcon Symbol="Checkmark" FontSize="18" />
+                                <Path Stroke="{DynamicResource TextControlForeground}" StrokeThickness="2">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M 3,12 L 8,17 L 17,4" FillRule="EvenOdd"/>
+                                    </Path.Data>
+                                </Path>
                             </Button>
                             <Button Name="PART_DismissButton" Grid.Column="1"
                                     Theme="{StaticResource DateTimeFlyoutButtonStyle}"
                                     Margin="{DynamicResource DatePickerFlyoutPresenterDismissMargin}"
                                     FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                <ui:SymbolIcon Symbol="Dismiss" FontSize="16" />
+                                <Path Stroke="{DynamicResource TextControlForeground}" StrokeThickness="2">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M 3,3 L 17,17 M 17,3 L 3,17" />
+                                    </Path.Data>
+                                </Path>    
                             </Button>
                         </Grid>
                     </Grid>
