@@ -225,7 +225,6 @@
     <ControlTheme x:Key="DatePickerFlyoutButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
         <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
         <Setter Property="Padding" Value="0" />
-
         <Style Selector="^:pointerover">
             <Style Selector="^ /template/ Border#Root">
                 <Setter Property="Background" Value="{DynamicResource DatePickerButtonBackgroundPointerOver}" />

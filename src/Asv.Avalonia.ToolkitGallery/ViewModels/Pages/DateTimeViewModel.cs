@@ -2,6 +2,7 @@ using System;
 using System.Globalization;
 using Asv.Avalonia.ToolkitGallery.Tools;
 using Asv.Common;
+using DynamicData.Binding;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 
@@ -12,21 +13,21 @@ public class DateTimeViewModel : DisposableReactiveObject, IShellPage
     public DateTimeViewModel()
     {
         SelectedDateValue = DateTimeOffset.Now;
-        this.WhenAnyValue(vm => vm.SelectedDateValue,
-                vm => vm.SelectedTimeValue)
-            .Subscribe(complexObject =>
-            {
-                var (date, time) = complexObject;
-                DateTimeResult = $"{date.DateTime.ToLongDateString()} {time.DateTime.ToLongTimeString()}";
-            })
-            .DisposeItWith(Disposable);
+        SelectedTimeValue = SelectedDateValue.TimeOfDay;
+        this.WhenAnyValue(x => x.SelectedDateValue).Subscribe(_ =>
+        {
+            DateTimeResult = $"{SelectedDateValue} {SelectedTimeValue}";
+        });
+        this.WhenAnyValue(x => x.SelectedTimeValue).Subscribe(_ =>
+        {
+            DateTimeResult = $"{SelectedDateValue.Date} {SelectedTimeValue}";
+        });
     }
 
     [Reactive] 
     public DateTimeOffset SelectedDateValue { get; set; }
-
-    [Reactive] 
-    public DateTimeOffset SelectedTimeValue { get; set; }
+    [Reactive]
+    public TimeSpan SelectedTimeValue { get; set; }
     
     [Reactive] 
     public string DateTimeResult { get; set; } = string.Empty;

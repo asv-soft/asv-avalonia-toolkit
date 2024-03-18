@@ -28,6 +28,9 @@
               </StackPanel>
            <StackPanel Grid.Column="0" Grid.Row="1" Spacing="10" HorizontalAlignment="Center" Width="250" >
                <TextBlock HorizontalAlignment="Center" Text="Stretchable time picker control:"/>
+               <dateTime:StretchableTimePicker Width="100" SelectedTime="{CompiledBinding SelectedTimeValue}"/>
+               <dateTime:StretchableTimePicker Width="150" SelectedTime="{CompiledBinding SelectedTimeValue}"/>
+               <dateTime:StretchableTimePicker Width="250" SelectedTime="{CompiledBinding SelectedTimeValue}"/>
                <Expander Header="XAML Example">
                    <TextBox TextWrapping="Wrap" IsReadOnly="True">
                        <x:String xml:space="preserve">&lt;toolkit:StretchableTimePicker/&gt;</x:String>

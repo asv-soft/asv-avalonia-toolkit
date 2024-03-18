@@ -6,17 +6,15 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/CommonIndicatorResources.axaml"/>
-                
                 <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/TripleSection/CircularTripleSectionIndicatorStyles.axaml"/>
                 <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/TripleSection/DualCircularTripleSectionIndicatorStyles.axaml"/>
                 <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/RouteIndicatorStyles.axaml"/>
                 <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/RecordIndicatorStyles.axaml"/>
-                
                 <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/DateTime/StretchableDatePickerStyles.axaml"/>
+                <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/DateTime/StretchableTimePickerStyles.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>
-    
     <Design.PreviewWith>
         <Border Padding="20">
             <!-- Add Controls for Previewer Here -->
@@ -73,9 +71,7 @@
                     BottomStatus="Warning"
                 />
                 <indicators:RecordIndicator>
-                    
                 </indicators:RecordIndicator>
-                
                 <indicators:RouteIndicator/>
             </StackPanel>
         </Border>
