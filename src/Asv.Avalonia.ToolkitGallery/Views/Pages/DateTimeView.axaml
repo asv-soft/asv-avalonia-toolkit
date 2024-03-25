@@ -26,7 +26,8 @@
                               FontSize="18"/>
                </Border>
               </StackPanel>
-           <StackPanel Grid.Column="0" Grid.Row="1" Spacing="10" HorizontalAlignment="Center" Width="250" >
+           <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Grid.ColumnSpan="2">
+           <StackPanel Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 0, 50, 0">
                <TextBlock HorizontalAlignment="Center" Text="Stretchable time picker control:"/>
                <dateTime:StretchableTimePicker Width="100" SelectedTime="{CompiledBinding SelectedTimeValue}"/>
                <dateTime:StretchableTimePicker Width="150" SelectedTime="{CompiledBinding SelectedTimeValue}"/>
@@ -37,7 +38,7 @@
                    </TextBox>
                </Expander>
            </StackPanel>
-           <StackPanel Grid.Row="1" Grid.Column="1" Spacing="10" Width="250" HorizontalAlignment="Center">
+           <StackPanel Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="50, 0, 10, 0">
                <TextBlock Text="Stretchable date picker control:" HorizontalAlignment="Center"/>
                <dateTime:StretchableDatePicker Width="100" SelectedDate="{CompiledBinding SelectedDateValue}"/>
                <dateTime:StretchableDatePicker Width="175" SelectedDate="{CompiledBinding SelectedDateValue}"/>
@@ -47,6 +48,7 @@
                        <x:String xml:space="preserve">&lt;toolkit:StretchableDatePicker/&gt;</x:String>
                    </TextBox>
                </Expander>
+           </StackPanel>
            </StackPanel>
        </Grid>
    </ScrollViewer>
