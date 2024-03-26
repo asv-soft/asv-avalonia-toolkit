@@ -45,9 +45,5 @@
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="FluentAvalonia">
-      <HintPath>..\..\..\..\..\Users\VitalyAnofriev\.nuget\packages\fluentavaloniaui\2.0.4\lib\net6.0\FluentAvalonia.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+ 
 </Project>
