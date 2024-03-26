@@ -62,4 +62,4 @@ jobs:
       - name: Pushing packages to Github   
         run: |    
           cd src    
-          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}Asv.Avalonia.Toolkit.${{ steps.version.outputs.version-without-v }}.nupkg -k ${{ secrets.GIHUB_NUGET_AUTH_TOKEN }} -s ${{ env.GITHUB_PACKAGE
+          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}Asv.Avalonia.Toolkit.${{ steps.version.outputs.version-without-v }}.nupkg -k ${{ secrets.GIHUB_NUGET_AUTH_TOKEN }} -s ${{ env.GITHUB_PACKAGE}}
