@@ -458,48 +458,65 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
         
         if (change.Property == TopLeftProgressValueProperty)
         {
-            var progressValue = (double)change.NewValue! * 1.3;
-            if (progressValue <= 0)
+            TopLeftStatus = IndicatorStatusEnum.Success;
+            var progressValue = (double)change.NewValue! ;
+            if (progressValue >= TopLeftMin )
             {
                 TopLeftProgressLinePoint = new Point(100, 2.5);
                 TopLeftProgressAngle = 0;
+                return;
             }
-            if (progressValue >= 130 )
+            if (Math.Abs(progressValue) <= Math.Abs(TopLeftMax))
             {
                 TopLeftProgressLinePoint = new Point(50, 2.5);
                 TopLeftProgressAngle = 80;
                 return;
             }
+            progressValue *= 1.08;
             TopLeftProgressAngle = 0;
-            TopLeftProgressLinePoint = new Point((100 - progressValue),2.5);
+            TopLeftProgressLinePoint = new Point((100 - Math.Abs(progressValue)),2.5);
+            if (TopLeftProgressLinePoint.X <= 80)
+            {
+                TopLeftStatus = IndicatorStatusEnum.Warning;
+            }
             if (TopLeftProgressLinePoint.X <= 50)
             {
                 TopLeftProgressLinePoint = new Point(50, 2.5);
-                TopLeftProgressAngle =  progressValue - 50;     
+                TopLeftProgressAngle = Math.Abs(progressValue) - 50;  
+                TopLeftStatus = IndicatorStatusEnum.Critical;
+
             }
         }
         
         if (change.Property == TopRightProgressValueProperty)
         {
-             var progressValue = (double)change.NewValue! * 1.3;
-             if (progressValue <= 0)
-             {
-                 TopRightProgressLinePoint = new Point(100, 2.5);
-                 TopRightProgressAngle = 0;
-             }
-             if (progressValue >= 130 )
-             {
-                 TopRightProgressLinePoint = new Point(150, 2.5);
-                 TopRightProgressAngle = 80;
-                 return;
-             }
-             TopRightProgressAngle = 0;
-             TopRightProgressLinePoint = new Point((100 + progressValue),2.5);
-             if (TopRightProgressLinePoint.X >= 150)
-             {
-                 TopRightProgressLinePoint = new Point(150, 2.5);
-                 TopRightProgressAngle =  progressValue - 50;     
-             }
+            TopRightStatus = IndicatorStatusEnum.Success;
+            var progressValue = (double)change.NewValue! ;
+            if (progressValue >= TopRightMin )
+            {
+                TopRightProgressLinePoint = new Point(100, 2.5);
+                TopRightProgressAngle = 0;
+                return;
+            }
+            if (progressValue >= TopRightMax)
+            {
+                TopRightProgressLinePoint = new Point(150, 2.5);
+                TopRightProgressAngle = 80;
+                return;
+            }
+            progressValue *= 1.08;
+            TopRightProgressAngle = 0;
+            TopRightProgressLinePoint = new Point((100 + Math.Abs(progressValue)),2.5);
+            if (TopRightProgressLinePoint.X >= 120)
+            {
+                TopRightStatus = IndicatorStatusEnum.Warning;
+            }
+            if (TopRightProgressLinePoint.X >=150)
+            {
+                TopRightProgressLinePoint = new Point(150, 2.5);
+                TopRightProgressAngle = Math.Abs(progressValue) - 50;  
+                TopRightStatus = IndicatorStatusEnum.Critical;
+            }
         }
         
         if (change.Property == TopRightStatusProperty)
