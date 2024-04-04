@@ -9,15 +9,17 @@
             Title="CRS \ CLR"
             LeftTopText="-90.0"
             LeftTopTitle="CLR Power, dBm"
-            LeftTopStatus="Success"
+           
             
             TopRightProgressLinePoint="100,2.5"
-            TopRightProgressValue="50"
-            
+            TopRightProgressValue="-60"
+            TopRightMax="-120"
+            TopRightMin="20"
             
             TopLeftProgressLinePoint="100,2.5"
-            TopLeftProgressValue="20"
-            
+            TopLeftProgressValue="-120"
+            TopLeftMax="-120"
+            TopLeftMin="20"
             
             LeftBottomLeftText="+40.0"
             LeftBottomLeftTitle="DDM,%"
@@ -29,7 +31,6 @@
             
             RightTopText="-110.0"
             RightTopTitle="CRS Power, dBm"
-            RightTopStatus="Critical"
             
             RightBottomLeftText="+40.0"
             RightBottomLeftTitle="DDM,%"
