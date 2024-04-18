@@ -8,72 +8,76 @@
              x:Class="Asv.Avalonia.ToolkitGallery.Views.Pages.MeasureUnitsView"
              x:DataType="pages2:MeasureUnitsViewModel">
     <ScrollViewer>
-       <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"  Spacing="5">
-        <TextBlock Text="Measuring units controls template" FontSize="26" />
-            <TextBlock Text="Example of our own controls to customize Asv.Afis."/>
-    </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Spacing="10">
-            <TextBlock Text="Circular Triple Section indicator"/>
-            <indicators:CircularTripleSectionIndicator
-                Title="Power"
-                TopTitle="Total power, dBm" 
-                TopStatus="Success" 
-                TopText="-110.05" 
-                TopMin="-90" 
-                TopMax="10" 
-                TopValue="-50" 
-                RightStatus="Warning"
-                RightText="80.00"
-                RightTitle="SDM, %"
-                LeftStatus="Success"
-                LeftText="-10.00"
-                LeftTitle="DDM, %"
-                Width="100" Height="100" />
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Spacing="10">
-            <TextBlock Text="Dual Circular Triple Section indicator"/>
-            <indicators:DualCircularTripleSectionIndicator VerticalAlignment="Center" Height="100" 
-                                              LeftTopStatus="Success"
-                                              TopLeftStatus="Success"
-                                              TopLeftProgressLinePoint = "{Binding PointDoubleLeftTopLineEndPoint}"
-                                              TopLeftProgressValue="60"
-                                              RightTopStatus="Critical"
-                                              TopRightProgressLinePoint="{Binding PointDoubleRightTopLineEndPoint}"
-                                              TopRightProgressValue="100"
-                                              TopRightStatus="Critical"
-                                              Title="CRS \ CLR"
-                                              LeftTopText="100,00"
-                                              LeftTopTitle="CLR Power, dBm"
-                                              LeftBottomLeftText="+40.0"
-                                              LeftBottomLeftTitle="DDM,%"
-                                              LeftBottomLeftStatus="Warning"
-                                              LeftBottomRightText="-80.8"
-                                              LeftBottomRightTitle="SDM,%"
-                                              LeftBottomRightStatus="Success"
-                                              RightTopText="-90"
-                                              RightTopTitle="CRS Power, dBm"
-                                              RightBottomLeftText="+40.0"
-                                              RightBottomLeftTitle="DDM,%"
-                                              RightBottomLeftStatus="Success"
-                                              RightBottomRightText="-80.8"
-                                              RightBottomRightTitle="SDM,%"
-                                              RightBottomRightStatus="Warning"
-                                              BottomStatus="Warning"
-                                              BottomStatusText="Warning"/>
-        </StackPanel>
-        <Expander Grid.Column="0" Grid.Row="2" Header="XAML Example" Margin="20">
-            <TextBox IsReadOnly="True" Background="Transparent"  TextWrapping="Wrap">
-                 <x:String xml:space="preserve">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"
+                        Spacing="5">
+                <TextBlock Text="Measuring units controls template" FontSize="26" />
+                <TextBlock Text="Example of our own controls to customize Asv.Afis." />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Spacing="10">
+                <TextBlock Text="Circular Triple Section indicator" />
+                <indicators:CircularTripleSectionIndicator
+                    Title="Power"
+                    TopTitle="Total power, dBm"
+                    TopStatus="Success"
+                    TopText="-110.05"
+                    TopMin="-90"
+                    TopMax="10"
+                    TopValue="-50"
+                    RightStatus="Warning"
+                    RightText="80.00"
+                    RightTitle="SDM, %"
+                    LeftStatus="Success"
+                    LeftText="-10.00"
+                    LeftTitle="DDM, %"
+                    Width="100" Height="100" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Spacing="10">
+                <TextBlock Text="Dual Circular Triple Section indicator" />
+                <indicators:DualCircularTripleSectionIndicator VerticalAlignment="Center" Height="100"
+                                                               LeftTopStatus="Success"
+                                                               TopLeftStatus="Success"
+                                                               TopLeftMin="20"
+                                                               TopLeftMax="-120"
+                                                               TopLeftProgressValue="10"
+                                                               RightTopStatus="Critical"
+                                                               TopRightMax="-120"
+                                                               TopRightMin="20"
+                                                               TopRightProgressValue="-90"
+                                                               TopRightStatus="Critical"
+                                                               Title="CRS \ CLR"
+                                                               LeftTopText="10,00"
+                                                               LeftTopTitle="CLR Power, dBm"
+                                                               LeftBottomLeftText="+40.0"
+                                                               LeftBottomLeftTitle="DDM,%"
+                                                               LeftBottomLeftStatus="Warning"
+                                                               LeftBottomRightText="-80.8"
+                                                               LeftBottomRightTitle="SDM,%"
+                                                               LeftBottomRightStatus="Success"
+                                                               RightTopText="-90"
+                                                               RightTopTitle="CRS Power, dBm"
+                                                               RightBottomLeftText="+40.0"
+                                                               RightBottomLeftTitle="DDM,%"
+                                                               RightBottomLeftStatus="Success"
+                                                               RightBottomRightText="-80.8"
+                                                               RightBottomRightTitle="SDM,%"
+                                                               RightBottomRightStatus="Warning"
+                                                               BottomStatus="Warning"
+                                                               BottomStatusText="Warning" />
+            </StackPanel>
+
+            <Expander Grid.Column="0" Grid.Row="2" Header="XAML Example" Margin="20">
+                <TextBox IsReadOnly="True" Background="Transparent" TextWrapping="Wrap">
+                    <x:String xml:space="preserve">
  &lt;controls:CircularTripleSectionIndicator
             Title="Power"
             TopTitle="Total power, dBm" 
@@ -90,44 +94,44 @@
             LeftTitle="DDM, %"
             Width="100" Height="100"/&gt;
                 </x:String>
-            </TextBox>
-        </Expander>
-        <Expander Grid.Row="2" Grid.Column="1" Header="XAML example" Margin="20">
-            <TextBox IsReadOnly="True" Background="Transparent" TextWrapping="Wrap">
-                <x:String xml:space="preserve">
-                            &lt;controls:DualCircularTripleSectionIndicator 
-                            VerticalAlignment="Center" 
-                            Height="100" 
-                            LeftTopStatus="Success"
-                            TopLeftStatus="Success"
-                            TopLeftProgressLinePoint="{Binding props}"
-                            TopLeftProgressValue="60"
-                            RightTopStatus="Critical"
-                            TopRightProgressLinePoint="{Binding props}"
-                            TopRightProgressValue="100"
-                            TopRightStatus="Critical"
-                            Title="CRS \ CLR"
-                            LeftTopText="100,00"
-                            LeftTopTitle="CLR Power, dBm"
-                            LeftBottomLeftText="+40.0"
-                            LeftBottomLeftTitle="DDM,%"
-                            LeftBottomLeftStatus="Warning"
-                            LeftBottomRightText="-80.8"
-                            LeftBottomRightTitle="SDM,%"
-                            LeftBottomRightStatus="Success"
-                            RightTopText="-90"
-                            RightTopTitle="CRS Power, dBm"
-                            RightBottomLeftText="+40.0"
-                            RightBottomLeftTitle="DDM,%"
-                            RightBottomLeftStatus="Success"
-                            RightBottomRightText="-80.8"
-                            RightBottomRightTitle="SDM,%"
-                            RightBottomRightStatus="Warning"
-                            BottomStatus="Warning"
-                            BottomStatusText="Warning"/&gt;
+                </TextBox>
+            </Expander>
+            <Expander Grid.Row="2" Grid.Column="1" Header="XAML example" Margin="20">
+                <TextBox IsReadOnly="True" Background="Transparent" TextWrapping="Wrap">
+                    <x:String xml:space="preserve">
+                            &lt;indicators:DualCircularTripleSectionIndicator VerticalAlignment="Center" Height="100" 
+                                              LeftTopStatus="Success"
+                                              TopLeftStatus="Success"
+                                              TopLeftMin="20"
+                                              TopLeftMax="-120"
+                                              TopLeftProgressValue="10"
+                                              RightTopStatus="Critical"
+                                              TopRightMax="-120"
+                                              TopRightMin="20"
+                                              TopRightProgressValue="-90"
+                                              TopRightStatus="Critical"
+                                              Title="CRS \ CLR"
+                                              LeftTopText="10,00"
+                                              LeftTopTitle="CLR Power, dBm"
+                                              LeftBottomLeftText="+40.0"
+                                              LeftBottomLeftTitle="DDM,%"
+                                              LeftBottomLeftStatus="Warning"
+                                              LeftBottomRightText="-80.8"
+                                              LeftBottomRightTitle="SDM,%"
+                                              LeftBottomRightStatus="Success"
+                                              RightTopText="-90"
+                                              RightTopTitle="CRS Power, dBm"
+                                              RightBottomLeftText="+40.0"
+                                              RightBottomLeftTitle="DDM,%"
+                                              RightBottomLeftStatus="Success"
+                                              RightBottomRightText="-80.8"
+                                              RightBottomRightTitle="SDM,%"
+                                              RightBottomRightStatus="Warning"
+                                              BottomStatus="Warning"
+                                              BottomStatusText="Warning"/&gt;
                 </x:String>
-            </TextBox>
-        </Expander>
-    </Grid>
-   </ScrollViewer>
+                </TextBox>
+            </Expander>
+        </Grid>
+    </ScrollViewer>
 </UserControl>
