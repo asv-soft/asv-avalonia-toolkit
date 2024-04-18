@@ -547,11 +547,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
                 TopRightStatus = IndicatorStatusEnum.Critical;
                 return;
             }
-            if (proccesValue < 0.3) TopRightStatus = IndicatorStatusEnum.Success;
-            if (proccesValue > 0.3) TopRightStatus = IndicatorStatusEnum.Warning;
             if (proccesValue > 0.5)
             {
-                TopRightStatus = IndicatorStatusEnum.Critical;
                 TopRightProgressLinePoint = new Point(150, 2.5);
                 TopRightProgressAngle = 160 * (proccesValue - 0.5);
                 return;
