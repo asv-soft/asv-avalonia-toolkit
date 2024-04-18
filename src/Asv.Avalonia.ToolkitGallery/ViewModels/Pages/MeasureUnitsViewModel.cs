@@ -12,8 +12,6 @@ public class MeasureUnitsViewModel : DisposableReactiveObject, IShellPage
 {
     public MeasureUnitsViewModel()
     {
-        PointDoubleLeftTopLineEndPoint = new Point(50, 2.5);
-        PointDoubleRightTopLineEndPoint = new Point(150, 2.5);
         bool isProgressRun = true;
         Observable.Timer(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1))
             .Subscribe(_ =>
@@ -95,7 +93,6 @@ public class MeasureUnitsViewModel : DisposableReactiveObject, IShellPage
                 }
             });
     }
-
     [Reactive] 
     public string DoubleLeftTopText { get; set; }
     [Reactive] 

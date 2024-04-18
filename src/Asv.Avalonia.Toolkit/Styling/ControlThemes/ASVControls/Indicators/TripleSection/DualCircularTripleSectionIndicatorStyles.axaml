@@ -11,15 +11,15 @@
             LeftTopTitle="CLR Power, dBm"
            
             
-            TopRightProgressLinePoint="100,2.5"
-            TopRightProgressValue="-60"
+            TopRightProgressLinePoint="80,2.5"
             TopRightMax="-120"
             TopRightMin="20"
+            TopRightProgressValue="-10"
             
-            TopLeftProgressLinePoint="100,2.5"
-            TopLeftProgressValue="-120"
+            TopLeftProgressLinePoint="80,2.5"
             TopLeftMax="-120"
             TopLeftMin="20"
+            TopLeftProgressValue="10"
             
             LeftBottomLeftText="+40.0"
             LeftBottomLeftTitle="DDM,%"
