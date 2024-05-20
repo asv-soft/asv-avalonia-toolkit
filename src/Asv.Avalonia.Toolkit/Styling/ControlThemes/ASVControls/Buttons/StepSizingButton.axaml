@@ -1,51 +1,64 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:system="clr-namespace:System;assembly=System.Runtime"
-                    xmlns:controls="clr-namespace:Asv.Avalonia.Toolkit.UI.Controls">
+                    xmlns:buttons="clr-namespace:Asv.Avalonia.Toolkit.UI.Controls.Buttons">
     <Design.PreviewWith>
         <Border Height="500" Padding="20" Width="500">
             <StackPanel Spacing="10">
                 <WrapPanel Width="200">
-                    
-                    <controls:StepSizingButton Content="12345222222222" ContentOrientation="Vertical" StepSizeHeight="20" StepSizeWidth="50">
-                        <controls:StepSizingButton.Icon>
-                            M41.0098 0.61026C18.4186 0.61026 0.120728 19.0646 0.120728 41.8489C0.120728 60.097 11.8252 75.51 28.0787 80.9741C30.1231 81.335 30.8898 80.0978 30.8898 79.0153C30.8898 78.0359 30.8387 74.7883 30.8387 71.3346C20.5653 73.2419 17.9075 68.8087 17.0897 66.489C16.6297 65.3034 14.6364 61.6435 12.8986 60.6641C11.4675 59.8908 9.423 57.9836 12.8475 57.932C16.0675 57.8805 18.3675 60.9218 19.1342 62.159C22.8142 68.3963 28.692 66.6437 31.0431 65.5612C31.4009 62.8807 32.4742 61.0765 33.6498 60.0455C24.552 59.0145 15.0453 55.4577 15.0453 39.6839C15.0453 35.1992 16.6297 31.4877 19.2364 28.601C18.8275 27.57 17.3964 23.3431 19.6453 17.6728C19.6453 17.6728 23.0697 16.5902 30.8898 21.8997C34.1609 20.9719 37.6365 20.5079 41.1121 20.5079C44.5877 20.5079 48.0632 20.9719 51.3344 21.8997C59.1544 16.5387 62.5789 17.6728 62.5789 17.6728C64.8278 23.3431 63.3966 27.57 62.9878 28.601C65.5944 31.4877 67.1789 35.1476 67.1789 39.6839C67.1789 55.5092 57.6211 59.0145 48.5232 60.0455C50.0055 61.3342 51.2832 63.8085 51.2832 67.6747C51.2832 73.1903 51.2321 77.6235 51.2321 79.0153C51.2321 80.0978 51.9988 81.3865 54.0433 80.9741C62.1609 78.2111 69.2149 72.9498 74.2119 65.9311C79.209 58.9123 81.8976 50.4897 81.899 41.8489C81.899 19.0646 63.6011 0.61026 41.0098 0.61026Z
-                        </controls:StepSizingButton.Icon>
-                    </controls:StepSizingButton>
-                    <controls:StepSizingButton StepSizeWidth="50" StepSizeHeight="20"  />
-                    <controls:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
-                    <controls:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" Content="12345222222" />
-                    <controls:StepSizingButton Content="12345222222222" ContentOrientation="Vertical"  StepSizeHeight="20"  StepSizeWidth="50">
-                        <controls:StepSizingButton.Icon>
-                            M41.0098 0.61026C18.4186 0.61026 0.120728 19.0646 0.120728 41.8489C0.120728 60.097 11.8252 75.51 28.0787 80.9741C30.1231 81.335 30.8898 80.0978 30.8898 79.0153C30.8898 78.0359 30.8387 74.7883 30.8387 71.3346C20.5653 73.2419 17.9075 68.8087 17.0897 66.489C16.6297 65.3034 14.6364 61.6435 12.8986 60.6641C11.4675 59.8908 9.423 57.9836 12.8475 57.932C16.0675 57.8805 18.3675 60.9218 19.1342 62.159C22.8142 68.3963 28.692 66.6437 31.0431 65.5612C31.4009 62.8807 32.4742 61.0765 33.6498 60.0455C24.552 59.0145 15.0453 55.4577 15.0453 39.6839C15.0453 35.1992 16.6297 31.4877 19.2364 28.601C18.8275 27.57 17.3964 23.3431 19.6453 17.6728C19.6453 17.6728 23.0697 16.5902 30.8898 21.8997C34.1609 20.9719 37.6365 20.5079 41.1121 20.5079C44.5877 20.5079 48.0632 20.9719 51.3344 21.8997C59.1544 16.5387 62.5789 17.6728 62.5789 17.6728C64.8278 23.3431 63.3966 27.57 62.9878 28.601C65.5944 31.4877 67.1789 35.1476 67.1789 39.6839C67.1789 55.5092 57.6211 59.0145 48.5232 60.0455C50.0055 61.3342 51.2832 63.8085 51.2832 67.6747C51.2832 73.1903 51.2321 77.6235 51.2321 79.0153C51.2321 80.0978 51.9988 81.3865 54.0433 80.9741C62.1609 78.2111 69.2149 72.9498 74.2119 65.9311C79.209 58.9123 81.8976 50.4897 81.899 41.8489C81.899 19.0646 63.6011 0.61026 41.0098 0.61026Z
-                        </controls:StepSizingButton.Icon>
-                    </controls:StepSizingButton>
-                    <controls:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
-                    <controls:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
-                    <controls:StepSizingButton StepSizeWidth="50"  StepSizeHeight="20" Content="12345222222" />
-                    <controls:StepSizingButton Content="12345222222222" StepSizeHeight="20" StepSizeWidth="50">
-                        <controls:StepSizingButton.Icon>
-                            M41.0098 0.61026C18.4186 0.61026 0.120728 19.0646 0.120728 41.8489C0.120728 60.097 11.8252 75.51 28.0787 80.9741C30.1231 81.335 30.8898 80.0978 30.8898 79.0153C30.8898 78.0359 30.8387 74.7883 30.8387 71.3346C20.5653 73.2419 17.9075 68.8087 17.0897 66.489C16.6297 65.3034 14.6364 61.6435 12.8986 60.6641C11.4675 59.8908 9.423 57.9836 12.8475 57.932C16.0675 57.8805 18.3675 60.9218 19.1342 62.159C22.8142 68.3963 28.692 66.6437 31.0431 65.5612C31.4009 62.8807 32.4742 61.0765 33.6498 60.0455C24.552 59.0145 15.0453 55.4577 15.0453 39.6839C15.0453 35.1992 16.6297 31.4877 19.2364 28.601C18.8275 27.57 17.3964 23.3431 19.6453 17.6728C19.6453 17.6728 23.0697 16.5902 30.8898 21.8997C34.1609 20.9719 37.6365 20.5079 41.1121 20.5079C44.5877 20.5079 48.0632 20.9719 51.3344 21.8997C59.1544 16.5387 62.5789 17.6728 62.5789 17.6728C64.8278 23.3431 63.3966 27.57 62.9878 28.601C65.5944 31.4877 67.1789 35.1476 67.1789 39.6839C67.1789 55.5092 57.6211 59.0145 48.5232 60.0455C50.0055 61.3342 51.2832 63.8085 51.2832 67.6747C51.2832 73.1903 51.2321 77.6235 51.2321 79.0153C51.2321 80.0978 51.9988 81.3865 54.0433 80.9741C62.1609 78.2111 69.2149 72.9498 74.2119 65.9311C79.209 58.9123 81.8976 50.4897 81.899 41.8489C81.899 19.0646 63.6011 0.61026 41.0098 0.61026Z
-                        </controls:StepSizingButton.Icon>
-                    </controls:StepSizingButton>
-                    <controls:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
-                    <controls:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
-                    <controls:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" Content="12345222222" />
+                    <buttons:StepSizingButton StepSizeHeight="20" StepSizeWidth="50">
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                            <PathIcon>
+                                <PathIcon.Data>
+                                    M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z
+                                </PathIcon.Data>
+                            </PathIcon>
+                            <TextBlock Margin="10,0" Text="Home"></TextBlock>
+                        </StackPanel>
+                      
+                    </buttons:StepSizingButton>
+                    <buttons:StepSizingButton StepSizeHeight="20" StepSizeWidth="50">
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                            <PathIcon>
+                                <PathIcon.Data>
+                                    M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z
+                                </PathIcon.Data>
+                            </PathIcon>
+                        </StackPanel>
+                      
+                    </buttons:StepSizingButton>
+                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
+                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
+                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" Content="12345222222" />
+                    <buttons:StepSizingButton Content="12345222222222" 
+                                              StepSizeHeight="20" StepSizeWidth="50">
+                    </buttons:StepSizingButton>
+                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
+                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
+                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" Content="1234" />
+                    <buttons:StepSizingButton StepSizeHeight="20" StepSizeWidth="50" Content="1234567890">
+                    </buttons:StepSizingButton>
+                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
+                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
+                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" Content="1234222222" />
                 </WrapPanel>
             </StackPanel>
         </Border>
     </Design.PreviewWith>
-    <ControlTheme x:Key="{x:Type controls:StepSizingButton}" TargetType="controls:StepSizingButton">
+    <ControlTheme x:Key="{x:Type buttons:StepSizingButton}"
+                  TargetType="buttons:StepSizingButton">
         <Setter Property="Template">
             <ControlTemplate>
-                <Button Width="{TemplateBinding Width}"
+                <Button
                         Height="{TemplateBinding Height}"
                         Command="{TemplateBinding Command}">
-                    <StackPanel Spacing="5" Orientation="{TemplateBinding ContentOrientation}">
-                        <ContentPresenter x:Name="PartContentPresenter" Content="{TemplateBinding Content}"
-                                          Foreground="{TemplateBinding Foreground}"
-                                          Theme="{TemplateBinding Theme}" />
-                    </StackPanel>
+                            <ContentPresenter
+                                Margin="0 0 5 0"
+                                HorizontalContentAlignment="Center"
+                                Width="{TemplateBinding Width}"
+                                x:Name="PartContentPresenter"
+                                Content="{TemplateBinding Content}"
+                                Foreground="{TemplateBinding Foreground}"
+                                Theme="{TemplateBinding Theme}" />      
                 </Button>
             </ControlTemplate>
         </Setter>

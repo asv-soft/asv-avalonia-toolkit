@@ -3,27 +3,10 @@ using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Media;
 
-namespace Asv.Avalonia.Toolkit.UI.Controls;
+namespace Asv.Avalonia.Toolkit.UI.Controls.Buttons;
 
 public class StepSizingButton : Button
 {
-    public static readonly StyledProperty<Geometry?> IconProperty =
-        AvaloniaProperty.Register<PathIcon, Geometry?>(nameof(Icon));
-
-    public Geometry? Icon
-    {
-        get => GetValue(IconProperty);
-        set => SetValue(IconProperty, value);
-    }
-
-    public static readonly StyledProperty<Orientation> ContentOrientationProperty =
-        AvaloniaProperty.Register<PathIcon, Orientation>(nameof(ContentOrientation));
-
-    public Orientation ContentOrientation
-    {
-        get => GetValue(ContentOrientationProperty);
-        set => SetValue(ContentOrientationProperty, value);
-    }
 
     public static readonly StyledProperty<double> ButtonUnitWidthProperty =
         AvaloniaProperty.Register<StepSizingButton, double>(nameof(StepSizeWidth));
@@ -46,7 +29,7 @@ public class StepSizingButton : Button
     protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
     {
         base.OnPropertyChanged(change);
-
+        
         if (change.Property == BoundsProperty)
         {
             if (StepSizeWidth != 0 )
@@ -63,7 +46,7 @@ public class StepSizingButton : Button
 
             if (StepSizeHeight != 0)
             {
-                if (Bounds.Height > StepSizeHeight)
+                if (Bounds.Height+15 > StepSizeHeight)
                 {
                     Height = StepSizeHeight *  Math.Round(Bounds.Height / StepSizeHeight);
                 }
@@ -72,7 +55,6 @@ public class StepSizingButton : Button
                     Height = StepSizeHeight;
                 }
             }
-            
         }
     }
 }
