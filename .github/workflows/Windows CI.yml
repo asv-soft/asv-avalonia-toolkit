@@ -37,7 +37,7 @@ jobs:
       - name: Setting the project version   
         run: |    
           dotnet tool install -g dotnet-setversion    
-          setversion ${{ steps.version.outputs.version-without-v }} ${{ env.PATH_TO_PROJECTS }}\Asv.Mavlink\Asv.Mavlink.csproj    
+          setversion ${{ steps.version.outputs.version-without-v }} ${{ env.PATH_TO_PROJECTS }}\Asv.Avalonia.Toolkit\Asv.Avalonia.Toolkit.csproj    
     
       - name: Restoring dependencies    
         run: |    
