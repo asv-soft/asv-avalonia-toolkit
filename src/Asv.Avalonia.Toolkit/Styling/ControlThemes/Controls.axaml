@@ -12,6 +12,7 @@
                 <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Indicators/RecordIndicatorStyles.axaml"/>
                 <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/DateTime/StretchableDatePickerStyles.axaml"/>
                 <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/DateTime/StretchableTimePickerStyles.axaml"/>
+                <MergeResourceInclude Source="avares://Asv.Avalonia.Toolkit/Styling/ControlThemes/ASVControls/Buttons/StepSizingButton.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>
