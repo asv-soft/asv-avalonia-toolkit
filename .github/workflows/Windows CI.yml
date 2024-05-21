@@ -52,12 +52,12 @@ jobs:
       - name: Building projects    
         run: |    
           cd src    
-          dotnet build -c Release --no-restore    
+          dotnet build -c Release     
 
       - name: Packing projects to Nuget    
         run: |    
           cd src    
-          dotnet pack -c Release --no-build --no-restore -p:PackageVersion=${{ steps.version.outputs.version-without-v }} --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}    
+          dotnet pack -c Release  -p:PackageVersion=${{ steps.version.outputs.version-without-v }} --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}    
     
       - name: Pushing packages to Nuget    
         run: |    
