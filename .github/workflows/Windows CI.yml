@@ -37,11 +37,16 @@ jobs:
       - name: Setting the project version   
         run: |    
           dotnet tool install -g dotnet-setversion    
-          setversion ${{ steps.version.outputs.version-without-v }} ${{ env.PATH_TO_PROJECTS }}\Asv.Avalonia.Toolkit\Asv.Avalonia.Toolkit.csproj    
+          setversion ${{ steps.version.outputs.version-without-v }} ${{ env.PATH_TO_PROJECTS }}\Asv.Avalonia.Toolkit\Asv.Avalonia.Toolkit.csproj      
     
+      - name: Restoring workloads    
+        run: |    
+          cd src       
+          dotnet workload restore    
+          
       - name: Restoring dependencies    
         run: |    
-          cd src    
+          cd src       
           dotnet restore    
     
       - name: Building projects    
