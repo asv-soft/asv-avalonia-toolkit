@@ -62,9 +62,9 @@ jobs:
       - name: Pushing packages to Nuget    
         run: |    
           cd src    
-          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}Asv.Avalonia.Toolkit.${{ steps.version.outputs.version-without-v }}.nupkg -k ${{ secrets.NUGET_AUTH_TOKEN }} -s ${{ env.NUGET_SOURCE_URL }}   
+          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}Asv.Avalonia.Toolkit.${{ steps.version.outputs.version-without-v }}.nupkg -k ${{ secrets.NUGET_AUTH_TOKEN }} --skip-duplicate --source https://api.nuget.org/v3/index.json   
     
       - name: Pushing packages to Github   
         run: |    
           cd src    
-          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}Asv.Avalonia.Toolkit.${{ steps.version.outputs.version-without-v }}.nupkg -k ${{ secrets.GIHUB_NUGET_AUTH_TOKEN }} -s ${{ env.GITHUB_PACKAGE}}
+          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}Asv.Avalonia.Toolkit.${{ steps.version.outputs.version-without-v }}.nupkg -k ${{ secrets.GIHUB_NUGET_AUTH_TOKEN }} --skip-duplicate --source https://nuget.pkg.github.com/asv-soft/index.json
