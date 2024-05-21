@@ -41,9 +41,9 @@ jobs:
         run: |    
           cd src       
           dotnet workload restore    
-          dotnet workloads restore \Asv.Avalonia.ToolkitGallery.iOS\Asv.Avalonia.ToolkitGallery.iOS.csproj
-          dotnet workload restore \Asv.Avalonia.ToolkitGallery.Android\Asv.Avalonia.ToolkitGallery.Android.csproj
-          
+          dotnet workload restore [D:\a\asv-avalonia-toolkit\asv-avalonia-toolkit\src\Asv.Avalonia.ToolkitGallery.Android\Asv.Avalonia.ToolkitGallery.Android.csproj]
+          dotnet workload restore [D:\a\asv-avalonia-toolkit\asv-avalonia-toolkit\src\Asv.Avalonia.ToolkitGallery.iOS\Asv.Avalonia.ToolkitGallery.iOS.csproj]
+         
       - name: Restoring dependencies    
         run: |    
           cd src       
