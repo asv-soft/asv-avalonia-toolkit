@@ -2,10 +2,20 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:buttons="clr-namespace:Asv.Avalonia.Toolkit.UI.Controls.Buttons">
     <Design.PreviewWith>
+        
         <Border Height="500" Padding="20" Width="500">
             <StackPanel Spacing="10">
-                <WrapPanel Width="200">
-                    <buttons:StepSizingButton StepSizeHeight="20" StepSizeWidth="50">
+        <StackPanel Orientation="Horizontal">
+           
+        </StackPanel>
+                <Border BorderBrush="Brown" BorderThickness="2" Width="200" >
+                <WrapPanel  Width="200">
+                    
+                    <Border Width="50" Height="20" BorderBrush="Brown" BorderThickness="1"></Border>
+                    <Border Width="50" Height="20" BorderBrush="Brown" BorderThickness="1"></Border>
+                    <Border Width="50" Height="20" BorderBrush="Brown" BorderThickness="1"></Border>
+                    <Border Width="50" Height="20" BorderBrush="Brown" BorderThickness="1"></Border>
+                    <buttons:StepSizingButton Margin="5" StepSizeHeight="20" StepSizeWidth="50">
                         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                             <PathIcon>
                                 <PathIcon.Data>
@@ -16,7 +26,7 @@
                         </StackPanel>
                       
                     </buttons:StepSizingButton>
-                    <buttons:StepSizingButton StepSizeHeight="20" StepSizeWidth="50">
+                    <buttons:StepSizingButton Margin="5" StepSizeHeight="20" StepSizeWidth="50">
                         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                             <PathIcon>
                                 <PathIcon.Data>
@@ -26,9 +36,12 @@
                         </StackPanel>
                       
                     </buttons:StepSizingButton>
-                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
-                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
-                    <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" Content="12345222222" />
+                    <buttons:StepSizingButton Margin="5" StepSizeWidth="50" StepSizeHeight="20" Content="222222222222" />
+                    <buttons:StepSizingButton  Margin="5" StepSizeWidth="50" StepSizeHeight="20" />
+                    <buttons:StepSizingButton  Margin="5" StepSizeWidth="50" StepSizeHeight="20" />
+
+                    <buttons:StepSizingButton Margin="5" StepSizeWidth="50" StepSizeHeight="20" Content="12345222222" />
+                   
                     <buttons:StepSizingButton Content="12345222222222" 
                                               StepSizeHeight="20" StepSizeWidth="50">
                     </buttons:StepSizingButton>
@@ -40,7 +53,9 @@
                     <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
                     <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" />
                     <buttons:StepSizingButton StepSizeWidth="50" StepSizeHeight="20" Content="1234222222" />
-                </WrapPanel>
+                </WrapPanel>    
+                </Border>
+                
             </StackPanel>
         </Border>
     </Design.PreviewWith>

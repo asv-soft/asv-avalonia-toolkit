@@ -36,11 +36,11 @@ public class StepSizingButton : Button
             {
                 if (Bounds.Width > StepSizeWidth)
                 {
-                    Width = StepSizeWidth * Math.Round(Bounds.Width / StepSizeWidth);
+                    Width = StepSizeWidth * Math.Round(Bounds.Width / StepSizeWidth) - Margin.Right - Margin.Left;
                 }
                 else
                 {
-                    Width = StepSizeWidth;
+                    Width = StepSizeWidth -Margin.Right - Margin.Left;
                 }
             }
 
@@ -48,11 +48,11 @@ public class StepSizingButton : Button
             {
                 if (Bounds.Height+15 > StepSizeHeight)
                 {
-                    Height = StepSizeHeight *  Math.Round(Bounds.Height / StepSizeHeight);
+                    Height = StepSizeHeight *  Math.Round(Bounds.Height / StepSizeHeight) - Margin.Bottom - Margin.Top;
                 }
                 else
                 {
-                    Height = StepSizeHeight;
+                    Height = StepSizeHeight - Margin.Bottom - Margin.Top;
                 }
             }
         }
