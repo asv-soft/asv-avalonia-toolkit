@@ -7,7 +7,6 @@ namespace Asv.Avalonia.Toolkit.UI.Controls.Buttons;
 
 public class StepSizingButton : Button
 {
-
     public static readonly StyledProperty<double> ButtonUnitWidthProperty =
         AvaloniaProperty.Register<StepSizingButton, double>(nameof(StepSizeWidth));
 
@@ -32,27 +31,30 @@ public class StepSizingButton : Button
         
         if (change.Property == BoundsProperty)
         {
-            if (StepSizeWidth != 0 )
+            MinWidth = StepSizeWidth;
+            if (StepSizeWidth != 0)
             {
                 if (Bounds.Width > StepSizeWidth)
                 {
-                    Width = StepSizeWidth * Math.Round(Bounds.Width / StepSizeWidth) - Margin.Right - Margin.Left;
+                    var increment = (int)Math.Round(Bounds.Width / StepSizeWidth);
+                    Width = StepSizeWidth * increment + (Margin.Right+Margin.Left) * (increment-1);
                 }
                 else
                 {
-                    Width = StepSizeWidth -Margin.Right - Margin.Left;
+                    Width = StepSizeWidth;
                 }
             }
 
             if (StepSizeHeight != 0)
             {
-                if (Bounds.Height+15 > StepSizeHeight)
+                if (Bounds.Height > StepSizeHeight)
                 {
-                    Height = StepSizeHeight *  Math.Round(Bounds.Height / StepSizeHeight) - Margin.Bottom - Margin.Top;
+                    var increment = (int)Math.Round(Bounds.Height / StepSizeHeight);
+                    Height = StepSizeHeight * increment + (Margin.Top+Margin.Bottom) * (increment-1);
                 }
                 else
                 {
-                    Height = StepSizeHeight - Margin.Bottom - Margin.Top;
+                    Height = StepSizeHeight;
                 }
             }
         }
