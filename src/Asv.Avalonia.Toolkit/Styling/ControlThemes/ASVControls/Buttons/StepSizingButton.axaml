@@ -28,7 +28,7 @@
                             </PathIcon>
                         </StackPanel>
                     </buttons:StepSizingButton>
-                    <buttons:StepSizingButton Margin="2" StepSizeWidth="50" StepSizeHeight="20" Content="33333333333333" />
+                    <buttons:StepSizingButton Margin="2" StepSizeWidth="50" StepSizeHeight="20" Content="33333333333" />
                     <buttons:StepSizingButton Margin="2" StepSizeWidth="50" StepSizeHeight="20" Content="11" />
                     <buttons:StepSizingButton Margin="2" StepSizeWidth="50" StepSizeHeight="20" />
                     <buttons:StepSizingButton Margin="2" StepSizeWidth="50" StepSizeHeight="20" Content="222222222" />

@@ -44,6 +44,8 @@ public class StepSizingButton : Button
                 {
                     var increment = (int)Math.Round(Bounds.Width / StepSizeWidth);
                     Width = StepSizeWidth * increment + (Margin.Right + Margin.Left) * (increment - 1);
+                    if (Width < Bounds.Width) increment++;
+                    Width = StepSizeWidth * increment + (Margin.Right + Margin.Left) * (increment - 1);
                 }
                 else
                 {
