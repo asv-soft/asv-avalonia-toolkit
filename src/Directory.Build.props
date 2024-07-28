@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Nullable>enable</Nullable>
     <ProductVersion>1.0.1</ProductVersion>
-    <AvaloniaVersion>11.0.6</AvaloniaVersion>
+    <AvaloniaVersion>11.1.0</AvaloniaVersion>
     <MaterialIconsAvaloniaVersion>2.0.1</MaterialIconsAvaloniaVersion>
     <FluentAvaloniaUIVersion>2.0.0</FluentAvaloniaUIVersion>
   </PropertyGroup>
