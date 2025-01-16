@@ -9,7 +9,7 @@ public abstract class MenuItemBase : DisposableReactiveObject, IShellMenuItem
 {
     public abstract string Name { get; }
     public abstract string Icon { get; }
-    
+
     public virtual IShellPage CreatePage()
     {
         throw new NotImplementedException();

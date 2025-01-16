@@ -11,8 +11,10 @@ public class RecordIndicator : TemplatedControl
 {
     public const string RecordingPseudoClass = ":recording";
 
-    public static readonly StyledProperty<bool> IsRecordingProperty = AvaloniaProperty.Register<RecordIndicator, bool>(
-        nameof(IsRecording));
+    public static readonly StyledProperty<bool> IsRecordingProperty = AvaloniaProperty.Register<
+        RecordIndicator,
+        bool
+    >(nameof(IsRecording));
 
     public bool IsRecording
     {
@@ -29,8 +31,8 @@ public class RecordIndicator : TemplatedControl
         }
     }
 
-    public static readonly StyledProperty<ICommand?> StartCommandProperty = AvaloniaProperty.Register<RecordIndicator, ICommand?>(
-        nameof(StartCommand));
+    public static readonly StyledProperty<ICommand?> StartCommandProperty =
+        AvaloniaProperty.Register<RecordIndicator, ICommand?>(nameof(StartCommand));
 
     public ICommand? StartCommand
     {
@@ -38,8 +40,8 @@ public class RecordIndicator : TemplatedControl
         set => SetValue(StartCommandProperty, value);
     }
 
-    public static readonly StyledProperty<ICommand?> StopCommandProperty = AvaloniaProperty.Register<RecordIndicator, ICommand?>(
-        nameof(StopCommand));
+    public static readonly StyledProperty<ICommand?> StopCommandProperty =
+        AvaloniaProperty.Register<RecordIndicator, ICommand?>(nameof(StopCommand));
 
     public ICommand? StopCommand
     {
@@ -47,8 +49,11 @@ public class RecordIndicator : TemplatedControl
         set => SetValue(StopCommandProperty, value);
     }
 
-    public static readonly StyledProperty<string> StartCommandTextProperty = AvaloniaProperty.Register<RecordIndicator, string>(
-        nameof(StartCommandText),"Start record");
+    public static readonly StyledProperty<string> StartCommandTextProperty =
+        AvaloniaProperty.Register<RecordIndicator, string>(
+            nameof(StartCommandText),
+            "Start record"
+        );
 
     public string StartCommandText
     {
@@ -56,8 +61,10 @@ public class RecordIndicator : TemplatedControl
         set => SetValue(StartCommandTextProperty, value);
     }
 
-    public static readonly StyledProperty<string> RecordingTextProperty = AvaloniaProperty.Register<RecordIndicator, string>(
-        nameof(RecordingText),"Recording");
+    public static readonly StyledProperty<string> RecordingTextProperty = AvaloniaProperty.Register<
+        RecordIndicator,
+        string
+    >(nameof(RecordingText), "Recording");
 
     public string RecordingText
     {
@@ -65,8 +72,8 @@ public class RecordIndicator : TemplatedControl
         set => SetValue(RecordingTextProperty, value);
     }
 
-    public static readonly StyledProperty<string> RecordingStatusTextProperty = AvaloniaProperty.Register<RecordIndicator, string>(
-        nameof(RecordingStatusText),"01:30.52");
+    public static readonly StyledProperty<string> RecordingStatusTextProperty =
+        AvaloniaProperty.Register<RecordIndicator, string>(nameof(RecordingStatusText), "01:30.52");
 
     public string RecordingStatusText
     {

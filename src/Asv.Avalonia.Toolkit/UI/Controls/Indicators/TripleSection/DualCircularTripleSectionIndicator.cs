@@ -4,23 +4,52 @@ using Avalonia.Controls.Metadata;
 
 namespace Asv.Avalonia.Toolkit.UI.Controls.Indicators;
 
-[PseudoClasses(RightBottomRightCritical, RightBottomRightWarning, RightBottomRightSuccess, RightBottomRightUnknown,
-    RightBottomLeftCritical, RightBottomLeftWarning, RightBottomLeftSuccess, RightBottomLeftUnknown,
-    RightTopCritical, RightTopWarning, RightTopSuccess, RightTopUnknown,
-    LeftBottomRightCritical, LeftBottomRightWarning, LeftBottomRightSuccess, LeftBottomRightUnknown,
-    LeftBottomLeftCritical, LeftBottomLeftWarning, LeftBottomLeftSuccess, LeftBottomLeftUnknown,
-    LeftTopCritical, LeftTopWarning, LeftTopSuccess, LeftTopUnknown, BottomStatusCritical, BottomStatusWarning,
-    BottomStatusSuccess, BottomStatusUnknown, LeftTopProgressWarning, LeftTopProgressSuccess, LeftTopProgressUnknown,
-    LeftTopProgressCritical, RightTopProgressWarning, RightTopProgressSuccess, RightTopProgressUnknown,
-    RightTopProgressCritical)]
+[PseudoClasses(
+    RightBottomRightCritical,
+    RightBottomRightWarning,
+    RightBottomRightSuccess,
+    RightBottomRightUnknown,
+    RightBottomLeftCritical,
+    RightBottomLeftWarning,
+    RightBottomLeftSuccess,
+    RightBottomLeftUnknown,
+    RightTopCritical,
+    RightTopWarning,
+    RightTopSuccess,
+    RightTopUnknown,
+    LeftBottomRightCritical,
+    LeftBottomRightWarning,
+    LeftBottomRightSuccess,
+    LeftBottomRightUnknown,
+    LeftBottomLeftCritical,
+    LeftBottomLeftWarning,
+    LeftBottomLeftSuccess,
+    LeftBottomLeftUnknown,
+    LeftTopCritical,
+    LeftTopWarning,
+    LeftTopSuccess,
+    LeftTopUnknown,
+    BottomStatusCritical,
+    BottomStatusWarning,
+    BottomStatusSuccess,
+    BottomStatusUnknown,
+    LeftTopProgressWarning,
+    LeftTopProgressSuccess,
+    LeftTopProgressUnknown,
+    LeftTopProgressCritical,
+    RightTopProgressWarning,
+    RightTopProgressSuccess,
+    RightTopProgressUnknown,
+    RightTopProgressCritical
+)]
 public class DualCircularTripleSectionIndicator : IndicatorBase
 {
     public DualCircularTripleSectionIndicator()
     {
-        TopRightProgressLinePoint = new Point(100,2.5);
+        TopRightProgressLinePoint = new Point(100, 2.5);
         TopLeftProgressLinePoint = new Point(100, 2.5);
     }
-    
+
     private double _topLeftProgressAngle;
     private double _topRightProgressAngle;
     private Point _topRightProgressLinePoint;
@@ -71,7 +100,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<double> TopLeftProgressValueProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, double>(
-            nameof(TopLeftProgressValue));
+            nameof(TopLeftProgressValue)
+        );
 
     public double TopLeftProgressValue
     {
@@ -81,7 +111,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<double> TopRightProgressValueProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, double>(
-            nameof(TopRightProgressValue));
+            nameof(TopRightProgressValue)
+        );
 
     public double TopRightProgressValue
     {
@@ -93,9 +124,10 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     #region Top Left Progress Arc Props
 
-    public static readonly StyledProperty<double> TopLeftMinProperty =
-        AvaloniaProperty.Register<DualCircularTripleSectionIndicator, double>(
-            nameof(TopLeftMin), 0);
+    public static readonly StyledProperty<double> TopLeftMinProperty = AvaloniaProperty.Register<
+        DualCircularTripleSectionIndicator,
+        double
+    >(nameof(TopLeftMin), 0);
 
     public double TopLeftMin
     {
@@ -103,9 +135,10 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
         set => SetValue(TopLeftMinProperty, value);
     }
 
-    public static readonly StyledProperty<double> TopLeftMaxProperty =
-        AvaloniaProperty.Register<DualCircularTripleSectionIndicator, double>(
-            nameof(TopLeftMax));
+    public static readonly StyledProperty<double> TopLeftMaxProperty = AvaloniaProperty.Register<
+        DualCircularTripleSectionIndicator,
+        double
+    >(nameof(TopLeftMax));
 
     public double TopLeftMax
     {
@@ -113,25 +146,33 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
         set => SetValue(TopLeftMaxProperty, value);
     }
 
-    public static readonly DirectProperty<DualCircularTripleSectionIndicator, double> TopLeftProgressAngleProperty =
-        AvaloniaProperty.RegisterDirect<DualCircularTripleSectionIndicator, double>(
-            nameof(TopLeftProgressAngle),
-            p => p.TopLeftProgressAngle,
-            (p, o) => p.TopLeftProgressAngle = o);
+    public static readonly DirectProperty<
+        DualCircularTripleSectionIndicator,
+        double
+    > TopLeftProgressAngleProperty = AvaloniaProperty.RegisterDirect<
+        DualCircularTripleSectionIndicator,
+        double
+    >(
+        nameof(TopLeftProgressAngle),
+        p => p.TopLeftProgressAngle,
+        (p, o) => p.TopLeftProgressAngle = o
+    );
 
     public double TopLeftProgressAngle
     {
         get => _topLeftProgressAngle;
-        private set => SetAndRaise(TopLeftProgressAngleProperty, ref _topLeftProgressAngle, value * -1);
+        private set =>
+            SetAndRaise(TopLeftProgressAngleProperty, ref _topLeftProgressAngle, value * -1);
     }
 
     #endregion
 
     #region Top Right Arc Props
 
-    public static readonly StyledProperty<double> TopRightMinProperty =
-        AvaloniaProperty.Register<DualCircularTripleSectionIndicator, double>(
-            nameof(TopRightMin), 0);
+    public static readonly StyledProperty<double> TopRightMinProperty = AvaloniaProperty.Register<
+        DualCircularTripleSectionIndicator,
+        double
+    >(nameof(TopRightMin), 0);
 
     public double TopRightMin
     {
@@ -139,9 +180,10 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
         set => SetValue(TopRightMinProperty, value);
     }
 
-    public static readonly StyledProperty<double> TopRightMaxProperty =
-        AvaloniaProperty.Register<DualCircularTripleSectionIndicator, double>(
-            nameof(TopRightMax));
+    public static readonly StyledProperty<double> TopRightMaxProperty = AvaloniaProperty.Register<
+        DualCircularTripleSectionIndicator,
+        double
+    >(nameof(TopRightMax));
 
     public double TopRightMax
     {
@@ -149,9 +191,10 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
         set => SetValue(TopRightMaxProperty, value);
     }
 
-    public static readonly StyledProperty<double> TopRightValueProperty =
-        AvaloniaProperty.Register<DualCircularTripleSectionIndicator, double>(
-            nameof(TopRightValue));
+    public static readonly StyledProperty<double> TopRightValueProperty = AvaloniaProperty.Register<
+        DualCircularTripleSectionIndicator,
+        double
+    >(nameof(TopRightValue));
 
     public double TopRightValue
     {
@@ -159,37 +202,52 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
         set => SetValue(TopRightValueProperty, value);
     }
 
-    public static readonly DirectProperty<DualCircularTripleSectionIndicator, double> TopRightProgressAngleProperty =
-        AvaloniaProperty.RegisterDirect<DualCircularTripleSectionIndicator, double>(
-            nameof(TopRightProgressAngle),
-            p => p.TopRightProgressAngle,
-            (p, o) => p.TopRightProgressAngle = o);
+    public static readonly DirectProperty<
+        DualCircularTripleSectionIndicator,
+        double
+    > TopRightProgressAngleProperty = AvaloniaProperty.RegisterDirect<
+        DualCircularTripleSectionIndicator,
+        double
+    >(
+        nameof(TopRightProgressAngle),
+        p => p.TopRightProgressAngle,
+        (p, o) => p.TopRightProgressAngle = o
+    );
 
     public double TopRightProgressAngle
     {
         get => _topRightProgressAngle;
-        private set => SetAndRaise(TopRightProgressAngleProperty, ref _topRightProgressAngle, value);
+        private set =>
+            SetAndRaise(TopRightProgressAngleProperty, ref _topRightProgressAngle, value);
     }
 
     #endregion
 
     #region Top Left Progress Line props
 
-    public static readonly DirectProperty<DualCircularTripleSectionIndicator, Point> TopLeftProgressLinePointProperty =
-        AvaloniaProperty.RegisterDirect<DualCircularTripleSectionIndicator, Point>(
-            nameof(TopLeftProgressLinePoint),
-            p => p.TopLeftProgressLinePoint,
-            (p, o) => p.TopLeftProgressLinePoint = o);
+    public static readonly DirectProperty<
+        DualCircularTripleSectionIndicator,
+        Point
+    > TopLeftProgressLinePointProperty = AvaloniaProperty.RegisterDirect<
+        DualCircularTripleSectionIndicator,
+        Point
+    >(
+        nameof(TopLeftProgressLinePoint),
+        p => p.TopLeftProgressLinePoint,
+        (p, o) => p.TopLeftProgressLinePoint = o
+    );
 
     public Point TopLeftProgressLinePoint
     {
         get => _topLeftProgressLinePoint;
-        private set => SetAndRaise(TopLeftProgressLinePointProperty, ref _topLeftProgressLinePoint, value);
+        private set =>
+            SetAndRaise(TopLeftProgressLinePointProperty, ref _topLeftProgressLinePoint, value);
     }
 
     public static readonly StyledProperty<IndicatorStatusEnum> TopLeftStatusProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, IndicatorStatusEnum>(
-            nameof(TopLeftStatus));
+            nameof(TopLeftStatus)
+        );
 
     public IndicatorStatusEnum TopLeftStatus
     {
@@ -199,7 +257,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<Point> TopLeftProgressLineMinProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, Point>(
-            nameof(TopLeftProgressLineMin));
+            nameof(TopLeftProgressLineMin)
+        );
 
     public Point TopLeftProgressLineMin
     {
@@ -209,7 +268,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<Point> TopLeftProgressLineMaxProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, Point>(
-            nameof(TopLeftProgressLineMax));
+            nameof(TopLeftProgressLineMax)
+        );
 
     public Point TopLeftProgressLineMax
     {
@@ -221,21 +281,29 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     #region Top Right Progress Line props
 
-    public static readonly DirectProperty<DualCircularTripleSectionIndicator, Point> TopRightProgressLinePointProperty =
-        AvaloniaProperty.RegisterDirect<DualCircularTripleSectionIndicator, Point>(
-            nameof(TopRightProgressLinePoint),
-            p => p.TopRightProgressLinePoint,
-            (p, o) => p.TopRightProgressLinePoint = o);
+    public static readonly DirectProperty<
+        DualCircularTripleSectionIndicator,
+        Point
+    > TopRightProgressLinePointProperty = AvaloniaProperty.RegisterDirect<
+        DualCircularTripleSectionIndicator,
+        Point
+    >(
+        nameof(TopRightProgressLinePoint),
+        p => p.TopRightProgressLinePoint,
+        (p, o) => p.TopRightProgressLinePoint = o
+    );
 
     public Point TopRightProgressLinePoint
     {
         get => _topRightProgressLinePoint;
-        private set => SetAndRaise(TopRightProgressLinePointProperty, ref _topRightProgressLinePoint, value);
+        private set =>
+            SetAndRaise(TopRightProgressLinePointProperty, ref _topRightProgressLinePoint, value);
     }
 
     public static readonly StyledProperty<IndicatorStatusEnum> TopRightStatusProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, IndicatorStatusEnum>(
-            nameof(TopRightStatus));
+            nameof(TopRightStatus)
+        );
 
     public IndicatorStatusEnum TopRightStatus
     {
@@ -245,7 +313,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<Point> TopRightProgressLineMinProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, Point>(
-            nameof(TopRightProgressLineMin));
+            nameof(TopRightProgressLineMin)
+        );
 
     public Point TopRightProgressLineMin
     {
@@ -255,7 +324,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<Point> TopRightProgressLineMaxProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, Point>(
-            nameof(TopRightProgressLineMax));
+            nameof(TopRightProgressLineMax)
+        );
 
     public Point TopRightProgressLineMax
     {
@@ -269,7 +339,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<string> RightBottomRightTitleProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(RightBottomRightTitle));
+            nameof(RightBottomRightTitle)
+        );
 
     public string RightBottomRightTitle
     {
@@ -279,7 +350,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<string> RightBottomRightTextProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(RightBottomRightText));
+            nameof(RightBottomRightText)
+        );
 
     public string RightBottomRightText
     {
@@ -289,7 +361,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<IndicatorStatusEnum> RightBottomRightStatusProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, IndicatorStatusEnum>(
-            nameof(RightBottomRightStatus));
+            nameof(RightBottomRightStatus)
+        );
 
     public IndicatorStatusEnum RightBottomRightStatus
     {
@@ -303,7 +376,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<string> RightBottomLeftTitleProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(RightBottomLeftTitle));
+            nameof(RightBottomLeftTitle)
+        );
 
     public string RightBottomLeftTitle
     {
@@ -313,7 +387,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<string> RightBottomLeftTextProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(RightBottomLeftText));
+            nameof(RightBottomLeftText)
+        );
 
     public string RightBottomLeftText
     {
@@ -323,7 +398,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<IndicatorStatusEnum> RightBottomLeftStatusProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, IndicatorStatusEnum>(
-            nameof(RightBottomLeftStatus));
+            nameof(RightBottomLeftStatus)
+        );
 
     public IndicatorStatusEnum RightBottomLeftStatus
     {
@@ -335,9 +411,10 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     #region RightTop
 
-    public static readonly StyledProperty<string> RightTopTitleProperty =
-        AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(RightTopTitle));
+    public static readonly StyledProperty<string> RightTopTitleProperty = AvaloniaProperty.Register<
+        DualCircularTripleSectionIndicator,
+        string
+    >(nameof(RightTopTitle));
 
     public string RightTopTitle
     {
@@ -345,9 +422,10 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
         set => SetValue(RightTopTitleProperty, value);
     }
 
-    public static readonly StyledProperty<string> RightTopTextProperty =
-        AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(RightTopText));
+    public static readonly StyledProperty<string> RightTopTextProperty = AvaloniaProperty.Register<
+        DualCircularTripleSectionIndicator,
+        string
+    >(nameof(RightTopText));
 
     public string RightTopText
     {
@@ -357,7 +435,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<IndicatorStatusEnum> RightTopStatusProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, IndicatorStatusEnum>(
-            nameof(RightTopStatus));
+            nameof(RightTopStatus)
+        );
 
     public IndicatorStatusEnum RightTopStatus
     {
@@ -371,7 +450,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<string> LeftBottomRightTitleProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(LeftBottomRightTitle));
+            nameof(LeftBottomRightTitle)
+        );
 
     public string LeftBottomRightTitle
     {
@@ -381,7 +461,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<string> LeftBottomRightTextProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(LeftBottomRightText));
+            nameof(LeftBottomRightText)
+        );
 
     public string LeftBottomRightText
     {
@@ -391,7 +472,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<IndicatorStatusEnum> LeftBottomRightStatusProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, IndicatorStatusEnum>(
-            nameof(LeftBottomRightStatus));
+            nameof(LeftBottomRightStatus)
+        );
 
     public IndicatorStatusEnum LeftBottomRightStatus
     {
@@ -405,7 +487,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<string> LeftBottomLeftTitleProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(LeftBottomLeftTitle));
+            nameof(LeftBottomLeftTitle)
+        );
 
     public string LeftBottomLeftTitle
     {
@@ -415,7 +498,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<string> LeftBottomLeftTextProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(LeftBottomLeftText));
+            nameof(LeftBottomLeftText)
+        );
 
     public string LeftBottomLeftText
     {
@@ -425,7 +509,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<IndicatorStatusEnum> LeftBottomLeftStatusProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, IndicatorStatusEnum>(
-            nameof(LeftBottomLeftStatus));
+            nameof(LeftBottomLeftStatus)
+        );
 
     public IndicatorStatusEnum LeftBottomLeftStatus
     {
@@ -437,9 +522,10 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     #region LeftTop
 
-    public static readonly StyledProperty<string> LeftTopTitleProperty =
-        AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(LeftTopTitle));
+    public static readonly StyledProperty<string> LeftTopTitleProperty = AvaloniaProperty.Register<
+        DualCircularTripleSectionIndicator,
+        string
+    >(nameof(LeftTopTitle));
 
     public string LeftTopTitle
     {
@@ -447,9 +533,10 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
         set => SetValue(LeftTopTitleProperty, value);
     }
 
-    public static readonly StyledProperty<string> LeftTopTextProperty =
-        AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(LeftTopText));
+    public static readonly StyledProperty<string> LeftTopTextProperty = AvaloniaProperty.Register<
+        DualCircularTripleSectionIndicator,
+        string
+    >(nameof(LeftTopText));
 
     public string LeftTopText
     {
@@ -459,7 +546,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<IndicatorStatusEnum> LeftTopStatusProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, IndicatorStatusEnum>(
-            nameof(LeftTopStatus));
+            nameof(LeftTopStatus)
+        );
 
     public IndicatorStatusEnum LeftTopStatus
     {
@@ -473,7 +561,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<string> BottomStatusTextProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, string>(
-            nameof(BottomStatusText));
+            nameof(BottomStatusText)
+        );
 
     public string BottomStatusText
     {
@@ -483,7 +572,8 @@ public class DualCircularTripleSectionIndicator : IndicatorBase
 
     public static readonly StyledProperty<IndicatorStatusEnum> BottomStatusProperty =
         AvaloniaProperty.Register<DualCircularTripleSectionIndicator, IndicatorStatusEnum>(
-            nameof(BottomStatus));
+            nameof(BottomStatus)
+        );
 
     public IndicatorStatusEnum BottomStatus
     {
