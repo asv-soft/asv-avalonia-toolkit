@@ -43,20 +43,25 @@ public class StepSizingButton : Button
                 if (Bounds.Width > StepSizeWidth)
                 {
                     var increment = (int)Math.Round(Bounds.Width / StepSizeWidth);
-                    Width = StepSizeWidth * increment + (Margin.Right + Margin.Left) * (increment - 1);
-                    if (Width < Bounds.Width) increment++;
-                    Width = StepSizeWidth * increment + (Margin.Right + Margin.Left) * (increment - 1);
+                    Width =
+                        StepSizeWidth * increment + (Margin.Right + Margin.Left) * (increment - 1);
+                    if (Width < Bounds.Width)
+                        increment++;
+                    Width =
+                        StepSizeWidth * increment + (Margin.Right + Margin.Left) * (increment - 1);
                 }
                 else
                 {
                     Width = StepSizeWidth;
                 }
             }
-            if (StepSizeHeight == 0) return;
+            if (StepSizeHeight == 0)
+                return;
             if (Bounds.Height > StepSizeHeight)
             {
                 var increment = (int)Math.Round(Bounds.Height / StepSizeHeight);
-                Height = StepSizeHeight * increment + (Margin.Top + Margin.Bottom) * (increment - 1);
+                Height =
+                    StepSizeHeight * increment + (Margin.Top + Margin.Bottom) * (increment - 1);
             }
             else
             {

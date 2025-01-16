@@ -8,7 +8,5 @@ public partial class MeasureUnitsView : ReactiveUserControl<MeasureUnitsViewMode
     public MeasureUnitsView()
     {
         InitializeComponent();
-        
     }
-  
 }

@@ -14,21 +14,24 @@ public class DateTimeViewModel : DisposableReactiveObject, IShellPage
     {
         SelectedDateValue = DateTimeOffset.Now;
         SelectedTimeValue = SelectedDateValue.TimeOfDay;
-        this.WhenAnyValue(x => x.SelectedDateValue).Subscribe(_ =>
-        {
-            DateTimeResult = $"{SelectedDateValue} {SelectedTimeValue}";
-        });
-        this.WhenAnyValue(x => x.SelectedTimeValue).Subscribe(_ =>
-        {
-            DateTimeResult = $"{SelectedDateValue.Date} {SelectedTimeValue}";
-        });
+        this.WhenAnyValue(x => x.SelectedDateValue)
+            .Subscribe(_ =>
+            {
+                DateTimeResult = $"{SelectedDateValue} {SelectedTimeValue}";
+            });
+        this.WhenAnyValue(x => x.SelectedTimeValue)
+            .Subscribe(_ =>
+            {
+                DateTimeResult = $"{SelectedDateValue.Date} {SelectedTimeValue}";
+            });
     }
 
-    [Reactive] 
+    [Reactive]
     public DateTimeOffset SelectedDateValue { get; set; }
+
     [Reactive]
     public TimeSpan SelectedTimeValue { get; set; }
-    
-    [Reactive] 
+
+    [Reactive]
     public string DateTimeResult { get; set; } = string.Empty;
 }

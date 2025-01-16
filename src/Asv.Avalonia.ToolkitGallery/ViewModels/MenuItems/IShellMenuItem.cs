@@ -6,7 +6,7 @@ namespace Asv.Avalonia.ToolkitGallery.ViewModels.MenuItems
     {
         string Icon { get; }
         string Name { get; }
-        
+
         IShellPage CreatePage();
     }
 }
