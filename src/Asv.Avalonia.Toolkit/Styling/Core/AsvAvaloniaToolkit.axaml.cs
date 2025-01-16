@@ -16,7 +16,7 @@ public partial class AsvAvaloniaToolkit : Styles, IResourceProvider
     {
         Init();
     }
-
+    
     private void Init()
     {
         AvaloniaXamlLoader.Load(this);

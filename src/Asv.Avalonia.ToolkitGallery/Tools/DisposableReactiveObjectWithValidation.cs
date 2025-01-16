@@ -20,8 +20,7 @@ namespace Asv.Avalonia.ToolkitGallery.Tools
 
         protected void ThrowIfDisposed()
         {
-            if (IsDisposed)
-                throw new ObjectDisposedException(GetType().Name);
+            if (IsDisposed) throw new ObjectDisposedException(GetType().Name);
         }
 
         protected CancellationToken DisposeCancel
@@ -42,6 +41,7 @@ namespace Asv.Avalonia.ToolkitGallery.Tools
                     _cancel = new();
                     return _cancel.Token;
                 }
+
             }
         }
 
@@ -49,8 +49,7 @@ namespace Asv.Avalonia.ToolkitGallery.Tools
         {
             get
             {
-                if (_dispose != null)
-                    return _dispose;
+                if (_dispose != null) return _dispose;
                 lock (_sync1)
                 {
                     return _dispose ??= new CompositeDisposable();
@@ -70,8 +69,7 @@ namespace Asv.Avalonia.ToolkitGallery.Tools
 
         public void Dispose()
         {
-            if (Interlocked.CompareExchange(ref _disposeFlag, Disposed, NotDisposed) != NotDisposed)
-                return;
+            if (Interlocked.CompareExchange(ref _disposeFlag, Disposed, NotDisposed) != NotDisposed) return;
             InternalDisposeOnce();
             GC.SuppressFinalize(this);
         }

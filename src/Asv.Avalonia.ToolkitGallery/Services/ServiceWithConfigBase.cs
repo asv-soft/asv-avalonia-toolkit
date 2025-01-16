@@ -8,10 +8,9 @@ public abstract class ServiceWithConfigBase<TConfig>(IConfiguration cfg) : Dispo
     where TConfig : new()
 {
     private readonly object _sync = new();
-
+    
     private readonly TConfig _config = cfg.Get<TConfig>();
-    private readonly IConfiguration _cfgService =
-        cfg ?? throw new ArgumentNullException(nameof(cfg));
+    private readonly IConfiguration _cfgService = cfg ?? throw new ArgumentNullException(nameof(cfg));
 
     protected TConfigValue InternalGetConfig<TConfigValue>(Func<TConfig, TConfigValue> getProperty)
     {

@@ -4,4 +4,6 @@ using Avalonia.Controls.Primitives;
 
 namespace Asv.Avalonia.Toolkit;
 
-public class AttitudeIndicator : TemplatedControl { }
+public class AttitudeIndicator : TemplatedControl
+{
+}

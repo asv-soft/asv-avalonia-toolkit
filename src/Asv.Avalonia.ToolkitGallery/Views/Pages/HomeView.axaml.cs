@@ -8,5 +8,6 @@ public partial class HomeView : ReactiveUserControl<HomeViewModel>
     public HomeView()
     {
         InitializeComponent();
+       
     }
 }

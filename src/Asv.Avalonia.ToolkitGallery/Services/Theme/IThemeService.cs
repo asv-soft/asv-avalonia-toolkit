@@ -12,10 +12,10 @@ namespace Asv.Avalonia.ToolkitGallery.Services.Theme
         public ThemeVariant Theme { get; set; } = theme;
     }
 
+
     public interface IThemeService
     {
-        IEnumerable<ThemeItem?>? Themes { get; }
-
+        IEnumerable<ThemeItem?> Themes { get; }
         [Reactive]
         ThemeItem? CurrentTheme { get; set; }
     }

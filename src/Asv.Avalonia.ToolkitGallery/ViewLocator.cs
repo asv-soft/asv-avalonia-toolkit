@@ -1,8 +1,8 @@
 using System;
 using Asv.Avalonia.ToolkitGallery.Tools;
-using Asv.Avalonia.ToolkitGallery.ViewModels;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
+using Asv.Avalonia.ToolkitGallery.ViewModels;
 
 namespace Asv.Avalonia.ToolkitGallery;
 

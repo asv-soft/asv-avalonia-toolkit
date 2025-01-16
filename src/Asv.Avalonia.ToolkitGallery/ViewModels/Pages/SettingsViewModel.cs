@@ -21,21 +21,21 @@ public class SettingsViewModel : DisposableReactiveObject, IShellPage
 
         Themes = _themeSvc?.Themes;
 
-        Theme = Themes?.First(theme => theme?.Theme == _themeSvc?.CurrentTheme?.Theme);
+        Theme = Themes.First(theme => theme?.Theme == _themeSvc?.CurrentTheme?.Theme);
 
         this.WhenAnyValue(settings => settings.Theme)
             .Skip(1)
             .Subscribe(theme =>
             {
-                if (_themeSvc != null)
+                if (_themeSvc != null) 
                     _themeSvc.CurrentTheme = theme;
             })
             .DisposeItWith(Disposable);
     }
 
     [Reactive]
-    public IEnumerable<ThemeItem?>? Themes { get; set; }
-
+    public IEnumerable<ThemeItem?> Themes { get; set; }
+    
     [Reactive]
     public ThemeItem? Theme { get; set; }
 }
