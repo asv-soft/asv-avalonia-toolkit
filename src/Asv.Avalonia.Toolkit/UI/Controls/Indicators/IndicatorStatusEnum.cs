@@ -5,5 +5,5 @@ public enum IndicatorStatusEnum
     Unknown,
     Critical,
     Warning,
-    Success
+    Success,
 }
